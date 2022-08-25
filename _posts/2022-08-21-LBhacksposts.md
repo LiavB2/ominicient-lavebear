@@ -19,16 +19,16 @@ I am very excited to get better at coding and am looking forward for this new ye
 
 ## hacks for Bash (Hacks #3) 
 - We use the code "--version" to verify that we installed a tool, while clarifying what version is currently installed.
-- We can verify Anaconda  
-- You can update a repository by committing your changes and pushing the same.
-- Really cool would be automating a procedure from installation?
+- We can verify the packages and versions that have been installed with Anaconda with "conda list"  
+- You can update a repository by committing your changes and pushing the same. Using "git add" to add desired files, "git commit" to commit the changes to your repository, and "git push" to push the changes that you have committed to your repository.
+- We are able to automate an action by programming a script to complete the desired task.
 
 --- 
 
 ## Hacks for Fastpages Frontend Development (Hacks #4)
 - 
 - 
-- Extra Credit (redesigned homepage)
+- Extra Credit (redesigned homepage) {done}
 
 --- 
 
