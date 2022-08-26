@@ -132,56 +132,73 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-python"><pre><span></span><span class="o">---</span>
-<span class="n">toc</span><span class="p">:</span> <span class="n">true</span>
-<span class="n">layout</span><span class="p">:</span> <span class="n">post</span>
-<span class="n">description</span><span class="p">:</span> <span class="n">Liav</span><span class="s1">&#39;s Python Quiz questions</span>
-<span class="n">categories</span><span class="p">:</span> <span class="p">[</span><span class="n">markdown</span><span class="p">]</span>
-<span class="n">title</span><span class="p">:</span> <span class="n">Python</span> <span class="n">Quiz</span>
-<span class="o">---</span>
-<span class="c1">## Python Quiz:</span>
+<div class=" highlight hl-bash"><pre><span></span>&gt; A display of the Python Quiz
+</pre></div>
 
-<span class="kn">import</span> <span class="nn">getpass</span><span class="o">,</span> <span class="nn">sys</span>
+    </div>
+</div>
+</div>
 
-<span class="k">def</span> <span class="nf">question_with_response</span><span class="p">(</span><span class="n">prompt</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
-    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-    <span class="k">return</span> <span class="n">msg</span>
+</div>
+    
 
-<span class="n">questions</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">correct</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
 
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Hello, &#39;</span> <span class="o">+</span> <span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; running &quot;</span> <span class="o">+</span> <span class="n">sys</span><span class="o">.</span><span class="n">executable</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;You will be asked &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; questions.&quot;</span><span class="p">)</span>
-<span class="n">question_and_answer</span><span class="p">(</span><span class="s2">&quot;Are you ready to take a test?&quot;</span><span class="p">)</span>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-bash"><pre><span></span>---
+toc: <span class="nb">true</span>
+layout: post
+description: Liav<span class="s1">&#39;s Python Quiz questions</span>
+<span class="s1">categories: [markdown]</span>
+<span class="s1">title: Python Quiz</span>
+<span class="s1">---</span>
+<span class="s1">## Python Quiz:</span>
 
-<span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">&quot;What command is used to include other functions that were previously developed?&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">&quot;import&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is correct!&quot;</span><span class="p">)</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is incorrect!&quot;</span><span class="p">)</span>
+<span class="s1">import getpass, sys</span>
 
-<span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">&quot;What command is used to evaluate correct or incorrect response in this example?&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">&quot;if&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is correct!&quot;</span><span class="p">)</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is incorrect!&quot;</span><span class="p">)</span>
+<span class="s1">def question_with_response(prompt):</span>
+<span class="s1">    print(&quot;Question: &quot; + prompt)</span>
+<span class="s1">    msg = input()</span>
+<span class="s1">    return msg</span>
 
-<span class="n">rsp</span> <span class="o">=</span> <span class="n">question_with_response</span><span class="p">(</span><span class="s2">&quot;Each &#39;if&#39; command contains an &#39;_________&#39; to determine a true or false condition?&quot;</span><span class="p">)</span>
-<span class="k">if</span> <span class="n">rsp</span> <span class="o">==</span> <span class="s2">&quot;expression&quot;</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is correct!&quot;</span><span class="p">)</span>
-    <span class="n">correct</span> <span class="o">+=</span> <span class="mi">1</span>
-<span class="k">else</span><span class="p">:</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">rsp</span> <span class="o">+</span> <span class="s2">&quot; is incorrect!&quot;</span><span class="p">)</span>
+<span class="s1">questions = 3</span>
+<span class="s1">correct = 0</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">getpass</span><span class="o">.</span><span class="n">getuser</span><span class="p">()</span> <span class="o">+</span> <span class="s2">&quot; you scored &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">correct</span><span class="p">)</span> <span class="o">+</span><span class="s2">&quot;/&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">questions</span><span class="p">))</span>
+<span class="s1">print(&#39;</span>Hello, <span class="s1">&#39; + getpass.getuser() + &quot; running &quot; + sys.executable)</span>
+<span class="s1">print(&quot;You will be asked &quot; + str(questions) + &quot; questions.&quot;)</span>
+<span class="s1">question_and_answer(&quot;Are you ready to take a test?&quot;)</span>
 
-<span class="k">def</span> <span class="nf">question_and_answer</span><span class="p">(</span><span class="n">What</span> <span class="ow">is</span> <span class="n">the</span> <span class="n">definition</span> <span class="n">of</span> <span class="s2">&quot;ominicient&quot;</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Question: &quot;</span> <span class="o">+</span> <span class="n">prompt</span><span class="p">)</span>
-    <span class="n">msg</span> <span class="o">=</span> <span class="nb">input</span><span class="p">()</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Infinitely knowledgable: &quot;</span> <span class="o">+</span> <span class="n">msg</span><span class="p">)</span>
+<span class="s1">rsp = question_with_response(&quot;What command is used to include other functions that were previously developed?&quot;)</span>
+<span class="s1">if rsp == &quot;import&quot;:</span>
+<span class="s1">    print(rsp + &quot; is correct!&quot;)</span>
+<span class="s1">    correct += 1</span>
+<span class="s1">else:</span>
+<span class="s1">    print(rsp + &quot; is incorrect!&quot;)</span>
+
+<span class="s1">rsp = question_with_response(&quot;What command is used to evaluate correct or incorrect response in this example?&quot;)</span>
+<span class="s1">if rsp == &quot;if&quot;:</span>
+<span class="s1">    print(rsp + &quot; is correct!&quot;)</span>
+<span class="s1">    correct += 1</span>
+<span class="s1">else:</span>
+<span class="s1">    print(rsp + &quot; is incorrect!&quot;)</span>
+
+<span class="s1">rsp = question_with_response(&quot;Each &#39;</span><span class="k">if</span><span class="s1">&#39; command contains an &#39;</span>_________<span class="err">&#39;</span> to determine a <span class="nb">true</span> or <span class="nb">false</span> condition?<span class="s2">&quot;)</span>
+<span class="s2">if rsp == &quot;</span>expression<span class="s2">&quot;:</span>
+<span class="s2">    print(rsp + &quot;</span> is correct!<span class="s2">&quot;)</span>
+<span class="s2">    correct += 1</span>
+<span class="s2">else:</span>
+<span class="s2">    print(rsp + &quot;</span> is incorrect!<span class="s2">&quot;)</span>
+
+<span class="s2">print(getpass.getuser() + &quot;</span> you scored <span class="s2">&quot; + str(correct) +&quot;</span>/<span class="s2">&quot; + str(questions))</span>
+
+<span class="s2">def question_and_answer(What is the definition of &quot;</span>ominicient<span class="s2">&quot;):</span>
+<span class="s2">    print(&quot;</span>Question: <span class="s2">&quot; + prompt)</span>
+<span class="s2">    msg = input()</span>
+<span class="s2">    print(&quot;</span>Infinitely knowledgable: <span class="s2">&quot; + msg)</span>
 </pre></div>
 
     </div>
