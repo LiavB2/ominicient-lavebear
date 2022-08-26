@@ -4,22 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>LB Blogs | CSP Blogs by LB</title>
+<title>Python Quiz | LB Blogs</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="LB Blogs" />
+<meta property="og:title" content="Python Quiz" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="CSP Blogs by LB" />
-<meta property="og:description" content="CSP Blogs by LB" />
-<link rel="canonical" href="https://liavb2.github.io/ominicient-lavebear/" />
-<meta property="og:url" content="https://liavb2.github.io/ominicient-lavebear/" />
+<meta name="description" content="Liav’s Python Quiz questions" />
+<meta property="og:description" content="Liav’s Python Quiz questions" />
+<link rel="canonical" href="https://liavb2.github.io/ominicient-lavebear/markdown/2022/08/25/LBQuiz.py" />
+<meta property="og:url" content="https://liavb2.github.io/ominicient-lavebear/markdown/2022/08/25/LBQuiz.py" />
 <meta property="og:site_name" content="LB Blogs" />
-<meta property="og:image" content="https://liavb2.github.io/ominicient-lavebear/images/logo.png" />
-<meta property="og:type" content="website" />
-<meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://liavb2.github.io/ominicient-lavebear/images/logo.png" />
-<meta property="twitter:title" content="LB Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-08-25T00:00:00-05:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Python Quiz" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","description":"CSP Blogs by LB","headline":"LB Blogs","image":"https://liavb2.github.io/ominicient-lavebear/images/logo.png","name":"LB Blogs","url":"https://liavb2.github.io/ominicient-lavebear/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-08-25T00:00:00-05:00","datePublished":"2022-08-25T00:00:00-05:00","description":"Liav’s Python Quiz questions","headline":"Python Quiz","mainEntityOfPage":{"@type":"WebPage","@id":"https://liavb2.github.io/ominicient-lavebear/markdown/2022/08/25/LBQuiz.py"},"url":"https://liavb2.github.io/ominicient-lavebear/markdown/2022/08/25/LBQuiz.py"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/ominicient-lavebear/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://liavb2.github.io/ominicient-lavebear/feed.xml" title="LB Blogs" /><link rel="shortcut icon" type="image/x-icon" href="/ominicient-lavebear/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -71,66 +70,78 @@ window.onload = wrap_img;
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <div class="home"><p><img src="/ominicient-lavebear/images/DNHS.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear" /></p>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<h1 id="home-page">Home Page</h1>
-<p>This site is built by Liav Bar, a period 4 CSP student.
-Junior at Del Norte High School
-Student of Mr Yeung</p>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Python Quiz</h1><p class="page-description">Liav's Python Quiz questions</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-08-25T00:00:00-05:00" itemprop="datePublished">
+        Aug 25, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      1 min read
+    
+</span></p>
 
-<h1 id="posts">Posts</h1>
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/ominicient-lavebear/categories/#markdown">markdown</a>
+        
+      
+      </p>
+    
 
+    </header>
 
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+</ul>## Python Quiz:
 
-  
+import getpass, sys
 
-  <!-- Hide posts if front matter flag hide:true -->
-  
-  
+def question_with_response(prompt):
+    print("Question: " + prompt)
+    msg = input()
+    return msg
 
-  <!-- Sort posts by rank, then date -->
-  
-  
-  
+questions = 3
+correct = 0
 
- 
-  
+print('Hello, ' + getpass.getuser() + " running " + sys.executable)
+print("You will be asked " + str(questions) + " questions.")
+question_and_answer("Are you ready to take a test?")
 
-   <!-- Assemble final sorted posts array -->
-  
-  <ul class="post-list"><li><h3>
-    <a class="post-link" href="/ominicient-lavebear/markdown/2022/08/25/LBQuiz.py">
-    Python Quiz
-    </a>
-</h3><p class="post-meta-description">Liav's Python Quiz questions</p><p class="post-meta">Aug 25, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/ominicient-lavebear/2022/08/22/First-Bash.html">
-    First Bash
-    </a>
-</h3><p class="post-meta">Aug 22, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/ominicient-lavebear/2022/08/21/Firstblogpost.html">
-    LB Jupyter Post
-    </a>
-</h3><p class="post-meta">Aug 21, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/ominicient-lavebear/markdown/2022/08/21/LBnew.html">
-    Liav&#39;s Computer Science Goals
-    </a>
-</h3><p class="post-meta-description">Liav Bar's goals for AP Computer Science Principles this year.</p><p class="post-meta">Aug 21, 2022</p>
-</li><li><h3>
-    <a class="post-link" href="/ominicient-lavebear/jupyter/2020/02/20/test.html">
-    Fastpages Notebook Blog Post
-    </a>
-</h3><p class="post-meta-description">A tutorial of fastpages for Jupyter notebooks.</p><p class="post-meta">Feb 20, 2020</p>
-</li><li><h3>
-    <a class="post-link" href="/ominicient-lavebear/markdown/2020/01/14/test-markdown-post.html">
-    An Example Markdown Post
-    </a>
-</h3><p class="post-meta-description">A minimal example of using markdown with fastpages.</p><p class="post-meta">Jan 14, 2020</p>
-</li></ul>
+rsp = question_with_response("What command is used to include other functions that were previously developed?")
+if rsp == "import":
+    print(rsp + " is correct!")
+    correct += 1
+else:
+    print(rsp + " is incorrect!")
 
-    </div>
+rsp = question_with_response("What command is used to evaluate correct or incorrect response in this example?")
+if rsp == "if":
+    print(rsp + " is correct!")
+    correct += 1
+else:
+    print(rsp + " is incorrect!")
+
+rsp = question_with_response("Each 'if' command contains an '_________' to determine a true or false condition?")
+if rsp == "expression":
+    print(rsp + " is correct!")
+    correct += 1
+else:
+    print(rsp + " is incorrect!")
+
+print(getpass.getuser() + " you scored " + str(correct) +"/" + str(questions))
+
+def question_and_answer(What is the definition of "ominicient"):
+    print("Question: " + prompt)
+    msg = input()
+    print("Infinitely knowledgable: " + msg)
+  </div><a class="u-url" href="/ominicient-lavebear/markdown/2022/08/25/LBQuiz.py" hidden></a>
+</article>
+
       </div>
     </main><footer class="site-footer h-card">
   <data class="u-url" href="/ominicient-lavebear/"></data>
