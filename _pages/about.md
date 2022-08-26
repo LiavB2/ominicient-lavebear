@@ -1,11 +1,13 @@
 ---
 layout: page
-title: About Me
+title: About Creator
 permalink: /about/
 ---
 
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+![]({{site.baseurl}}/images/lavebear.png "https://github.com/LiavB2/ominicient-lavebear")
+
+Hi! This Fastpages website was constructed by Liav Bar. I am a Junior at Del Norte. 
 
 
 
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
+
