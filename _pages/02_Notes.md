@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Notes
-permalink: /about/
+permalink: /notes/
 ---
  
 ## Notes For CSP
