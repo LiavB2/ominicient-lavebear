@@ -127,8 +127,8 @@
       ,"page1": {
           "title": "Notes",
           "content": "Notes For CSP . Weeks 1 and 2: . Markdown posts do not contain code, whereas jupyter notebooks (in the form of a post) will allow us to post the running of code. | You can change the logo of your website by replacing the current icon with one of your own. | .",
-          "url": "https://liavb2.github.io/ominicient-lavebear/about/",
-          "relUrl": "/about/",
+          "url": "https://liavb2.github.io/ominicient-lavebear/notes/",
+          "relUrl": "/notes/",
           "date": ""
       }
       
