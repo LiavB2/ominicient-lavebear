@@ -9,12 +9,16 @@ title: HTML Fragments
 ## Display of the Change of Theme (Minima to Hacker)
 ![]({{site.baseurl}}/images/changetheme.png "https://github.com/LiavB2/ominicient-lavebear") 
 
-- I Noticed that
+- After changing the theme of my Fastpages from Minima to Hacker, I noticed multiple changes to the design of the website. 
+- First of all, the dark mode that I had was removed and became light mode again. 
+- Next, I noticed that the indent for the links to each post was removed. They were all the way to the left.
+- Finally, rather than having tabs to visit other pages on the website (located in the top right), there is a dropdown menu that has all the page options listed (located in the top left).
 
 
 ## Constraints of Changing Theme
 ![]({{site.baseurl}}/images/BashInHacker.png "https://github.com/LiavB2/ominicient-lavebear") 
 
+- After changing the theme to hacker, I noticed that every code that I ran in "Bash Kernel" just became text (like a markdown).
 
 ## Key Points in CSP So Far Table Example
 
