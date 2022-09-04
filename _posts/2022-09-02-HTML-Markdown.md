@@ -21,7 +21,7 @@
 ## Key Points in CSP So Far Table Example
 |S.NO| Week 0 |            
 |-|-|
-| 1  |Downloading and Using VScode|
+| 1  |Downloading and Using VScode|[This is the link to __]()
 | 2  |Downloading and Using Anaconda| 
 | 3  |Making a Fastpages website through GitHub and VScode| 
 | 4  |Installing various kernels such as Bash, Java, and Python|
