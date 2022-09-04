@@ -1,10 +1,10 @@
-# HTML Fragments
-> Hacks for the HTML Fragments
-
-- toc: true 
-- badges: true
-- comments: true
-- categories: [Markdown]
+---
+toc: true
+layout: post
+description: Hacks and assignment for HTML Fragments
+categories: [markdown]
+title: HTML Fragments
+---
 
 ## Display of the Change of Theme (Minima to Hacker)
 ![]({{site.baseurl}}/images/changetheme.png "https://github.com/LiavB2/ominicient-lavebear") 
@@ -14,8 +14,6 @@
 
 ## Constraints of Changing Theme
 ![]({{site.baseurl}}/images/BashInHacker.png "https://github.com/LiavB2/ominicient-lavebear") 
-
-
 
 
 ## Key Points in CSP So Far Table Example
