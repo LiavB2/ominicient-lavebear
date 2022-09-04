@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Html Markdown",
-            "content": "HTML Fragments . Hacks for the HTML Fragments . toc: true | badges: true | comments: true | categories: [Markdown] | . Display of the Change of Theme (Minima to Hacker) . . I Noticed that | . Constraints of Changing Theme . . Key Points in CSP So Far Table Example . |S.NO| Week 0|Week 1|Week 2| |— |——-|——|——| | 1 |Downloading and Using VScode| | 2 |Downloading and Using Anaconda| | 3 |Making a Fastpages website through GitHub and VScode| | 4 |Installing various kernels such as Bash, Java, and Python| | 4 |Creating issue tickets| | 5 |Fundamentals of Jupyter Notebooks| .",
+            "content": "HTML Fragments . Hacks for the HTML Fragments . toc: true | badges: true | comments: true | categories: [Markdown] | . Display of the Change of Theme (Minima to Hacker) . . I Noticed that | . Constraints of Changing Theme . . Key Points in CSP So Far Table Example . |S.NO| Week 0 | |-|-| | 1 |Downloading and Using VScode| | 2 |Downloading and Using Anaconda| | 3 |Making a Fastpages website through GitHub and VScode| | 4 |Installing various kernels such as Bash, Java, and Python| | 4 |Creating issue tickets| | 5 |Fundamentals of Jupyter Notebooks| .",
             "url": "https://liavb2.github.io/ominicient-lavebear/2022/09/02/HTML-Markdown.html",
             "relUrl": "/2022/09/02/HTML-Markdown.html",
             "date": " • Sep 2, 2022"
