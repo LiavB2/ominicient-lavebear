@@ -16,6 +16,9 @@ title: AppLab Quiz Outline
 |4|How Many Super Bowls have the LA Chargers Won?|1|2|5|4|
 |5|Total Score|Displays the total score they recieved on the quiz|NfL Logo|"Thanks For Playing!"|-|
 
+- I want the quiz to somehow display that the user got a question correct/incorrect
+- Answer choices to be images and not just words
+
 ---
 
 # Pre-Coding Thoughts and Ideas
@@ -28,25 +31,29 @@ title: AppLab Quiz Outline
 ## What I am not Confident that I can do (yet):
 - Displaying if they got the question Incorrect or Correct
 - Embeding an image as an answer choice
-- Displaying the total score on the last page
 
 ---
 
 # Thoughts I Have While Coding
-- 
+- How do I make an image a button as the answer choice? (EDIT) Name the image and use "onEvent" command to make "image name" on "click" set screen __.
+- How can I display that the user got a question correct/incorrect? (EDIT) I originally wanted the "Correct" or "Incorrect" to show on the same page where the question was asked, but I resorted to changing to a "wrong" or "right" answer screen upon the click of a wrong or right answer. 
 
 --- 
 
 # Post Coding Thoughts
 
 ## Successes
-- 
+- Images as answer choices
+- Making a nice background
+- Quiz displays if the user got an answer right/wrong
+- Intuitive/easy to use quiz
+- Was able to include every question I wanted.
 
 ## Failures
-- 
+- II originally wanted the "Correct" or "Incorrect" to show on the same page where the question was asked, but I was not able to figure out how to do this. 
 
 ## What I learned
-- 
+- I became familiar with how to use the block coding, while learning the basics of Java.
 
 # Final Quiz 
 
