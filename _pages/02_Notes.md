@@ -26,3 +26,11 @@ permalink: /notes/
 | String | A series of readable or usable sentences that the user will use | 
 | len() | Returns the length (the number of items) of an object |
 | return | Used to return from a function (break out of the function) |
+
+
+# Week 3 Notes
+- Learned how to do basic block coding with Java
+- Utilizing OnEvent command to make an action happen when a specific event occurs
+- Learned the structure of the AP CSP Exam (How to get a 5)
+- The AP Exam create a performance task can be made on any platform
+- Algorithmic sequences are usefull for creating quizzes.
