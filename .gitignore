@@ -14,3 +14,4 @@ _notebooks/.ipynb_checkpoints
 __pycache__
 images/copied_from_nb/my_icons/fastai_logo.png
 .gitignore
+_posts/2022-09-docker-server.md
