@@ -12,3 +12,5 @@ _notebooks/.ipynb_checkpoints
 .netlify
 .tweet-cache
 __pycache__
+images/copied_from_nb/my_icons/fastai_logo.png
+.gitignore
