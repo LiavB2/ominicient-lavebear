@@ -54,4 +54,4 @@ Taking time to be thankful about something everyday can improve one's happiness.
 - Sleep at least 7.5 hours
 - Always eat healthy
 - Excersize as much as I can
-- Be a good person.
+- Be a good person. :)
