@@ -9,6 +9,17 @@ title: Docker Local Fastpages and Python Webpages Servers
 # Fastpages Local Server with Docker
 - As you can see I have successfully created a local server for my fastpages website that allows me to create a preview of potential edits and changes to the site. After I review my changes on the local server, I can then commit them to my actual website.
 
+- You can see that the server address was created:
+![]({{site.baseurl}}/images/fastpageslocalserveraddress.png "https://github.com/LiavB2/ominicient-lavebear")
 
+- That leads to this server:
+![]({{site.baseurl}}/images/fastpageslocalserver.png "https://github.com/LiavB2/ominicient-lavebear")
 
 # Python Webpages Local Server
+- As you can see I have also successfully created a local server for my groups python webpages site that allows me to create a preview of potential edits and changes to our group website. After I review my changes on the local server, I can then commit them to our actual website.
+
+- You can see that the server address was created:
+![]({{site.baseurl}}/images/webpageslocalserveraddress.png "https://github.com/LiavB2/ominicient-lavebear")
+
+- That leads to this server:
+![]({{site.baseurl}}/images/webpageslocalserver.png "https://github.com/LiavB2/ominicient-lavebear")
