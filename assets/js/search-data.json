@@ -13,8 +13,8 @@
   
     
         ,"post1": {
-            "title": "Docker Server",
-            "content": "test . Hello this is a test .",
+            "title": "Docker Local Fastpages and Python Webpages Servers",
+            "content": "Fastpages Local Server with Docker . As you can see I have successfully created a local server for my fastpages website that allows me to create a preview of potential edits and changes to the site. After I review my changes on the local server, I can then commit them to my actual website. . | You can see that the server address was created: . | That leads to this server: . | . Python Webpages Local Server . As you can see I have also successfully created a local server for my groups python webpages site that allows me to create a preview of potential edits and changes to our group website. After I review my changes on the local server, I can then commit them to our actual website. . | You can see that the server address was created: . | That leads to this server: . | .",
             "url": "https://liavb2.github.io/ominicient-lavebear/markdown/2022/09/15/docker.html",
             "relUrl": "/markdown/2022/09/15/docker.html",
             "date": " • Sep 15, 2022"
