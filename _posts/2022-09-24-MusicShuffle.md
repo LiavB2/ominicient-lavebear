@@ -1,9 +1,9 @@
 ---
 toc: true
 layout: post
-description: Music Shuffle Program for Java
+description: Music Shuffle Program for JavaScript
 categories: [Java]
-title: Music Shuffle Song Selector with Java
+title: Music Shuffle Song Selector with JavaScript
 ---
 
 ### Submenu:
