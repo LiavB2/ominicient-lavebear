@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "JavaScript Test Post",
-            "content": "Hi .",
+            "content": "console.log(&quot;This is my use of JavaScript Kernel!&quot;) . This is my use of JavaScript Kernel! . Submenu: . This is the navigation bar submenu I created with links to this page, and the Javascript program I created that outputs a random song from a playlist. . | JavaScript Documentation | Music Shuffle | . .",
             "url": "https://liavb2.github.io/ominicient-lavebear/java/2022/09/25/testpost.html",
             "relUrl": "/java/2022/09/25/testpost.html",
             "date": " • Sep 25, 2022"
