@@ -14,7 +14,7 @@
     
         ,"post1": {
             "title": "Music Shuffle Song Selector with Java",
-            "content": "Submenu: . | JavaScript Documentation | Focus Habits | . What is this program? . This will be a program that randomly selects a song from a list, and gives you a spotify link to listen to it. | . Click Me . .",
+            "content": "Submenu: . | JavaScript Documentation | Focus Habits | . What is this program? . This will be a program that randomly selects a song from a list, and gives you a spotify link to listen to it. | . Click For Random Song . &lt;/script&gt; .",
             "url": "https://liavb2.github.io/ominicient-lavebear/java/2022/09/24/MusicShuffle.html",
             "relUrl": "/java/2022/09/24/MusicShuffle.html",
             "date": " • Sep 24, 2022"
