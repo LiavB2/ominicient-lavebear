@@ -21,7 +21,7 @@ const songNameList = ["The Age of The Understatement", "Standing Next To Me", "C
 function randomSelect() {
     var index=Math.floor(Math.random() *songList.length)
     document.getElementById("Song Selector").innerHTML = songNameList[index]
-    document.getElementById("").href = songList[index]
+    document.getElementById("Song Selector").href = songList[index]
 }
 
 </script>
