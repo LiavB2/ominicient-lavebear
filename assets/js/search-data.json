@@ -13,7 +13,7 @@
   
     
         ,"post1": {
-            "title": "JavaScript Kernel",
+            "title": "JavaScript Usage",
             "content": "console.log(&quot;This is my use of JavaScript Kernel!&quot;) . This is my use of JavaScript Kernel! . Submenu: . {% include nav_javascript.html %} .",
             "url": "https://liavb2.github.io/ominicient-lavebear/javascript/2022/09/22/JavaUsage.html",
             "relUrl": "/javascript/2022/09/22/JavaUsage.html",
