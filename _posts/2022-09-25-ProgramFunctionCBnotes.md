@@ -34,7 +34,7 @@ title: Program Function and Purpose CB Notes and Quiz
 - Programs are described by what the program does and how its statements accomplish the function.
 
 # Quiz: 
-![]({{site.baseurl}}/images/collaborationquiz.png "https://github.com/LiavB2/ominicient-lavebear")
+![]({{site.baseurl}}/images/programquiz.png "https://github.com/LiavB2/ominicient-lavebear")
 
 # Hacks Qs:
 
