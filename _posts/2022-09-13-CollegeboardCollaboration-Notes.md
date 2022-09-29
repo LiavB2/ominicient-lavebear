@@ -27,6 +27,9 @@ title: Collaboration Notes
 ## Completed Collaboration Video Quiz:
 ![]({{site.baseurl}}/images/collaborationquiz.png "https://github.com/LiavB2/ominicient-lavebear")
 
+## Problem I got incorrect:
+- In problem 3, I believed that users would be able to comment on the code after discovering errors, but apperently they are unlikely to have expertise in your code, so they will just provide feedback to give a variety of perspectives to the coding process of your program.
+
 # Hacks
 - My group is made of no former friends, though most of us have similar interests.
 - My group has many diverse backgrounds: I am Israeli, Male, and 11th grade. Annika Is a Taiwanese Sophomore Girl, Haeryn is a Korean Sophomore, Sophia is a Chinese Sophomore.

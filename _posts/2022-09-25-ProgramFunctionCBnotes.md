@@ -36,6 +36,9 @@ title: Program Function and Purpose CB Notes and Quiz
 # Quiz: 
 ![]({{site.baseurl}}/images/programquiz.png "https://github.com/LiavB2/ominicient-lavebear")
 
+## Problem I Got Incorrect:
+- In problem #2 it displayed a code and the problem asked us to explain its purpose. I understood that it would display true if x is negative, but I assumed that it would display false if anything otherwise, however there isn no documentation of the code saying it would do that. Therefore, it would display nothing otherwise, not false.
+
 # Hacks Qs:
 
 1. We have a good idea for the PBL web final project. We are going to make a daily planner for your events, homework, and schedule. 
