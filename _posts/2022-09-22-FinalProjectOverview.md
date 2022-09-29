@@ -20,13 +20,13 @@ title: Program Design for Final Project
 - We will store ratings and scales for the users moods and characteristics in lists. This data is what will be used in our program, thus demonstrating data abstraction.
 
 ## #3: Managing Complexity
-- 
+- The program we will be creating will contain a list of all the moods, journals, and feeling categories that are essential to contain in out code segment, therefore the program could not be written without it.
 
 ## #4: Procedral Abstraction 
-- 
+- The proceedure that the user will endure will include selecting their mood from a variety of emoticons. The parameter that will limit this procedure include the list of Moods and feelings that are accountable for the output of the program. 
 
 ## #5: Algorithm Implementation
-- 
+- Our program will involve a sequence of various mood/feeling options, that will be selected by the user. The selection of the various given options will determine the path that the program will take (depending on the user). The iteration will then be a repition of a section of code that gives the user their options.
 
 ## #6: Testing
-- 
+- Eventually, our program will contain an "overview of your week" feature that will require the abstraction of code segments that were utilized and run throughout the week in order to display to the user a log of the journal they created over the course of the past week.
