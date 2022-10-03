@@ -36,6 +36,6 @@ permalink: /notes/
 - Algorithmic sequences are usefull for creating quizzes.
 
 # Notes with commands to edit flask site on AWS Instance
--always in "cd lavflask" 
+- always in "cd lavflask" 
 - git pull
-- sudo docker-compose up --build -d
+- sudo docker-compose up --build -d 
