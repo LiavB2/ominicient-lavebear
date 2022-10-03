@@ -34,3 +34,8 @@ permalink: /notes/
 - Learned the structure of the AP CSP Exam (How to get a 5)
 - The AP Exam create a performance task can be made on any platform
 - Algorithmic sequences are usefull for creating quizzes.
+
+# Notes with commands to edit flask site on AWS Instance
+-always in "cd lavflask" 
+- git pull
+- sudo docker-compose up --build -d
