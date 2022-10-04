@@ -39,3 +39,12 @@ permalink: /notes/
 - always in "cd lavflask" 
 - git pull
 - sudo docker-compose up --build -d 
+
+# Git Commands
+- A “git clone” makes a local Git repository 
+- A .git directory contains a local database that keeps track of local changes.
+- A “git commit” makes a child snapshot of the original parent on the local database.
+- The .gitignore file tells .git to ignore certain files in directory tree (ie files constructed from source or derived files, like ipynb files that turn into md files).
+- The “git push” command moves files from local system back to cloud server (GitHub).
+- Pull requests is common process used to merge code from isolated Fork back to the primary GitHub repository.
+- A “git rebase” is a common command for Developer on an isolated Git branch to update their environment from the “main” branch.
