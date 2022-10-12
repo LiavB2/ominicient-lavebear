@@ -3,30 +3,31 @@ toc: true
 layout: post
 description: AP requirements for final group project.
 categories: [Markdown]
-title: Program Design for Final Project
+title: Program Design for Final Project (Schedule)
 ---
 
-# Our Final Project: Interactive Journal
-- Our Project will be an interactive journal that the user will use to track their gratitude, and moods.
-- The user will journal their daily gratitude and activities, while selecting from various emoticons that select your mood.
-- The output/purpose of the program is to improve the mental health of its user and to track their moods. This program will improve its users mental health, because it allows them to document what they are grateful for and understand the positive side of their life.
+# Our Final Project: Scheduling Program
+- Our Project will be a scheduling calendar that tells you whether you can attend your events or not, depending on the weather.
+- The user will have in input of their events that they plan on attending in the future (onto the calendar). 
+    - The output of the program would display the weather and let the user know whether they should be attending that event based on the weather.
+- The purpose of this program is to make a more convinient scheduler/calendar that informs the user of obstacles of weather that could impact their events. 
 
 # AP Exam Requirements: 
 
-## #1: Program Purpose and Function
-- The purpose of the program is to provide a platform in which users can schedule and plan out their day, as well as take into account their mindfulness and mental health.
+## Row 1: Program Purpose and Function
+Our program's purpose is to provide an automated organizer for students' tasks. The function is to utilize a calendar and allow students to add, remove, and edit events on each day. Students will also be able to sign in with their own account in order to save their events.
 
-## #2: Data Abstraction
-- We will store ratings and scales for the users moods and characteristics in lists. This data is what will be used in our program, thus demonstrating data abstraction.
+## Row 2: Data Abstraction
+The data will be a list which includes a students' events. As a student adds, removes, or edits an event, the list will change. The name of the variable representing the list will be calendarEvent, or some variable related to events on a calendar.
 
-## #3: Managing Complexity
-- The program we will be creating will contain a list of all the moods, journals, and feeling categories that are essential to contain in out code segment, therefore the program could not be written without it.
+## Row 3: Managing Complexity
+We can manage the complexity by creating a new list specific to each user. Then, we can create a list of all the users, making the entire project easy to manage.
 
-## #4: Procedral Abstraction 
-- The proceedure that the user will endure will include selecting their mood from a variety of emoticons. The parameter that will limit this procedure include the list of Moods and feelings that are accountable for the output of the program. 
+## Row 4: Procedural Abstraction
+My student-developed procedure is to make the login screen for the website. I will also help to log all of the information entered by the users when they first use the scheduler.
 
-## #5: Algorithm Implementation
-- Our program will involve a sequence of various mood/feeling options, that will be selected by the user. The selection of the various given options will determine the path that the program will take (depending on the user). The iteration will then be a repition of a section of code that gives the user their options.
+## Row 5: Algorithm Implementation
+While we have not started on the project yet, our plan is to make a list inside of a list, etc. The list can be appended by using a while loop.
 
-## #6: Testing
-- Eventually, our program will contain an "overview of your week" feature that will require the abstraction of code segments that were utilized and run throughout the week in order to display to the user a log of the journal they created over the course of the past week.
+## Row 6: Testing
+After making slight changes, I will test the code by using a local server. I will do it very often in order to make sure that everything is working before I move onto a new task.
