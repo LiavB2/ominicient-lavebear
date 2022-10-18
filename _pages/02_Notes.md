@@ -48,3 +48,11 @@ permalink: /notes/
 - The “git push” command moves files from local system back to cloud server (GitHub).
 - Pull requests is common process used to merge code from isolated Fork back to the primary GitHub repository.
 - A “git rebase” is a common command for Developer on an isolated Git branch to update their environment from the “main” branch.
+
+# Computer System and Networks notes
+- The internet
+    - a computer system that consits of the world wide web, lcal area network, HTTP, DNS, TCP, UDP, IP.
+- Web servers and browsers use TCP and IP Protocols to connect to the internet
+    - HTTP sends requests to a web client to recieve a response from a server in the form of JSON or HTML. 
+        - Used for communication between a web server and users browser.
+    - TCP/IP messages are broken into packets and routed to various destinations including OP routers that take it to the destination or another router.
