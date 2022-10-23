@@ -96,7 +96,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#take-2">Take 2:</a></li>
+<li class="toc-entry toc-h1"><a href="#hacks-breaking-down-the-code">Hacks: Breaking Down the Code</a></li>
 </ul><!-- HTML table fragment for page -->
 <table>
   <thead>
@@ -213,154 +213,47 @@ window.onload = wrap_img;
   });
 </script>
 
-<h1 id="take-2">
-<a class="anchor" href="#take-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Take 2:</h1>
+<h1 id="hacks-breaking-down-the-code">
+<a class="anchor" href="#hacks-breaking-down-the-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks: Breaking Down the Code</h1>
 
-<!-- HTML table fragment for page -->
-<table>
-  <thead>
-  <tr>
-    <th>Joke</th>
-    <th>HaHa</th>
-    <th>Boohoo</th>
-  </tr>
-  </thead>
-  <tbody id="result">
-    <!-- javascript generated data -->
-  </tbody>
-</table>
+<p><img src="/ominicient-lavebear/images/tablecode.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
 
-<!-- Script is layed out in a sequence (without a function) and will execute when page is loaded -->
-<script>
+<ul>
+  <li>This first part is a Table, Th is table header, and we can see that the table has 4 columns: “time” “all time cases “ “Recorded Deaths” and “Active cases”. td is the table data and it gives 4 IDs: time, total cases, total deaths, and active cases. Each ID stores the data that is fetched by dcoument.getElementByID (later in the code) for time, total cases, total deaths, and active cases. To make the world data table.</li>
+  <li>The country data table does the same process for the headers, however it has an ID “result” which is returned by the upcoming data.</li>
+</ul>
 
-  // prepare HTML defined "result" container for new output
-  const resultContainer = document.getElementById("result");
+<p><img src="/ominicient-lavebear/images/script.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
 
-  // keys for joke reactions
-  const HAHA = "haha";
-  const BOOHOO = "boohoo";
+<ul>
+  <li>&lt;”Script”&gt; makes it in javascript</li>
+  <li>const url: stores the link inside a variable called “url” and uses the fetch command (further down) to take that link (url) and use the headers that are in the json file and takes their values and puts them in the table that was just made.</li>
+</ul>
 
-  // prepare fetch urls
-  const url = "https://flask.nighthawkcodingsociety.com/api/jokes";
-  const like_url = url + "/like/";  // haha reaction
-  const jeer_url = url + "/jeer/";  // boohoo reaction
+<p><img src="/ominicient-lavebear/images/fetch.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
 
-  // prepare fetch GET options
-  const options = {
-    method: 'GET', // *GET, POST, PUT, DELETE, etc.
-    mode: 'cors', // no-cors, *cors, same-origin
-    cache: 'default', // *default, no-cache, reload, force-cache, only-if-cached
-    credentials: 'omit', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json'
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
-  };
-  // prepare fetch PUT options, clones with JS Spread Operator (...)
-  const put_options = {...options, method: 'PUT'}; // clones and replaces method
+<ul>
+  <li>fetches the links to get the headers from URl</li>
+  <li>const errorMsg disregards the Database response error</li>
+  <li>if (response.status…) instead of breaking down the whole code, it eliminates that specific error .</li>
+  <li>then returns the result.container for the country data table.</li>
+</ul>
 
-  // fetch the API
-  fetch(url, options)
-    // response is a RESTful "promise" on any successful fetch
-    .then(response => {
-      // check for response errors
-      if (response.status !== 200) {
-          error('GET API response failure: ' + response.status);
-          return;
-      }
-      // valid response will have JSON data
-      response.json().then(data => {
-          console.log(data);
-          for (const row of data) {
-            // make "tr element" for each "row of data"
-            const tr = document.createElement("tr");
-            
-            // td for joke cell
-            const joke = document.createElement("td");
-              joke.innerHTML = row.id + ". " + row.joke;  // add fetched data to innerHTML
+<p><img src="/ominicient-lavebear/images/data.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
 
-            // td for haha cell with onclick actions
-            const haha = document.createElement("td");
-              const haha_but = document.createElement('button');
-              haha_but.id = HAHA+row.id   // establishes a HAHA JS id for cell
-              haha_but.innerHTML = row.haha;  // add fetched "haha count" to innerHTML
-              haha_but.onclick = function () {
-                // onclick function call with "like parameters"
-                reaction(HAHA, like_url+row.id, haha_but.id);  
-              };
-              haha.appendChild(haha_but);  // add "haha button" to haha cell
+<ul>
+  <li>response.json and console.log take the data from the URL that is in the form of a json file.</li>
+  <li>the document.getElementBYID takes specific data for each ID of the world data table (time, total cases, total deaths, active cases)</li>
+  <li>country data is in the form of a for loop under an HTML contianer called result.container that makes a new row in the country data table for each data point that the country data api link gives us.</li>
+  <li>tr.append builds a row from each table data which is then added to the HTML container with resultContainer.appendChild(tr);</li>
+</ul>
 
-            // td for boohoo cell with onclick actions
-            const boohoo = document.createElement("td");
-              const boohoo_but = document.createElement('button');
-              boohoo_but.id = BOOHOO+row.id  // establishes a BOOHOO JS id for cell
-              boohoo_but.innerHTML = row.boohoo;  // add fetched "boohoo count" to innerHTML
-              boohoo_but.onclick = function () {
-                // onclick function call with "jeer parameters"
-                reaction(BOOHOO, jeer_url+row.id, boohoo_but.id);  
-              };
-              boohoo.appendChild(boohoo_but);  // add "boohoo button" to boohoo cell
-             
-            // this builds ALL td's (cells) into tr (row) element
-            tr.appendChild(joke);
-            tr.appendChild(haha);
-            tr.appendChild(boohoo);
+<p><img src="/ominicient-lavebear/images/errorcatch.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
 
-            // this adds all the tr (row) work above to the HTML "result" container
-            resultContainer.appendChild(tr);
-          }
-      })
-  })
-  // catch fetch errors (ie Nginx ACCESS to server blocked)
-  .catch(err => {
-    error(err + " " + url);
-  });
-
-  // Reaction function to likes or jeers user actions
-  function reaction(type, put_url, elemID) {
-
-    // fetch the API
-    fetch(put_url, put_options)
-    // response is a RESTful "promise" on any successful fetch
-    .then(response => {
-      // check for response errors
-      if (response.status !== 200) {
-          error("PUT API response failure: " + response.status)
-          return;  // api failure
-      }
-      // valid response will have JSON data
-      response.json().then(data => {
-          console.log(data);
-          // Likes or Jeers updated/incremented
-          if (type === HAHA) // like data element
-            document.getElementById(elemID).innerHTML = data.haha;  // fetched haha data assigned to haha Document Object Model (DOM)
-          else if (type === BOOHOO) // jeer data element
-            document.getElementById(elemID).innerHTML = data.boohoo;  // fetched boohoo data assigned to boohoo Document Object Model (DOM)
-          else
-            error("unknown type: " + type);  // should never occur
-      })
-    })
-    // catch fetch errors (ie Nginx ACCESS to server blocked)
-    .catch(err => {
-      error(err + " " + put_url);
-    });
-    
-  }
-
-  // Something went wrong with actions or responses
-  function error(err) {
-    // log as Error in console
-    console.error(err);
-    // append error to resultContainer
-    const tr = document.createElement("tr");
-    const td = document.createElement("td");
-    td.innerHTML = err;
-    tr.appendChild(td);
-    resultContainer.appendChild(tr);
-  }
-
-</script>
-
+<ul>
+  <li>Finally .catch(err =&gt;{ catches every error in the code, and instead of breaking the whole code, it just tells you what the specific error is</li>
+  <li>If this was not here, then (if there was an error) the whole output would be blank.</li>
+</ul>
 
   </div><a class="u-url" href="/ominicient-lavebear/markdown/2022/10/18/HTMLinfo.html" hidden></a>
 </article>
