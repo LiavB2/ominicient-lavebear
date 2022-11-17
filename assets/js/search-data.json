@@ -35,8 +35,8 @@
   
     
         ,"post3": {
-            "title": "Binary Math",
-            "content": "Binary Math with Conversions . Plus Binary Octal Hexadecimal Decimal Minus . +1 | 00000000 | 0 | 0 | 0 | -1 | . Turn on | Turn on | Turn on | . | | | .",
+            "title": "Binary Math + Operations",
+            "content": "Binary Math with Conversions . Plus Binary Octal Hexadecimal Decimal Minus . +1 | 00000000 | 0 | 0 | 0 | -1 | . Turn on | Turn on | Turn on | . | | | . Binary Operations . Binary Search Operations . perform binary operations &quot;AND&quot;, &quot;OR&quot;, &quot;XOR&quot;, &quot;Zero fill left shift&quot;, &quot;Signed right shift&quot;, or &quot;Zero fill right shift&quot; 1st Number: 2nd Number: The Result is: . . Explanation of each button . Boolean Operations . Shifts .",
             "url": "https://liavb2.github.io/ominicient-lavebear/frontend/binary",
             "relUrl": "/frontend/binary",
             "date": " • Nov 15, 2022"

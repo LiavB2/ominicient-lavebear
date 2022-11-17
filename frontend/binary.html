@@ -4,9 +4,9 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Binary Math | LB Blogs</title>
+<title>Binary Math + Operations | LB Blogs</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Binary Math" />
+<meta property="og:title" content="Binary Math + Operations" />
 <meta property="og:locale" content="en_US" />
 <meta name="description" content="A Binary Math illustrative application using HTML, Liquid, and JavaScript." />
 <meta property="og:description" content="A Binary Math illustrative application using HTML, Liquid, and JavaScript." />
@@ -18,9 +18,9 @@
 <meta property="article:published_time" content="2022-11-15T00:00:00-06:00" />
 <meta name="twitter:card" content="summary_large_image" />
 <meta property="twitter:image" content="https://liavb2.github.io/ominicient-lavebear/images/binary.png" />
-<meta property="twitter:title" content="Binary Math" />
+<meta property="twitter:title" content="Binary Math + Operations" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-15T00:00:00-06:00","datePublished":"2022-11-15T00:00:00-06:00","description":"A Binary Math illustrative application using HTML, Liquid, and JavaScript.","headline":"Binary Math","image":"https://liavb2.github.io/ominicient-lavebear/images/binary.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://liavb2.github.io/ominicient-lavebear/frontend/binary"},"url":"https://liavb2.github.io/ominicient-lavebear/frontend/binary"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-11-15T00:00:00-06:00","datePublished":"2022-11-15T00:00:00-06:00","description":"A Binary Math illustrative application using HTML, Liquid, and JavaScript.","headline":"Binary Math + Operations","image":"https://liavb2.github.io/ominicient-lavebear/images/binary.png","mainEntityOfPage":{"@type":"WebPage","@id":"https://liavb2.github.io/ominicient-lavebear/frontend/binary"},"url":"https://liavb2.github.io/ominicient-lavebear/frontend/binary"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/ominicient-lavebear/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://liavb2.github.io/ominicient-lavebear/feed.xml" title="LB Blogs" /><link rel="shortcut icon" type="image/x-icon" href="/ominicient-lavebear/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -308,6 +308,74 @@ window.onload = wrap_img;
         document.getElementById("output").innerHTML = scr;
     }
 </script>
+
+<html> 
+<head>
+    <title>Binary Operations</title>
+    <style type="text/css">
+    body {margin: 30px;}
+    </style> 
+</head>
+<body>
+
+<form>
+    <h1>Binary Search Operations</h1>
+    <mark>perform binary operations "AND", "OR", "XOR", "Zero fill left shift", "Signed right shift", or "Zero fill right shift"</mark>
+    1st Number: <input type="text" id="firstNumber" /><br />
+    2nd Number: <input type="text" id="secondNumber" /><br />
+    <input type="button" onclick="AND()" value="AND" />
+    <input type="button" onclick="OR()" value="OR" />
+    <input type="button" onclick="XOR()" value="XOR" />
+    <input type="button" onclick="ZeroFillLeftShift()" value="Zero fill left shift" />
+    <input type="button" onclick="SignedRightShift()" value="Signed right shift" />
+    <input type="button" onclick="ZeroFillRightShift()" value="Zero fill right shift" />
+</form>
+    <p>The Result is: <br />
+    <span id="result2"></span>
+</p>
+
+
+<script>
+    function AND() {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result2").innerHTML = num1 & num2;
+    }
+    function OR() {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result2").innerHTML = num1 | num2;
+    }
+    function XOR() {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result2").innerHTML = num1 ^ num2;
+    }
+    function ZeroFillLeftShift() {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result2").innerHTML = num1 << num2;
+    }
+    function SignedRightShift() {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result2").innerHTML = num1 >> num2;
+    }
+    function ZeroFillRightShift() {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result2").innerHTML = num1 >> num2;
+    }
+</script>
+
+</body>
+</html>
+
+<h1 id="explanation-of-each-button">Explanation of each button</h1>
+
+<h2 id="boolean-operations">Boolean Operations</h2>
+
+<h2 id="shifts">Shifts</h2>
 
 
       </div>
