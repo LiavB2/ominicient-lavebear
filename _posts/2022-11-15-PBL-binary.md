@@ -1,5 +1,5 @@
 ---
-title: Binary Math
+title: Binary Math + Operations
 layout: default
 description: A Binary Math illustrative application using HTML, Liquid, and JavaScript.
 permalink: /frontend/binary
@@ -236,3 +236,73 @@ type: pbl
         document.getElementById("output").innerHTML = scr;
     }
 </script>
+
+<html> 
+<head>
+    <title>Binary Operations</title>
+    <style type="text/css">
+    body {margin: 30px;}
+    </style> 
+</head>
+<body>
+
+<form>
+    <h1>Binary Search Operations</h1>
+    <mark>perform binary operations "AND", "OR", "XOR", "Zero fill left shift", "Signed right shift", or "Zero fill right shift"</mark>
+    1st Number: <input type="text" id="firstNumber"/><br>
+    2nd Number: <input type="text" id="secondNumber"/><br>
+    <input type="button" onClick="AND()" Value="AND"/>
+    <input type="button" onClick="OR()" Value="OR"/>
+    <input type="button" onClick="XOR()" Value="XOR"/>
+    <input type="button" onClick="ZeroFillLeftShift()" Value="Zero fill left shift"/>
+    <input type="button" onClick="SignedRightShift()" Value="Signed right shift"/>
+    <input type="button" onClick="ZeroFillRightShift()" Value="Zero fill right shift"/>
+</form>
+    <p>The Result is: <br>
+    <span id = "result2"></span>
+</p>
+
+
+<script>
+    function AND() {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result2").innerHTML = num1 & num2;
+    }
+    function OR() {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result2").innerHTML = num1 | num2;
+    }
+    function XOR() {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result2").innerHTML = num1 ^ num2;
+    }
+    function ZeroFillLeftShift() {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result2").innerHTML = num1 << num2;
+    }
+    function SignedRightShift() {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result2").innerHTML = num1 >> num2;
+    }
+    function ZeroFillRightShift() {
+        num1 = document.getElementById("firstNumber").value;
+        num2 = document.getElementById("secondNumber").value;
+        document.getElementById("result2").innerHTML = num1 >> num2;
+    }
+</script>
+
+</body>
+</html>
+
+# Explanation of each button
+
+## Boolean Operations
+
+
+## Shifts
+
