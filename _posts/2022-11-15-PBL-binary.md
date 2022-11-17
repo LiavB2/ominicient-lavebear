@@ -248,7 +248,7 @@ type: pbl
 
 <form>
     <h1>Binary Search Operations</h1>
-    <mark>perform binary operations "AND", "OR", "XOR", "Zero fill left shift", "Signed right shift", or "Zero fill right shift"</mark>
+    <h2>perform binary operations "AND", "OR", "XOR", "Zero fill left shift", "Signed right shift", or "Zero fill right shift"<br></h2>
     1st Number: <input type="text" id="firstNumber"/><br>
     2nd Number: <input type="text" id="secondNumber"/><br>
     <input type="button" onClick="AND()" Value="AND"/>
