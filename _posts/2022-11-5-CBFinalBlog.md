@@ -6,7 +6,7 @@ categories: [Markdown]
 title: Final College Board MC 
 ---
 
-# Total Score: 47/50
+# Total Score: 47/50 is a good score
 
 ![]({{site.baseurl}}/images/score.png "https://github.com/LiavB2/ominicient-lavebear")
 
