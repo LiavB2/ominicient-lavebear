@@ -21,7 +21,7 @@ title: Lesson Pre-Planning
 - My group members previously went over variables and how to make lists and strings, so it is my job to make examples.
 - Mention and go over this reference sheet for making lists with values, aLists, and Blists:
 
-![]({{site.baseurl}}/images/refsheet.png "https://github.com/LiavB2/ominicient-lavebear")
+![]({{site.baseurl}}/images/refsheet.png.png "https://github.com/LiavB2/ominicient-lavebear")
 
 - After this I will pause and ask the class to complete a python quiz that will be in the jupyter notebook.
     - Questions in this quiz would include:
