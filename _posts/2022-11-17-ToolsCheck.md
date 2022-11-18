@@ -12,7 +12,7 @@ title: Tools Check
 
 ## Javascript Kernel
 
-![]({{site.baseurl}}/images/jk.png "https://github.com/LiavB2/ominicient-lavebear")
+![]({{site.baseurl}}/images/JK.png "https://github.com/LiavB2/ominicient-lavebear")
 
 ## Python Kernel
 
