@@ -62,7 +62,7 @@ permalink: /notes/
     - Data about data
     - For example the categories about the blog are data about the data (Or metadata)
 
-- {%%} = Liquid data
+- {     %       %      } = Liquid data
     - Front end HTML code
     - Allows you to generate HTML code
         - Can create loops
