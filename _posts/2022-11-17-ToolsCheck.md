@@ -19,9 +19,10 @@ title: Tools Check
 ![]({{site.baseurl}}/images/pk.png "https://github.com/LiavB2/ominicient-lavebear")
 
 # Make Server
-
+- sudo make server command that makes server and generates the address:
 ![]({{site.baseurl}}/images/fastpageslocalserveraddress.png "https://github.com/LiavB2/ominicient-lavebear")
 
+- Local server running:
 ![]({{site.baseurl}}/images/fastpageslocalserver.png "https://github.com/LiavB2/ominicient-lavebear")
 
 # Running Code in Fastpages for Binary
