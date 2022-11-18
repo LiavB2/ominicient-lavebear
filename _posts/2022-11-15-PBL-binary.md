@@ -302,10 +302,5 @@ type: pbl
 </body>
 </html>
 
-# Explanation of each button
 
-## Boolean Operations
-
-
-## Shifts
 
