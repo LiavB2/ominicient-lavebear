@@ -16,6 +16,7 @@ type: pbl
 
 {% assign BITS = 3 %}
 
+
 <div class="container bg-primary">
     <header class="pb-3 mb-4 border-bottom border-primary text-dark">
         <span class="fs-4">Binary Math with Conversions</span>
@@ -72,7 +73,9 @@ type: pbl
     const MSG_OFF = "Turn off";
     const IMAGE_OFF = "{{site.baseurl}}/images/bulb_off.png"
 
-    // return string with current value of each bit
+    // Above are assignents or functions that are procedural abstractions
+   
+   // return string with current value of each bit
     function getBits() {
         let bits = "";
         for(let i = 0; i < BITS; i++) {

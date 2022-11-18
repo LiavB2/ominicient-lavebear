@@ -56,3 +56,20 @@ permalink: /notes/
     - HTTP sends requests to a web client to recieve a response from a server in the form of JSON or HTML. 
         - Used for communication between a web server and users browser.
     - TCP/IP messages are broken into packets and routed to various destinations including OP routers that take it to the destination or another router.
+
+# Meta Data (11/17/22 in class)
+- Data that is about something else
+    - Data about data
+    - For example the categories about the blog are data about the data (Or metadata)
+
+- {%%} = Liquid data
+    - Front end HTML code
+    - Allows you to generate HTML code
+        - Can create loops
+    - Pre processed or pregenerated HTML code in advance 
+
+- On the CSP exam, counting will start with 1
+    - Where does this happen?
+
+
+
