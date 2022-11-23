@@ -3,7 +3,7 @@
     
         "post0": {
             "title": "Lesson Plan Jupyter Notebook",
-            "content": "score1 = 95 score2 = 24 score3 = 87 print(score1, score2, score3) . 95 24 87 . scores = [95, 24, 87] print(scores) . [95, 24, 87] .",
+            "content": "score1 = 95 score2 = 24 score3 = 87 score4 = 92 print(score1, score2, score3, score4) . 95 24 87 92 . scores = [95, 24, 87] print(scores) . [95, 24, 87] .",
             "url": "https://liavb2.github.io/ominicient-lavebear/jupyter/python/2022/11/23/LessonPlanNB.html",
             "relUrl": "/jupyter/python/2022/11/23/LessonPlanNB.html",
             "date": " • Nov 23, 2022"
