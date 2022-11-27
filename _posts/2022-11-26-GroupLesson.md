@@ -140,6 +140,10 @@ More work: Create a list of your favorite foods and create an index to access th
 
 marks = ["food1"]
 
+### Rubric 
+
+![]({{site.baseurl}}/images/ncrubric.png "https://github.com/LiavB2/ominicient-lavebear")
+
 # Data Abstraction with Lists - Steven
 
 ## Data abstraction can be created with lists.
