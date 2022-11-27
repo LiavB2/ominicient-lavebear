@@ -21,7 +21,7 @@ A variable is an abstraction made inside a program that holds a value. These var
 Variables can be seen as "containers" and each container has a name that holds what it is supposed to hold.
 In the following code, we can see that a variable has the value of "Alex." How can we make the variable appear more organized in the code?
 
-![]({{site.baseurl}}/images/Eddy1.png "https://github.com/LiavB2/ominicient-lavebear")
+![]({{site.baseurl}}/images/eddy1.png "https://github.com/LiavB2/ominicient-lavebear")
 
 ## Choosing Variables
 When choosing variables, it is important to assign the variables name to something that correlates with what the function of the variable is supposed to do. For example, we do not want a variable that is supposed to hold a name be named "age" becaue it can be confusing and mistakes may be more prevalent.
