@@ -134,11 +134,9 @@ There's more than one way to define the variable. List two ways to do it.
 Strings is a series of characters (numbers, letters, etc), one example of a string is your name or your id because strings can contain both numbers and letters.
 
 The following are all examples of strings being used in code, in this case, within print functions.
-```
-print "hello"
-print '123456789'
-print "hello123456789"
-```
+
+![]({{site.baseurl}}/images/nc1.png "https://github.com/LiavB2/ominicient-lavebear")
+
 ## Lists
 Lists are sequences of elements with each element being a variable. An example of a list can be the names of the students in this classroom. 
 
@@ -148,15 +146,21 @@ Lists are sequences of elements with each element being a variable. An example o
 * The list is in order
 
 ### Example of a list and how it can be used
-```html
-thanksgivingList = ["cranberry pie", "casserole", "mashed potatoes", "turkey"] // this is the list in which each 
 
-```
+![]({{site.baseurl}}/images/nc2.png "https://github.com/LiavB2/ominicient-lavebear")
 
 ## List Index
 An index is an element of a string. Indices typically start with 0, but Collegeboard has the index start at 1.
 
+![]({{site.baseurl}}/images/nc3.png "https://github.com/LiavB2/ominicient-lavebear")
+
 ## Hacks
+
+## Questions
+* What is a list?
+* What is an element
+* What is an easy way to reference the elements in a list or string?
+* What is an example of a string?
 
 ### Create an index of your favorite foods
 Tips: Index starts at 1, Strings are ordered sequences of characters
