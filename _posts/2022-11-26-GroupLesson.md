@@ -51,6 +51,21 @@ Bonus (Not required but important to know):
 1. How can we update a variable's value
 2. What function is used to recieve a user's input?
 
+## Hacks
+- As your code becomes increasingly more complex, variables and their names will make reading and fixing your code easier.
+
+### Create code that...
+
+- Uses variables
+- Show your understanding of different variable data types by using at least 2 different types in your code
+- Uses meaningful names to prevent confusion
+
+### Rubric 0.2/0.2
+- Code needs to function
+- Data types are properly used for their given function
+- Each variable has identification to prevent confusion
+- Each Variable is utilized for their intended purpose
+
 # Variables (3.1.2) - Noor
 
 ## Learning objective for 3.1.2:
@@ -101,6 +116,16 @@ Copy the all the html code into a markdown file and run your local server. You w
 ### Bonus (optional):
 There's more than one way to define the variable. List two ways to do it.
 
+### Rubric
+
+#### For .15:
+- Student has followed directions properly and has the converter working
+
+#### For .18:
+- Student has completed some of the bonus material alongside requirement for 2.7
+
+#### For .20:
+- Student has completed all of the material, answered thoughtfully, and met requirements for 2.7
 
 # List and Strings Using Variables- Nathan
 
