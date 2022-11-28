@@ -128,7 +128,7 @@ There's more than one way to define the variable. List two ways to do it.
 #### For .20:
 - Student has completed all of the material, answered thoughtfully, and met requirements for 2.7
 
-# List and Strings Using Variables- Nathan
+# 3.2.1 List and Strings Using Variables- Nathan
 
 ## Strings
 Strings is a series of characters (numbers, letters, etc), one example of a string is your name or your id because strings can contain both numbers and letters.
@@ -174,7 +174,7 @@ marks = ["food1"]
 
 ![]({{site.baseurl}}/images/ncrubric.png "https://github.com/LiavB2/ominicient-lavebear")
 
-# Data Abstraction with Lists - Steven
+# 3.2.2 Data Abstraction with Lists - Steven
 
 ## Data abstraction can be created with lists.
 - Lists bundle together multiple elements and/or variables under one name are not defined with specified lengths. 
@@ -198,7 +198,7 @@ marks = ["food1"]
 0.00 - not functioning, no evidence of attempt based upon the guidelines
 
 
-# Managing Complexity with lists - Liav 
+# 3.2.3 Managing Complexity with lists - Liav 
 
 ## Long and slow way
 - By now, everyone should know the "long and slow way" to print a list of something in python
