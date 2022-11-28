@@ -28,7 +28,8 @@ When choosing variables, it is important to assign the variables name to somethi
 
 Example:
 
-age = "Timothy"
+![]({{site.baseurl}}/images/eddy4.png "https://github.com/LiavB2/ominicient-lavebear")
+
 - Notice how age is going to be seen when printing the code. That can lead to confusion
 
 ## Data Types
