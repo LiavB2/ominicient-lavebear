@@ -12,7 +12,7 @@ title: 3.1-3.2 Group Lesson
  * A variable is an abstraction inside a program that holds a value, where each variable has associated data storage that represents a single value at a time (However, if the value is a collection type such as a list, then the value can contain multiple values).
  * Variables typically have meaningful names that helps with the overall organization of the code and understanding of what is being represented by the variables
  * Some programming languages provide a variety of methods to represent data, which are referenced using variables 9Booleans, numbers, lists, and strings)
- * One form of a value is better suited for representation than antoher.
+ * One form of a value is better suited for representation than another.
 
 ## What is a Variable?
 
