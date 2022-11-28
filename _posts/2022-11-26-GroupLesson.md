@@ -187,7 +187,7 @@ marks = ["food1"]
 
 ## Hacks
 
-- The following code is incomplete. It's intended purpose is to increase three numbers, all of which ask for user input, by an amount specified the user. The input code is abstracted, but the actual logic isn't connected to the abstraction.
+- The following code is incomplete. Its intended purpose is to increase three numbers, all of which ask for user input, by an amount specified the user. The input code is abstracted, but the actual logic isn't connected to the abstraction.
 
 ![]({{site.baseurl}}/images/steven2.png "https://github.com/LiavB2/ominicient-lavebear")
 
