@@ -29,16 +29,17 @@ title: Lesson 3.1-3.2 Group Grades (table)
 |19|Ederick|Shruthi|.95/1.0|Yes|Yes|Did everything, put some of noor's hacks with stevens hacks and did not really finish Liav's hacks (no screen shot of quiz provided and did not manage the "long and slow way."|
 |20|Liav|Paarus|0.9|Yes|Yes|Did all the hacks well|
 
-# Late Submissions all are 0.85
+# Late Submissions 
+### all are 0.85
 
 |S.NO| Graded By | Student That Completed | Overall Grade ( /1.0) | Complete | Correct | Comments |
-|1|Nathan|Lydia|-|Yes|Yes|Late|
-|2|Liav|Alex K|-|Yes|Yes|Late|
-|3|Noor|David|-|Yes|Yes|Late|
-|4|Liav|Amay A|-|Yes|Yes|Late|
-|5|Steven|Safin|-|Yes|Yes|Late|
-|6|Ederick|Aaron|-|Yes|Yes|Late|
-|7|Steven|Jeongwoo|-|Yes|Yes|Late|
+|1|Nathan|Lydia|0.87|Yes|Yes|Late, needs to elaborate answers for 3.1.2|
+|2|Liav|Alex K|0.9|Yes|Yes|Late, very good hacks|
+|3|Nathan|David|0.87|Yes|Yes|Late, did not index from the end for 3.2.1|
+|4|Liav|Amay A|.9|Yes|Yes|Late, very good hacks|
+|5|Steven|Safin|1.0|Yes|Yes|Perfect, way above the expectations, even though it was late|
+|6|Ederick|Aaron|.85|Yes|Yes|Late|
+|7|Steven|Jeongwoo|.8|Yes|Yes|Late, missing some stuff|
 
 
 
