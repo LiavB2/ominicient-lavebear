@@ -40,6 +40,7 @@ title: Lesson 3.1-3.2 Group Grades (table)
 |5|Steven|Safin|1.0|Yes|Yes|Perfect, way above the expectations, even though it was late|
 |6|Ederick|Aaron|.85|Yes|Yes|Late|
 |7|Steven|Jeongwoo|.8|Yes|Yes|Late, missing some stuff|
+|9|Nathan|Antony|.73|Yes|Yes|Late, missing index from the start, missing fast/slow way, missing 3.1.1 hacks|
 
 
 
