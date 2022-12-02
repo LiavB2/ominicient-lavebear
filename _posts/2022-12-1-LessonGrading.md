@@ -25,8 +25,21 @@ title: Lesson 3.1-3.2 Group Grades (table)
 |15|Noor|Luka VDB|.9/1|Yes|Yes|Comments:  Hacks2 were answered partially correct. Hacks3 were missing elements. You need to index from the end aswell. Hacks5 were missing the questions.  |
 |16|Steven|Ethan Tran|.98/1|Yes|Yes|0.18 on Nathan's hack Everything else was great|
 |17|Noor|Nikhil|.9/1|Yes|Yes|Need to elaborate on lesson questions. Missing elements for most hacks.|
-|18|Ederick|Lydia Cho|.7/1.0|No|No|Nothing|
-|19|Liav|Kaiden Do|1.0/1.0|Yes|Yes|Completed all necessary hacks, additional notes given. Overall very complete and organized.|
-|20|Ederick|Shruthi|.95/1.0|Yes|Yes|Did everything, put some of noor's hacks with stevens hacks and did not really finish Liav's hacks (no screen shot of quiz provided and did not manage the "long and slow way."|
+|18|Liav|Kaiden Do|1.0/1.0|Yes|Yes|Completed all necessary hacks, additional notes given. Overall very complete and organized.|
+|19|Ederick|Shruthi|.95/1.0|Yes|Yes|Did everything, put some of noor's hacks with stevens hacks and did not really finish Liav's hacks (no screen shot of quiz provided and did not manage the "long and slow way."|
+|20|Liav|Paarus|0.9|Yes|Yes|Did all the hacks well|
 
-# Any Name Not Listed Will Recieve a .70/1.0
+# Late Submissions all are 0.85
+
+|S.NO| Graded By | Student That Completed | Overall Grade ( /1.0) | Complete | Correct | Comments |
+|1|Nathan|Lydia|-|Yes|Yes|Late|
+|2|Liav|Alex K|-|Yes|Yes|Late|
+|3|Noor|David|-|Yes|Yes|Late|
+|4|Liav|Amay A|-|Yes|Yes|Late|
+|5|Steven|Safin|-|Yes|Yes|Late|
+|6|Ederick|Aaron|-|Yes|Yes|Late|
+|7|Steven|Jeongwoo|-|Yes|Yes|Late|
+
+
+
+# Any Name Not Listed anywhre Will Recieve a .0/1.0
