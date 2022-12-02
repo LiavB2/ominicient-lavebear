@@ -7,10 +7,10 @@ title: Lesson 3.1-3.2 Group Grades (table)
 ---
 
 |S.NO| Student That Completed | Overall Grade ( /1.0) | Complete | Correct | Organization | Comments |     
-|1|-|-|-|-|-|-|
-|2|-|-|-|-|-|-|
-|3|-|-|-|-|-|-|
-|4|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|
+|-|-|-|-|-|-|-|
 |-|-|-|-|-|-|-|
 |-|-|-|-|-|-|-|
 |-|-|-|-|-|-|-|
