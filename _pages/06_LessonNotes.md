@@ -4,6 +4,37 @@ title: Lesson Notes
 permalink: /lesson_notes/
 ---
 
+# Vocab We Have Covered in Lessons
+- Managing complexity, algorithms, sequencing, selection, iteration, Booleans, If Elif and Else Conditionals, Nested Conditionals, For and While loops.
+
+## Managing Complexity
+
+## Alorithms
+ - 
+
+
+### Sequencing
+
+
+### Selection
+
+
+### Iteration
+
+
+### If Elif and Else Conditionals
+
+
+### Nested Conditionals
+
+
+## Loops
+
+### For Loops
+
+
+### While Loops
+
 # 3.1-3.2 
 - (This was my groups presentation)
 
