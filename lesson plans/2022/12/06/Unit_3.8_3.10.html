@@ -152,7 +152,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h3"><a href="#Find-the-lowest-value-in-a-list-(Luna-Iwazaki)">Find the lowest value in a list (Luna Iwazaki) </a></li>
 <li class="toc-entry toc-h3"><a href="#Lists-Quiz-(Ethan-Tran)">Lists Quiz (Ethan Tran) </a></li>
 <li class="toc-entry toc-h3"><a href="#-">  </a></li>
-<li class="toc-entry toc-h3"><a href="#College-Board-Reference-Sheets">College Board Reference Sheets </a></li>
+<li class="toc-entry toc-h3"><a href="#College-Board-Reference-Sheets-(Take-a-few-notes-on-these)">College Board Reference Sheets (Take a few notes on these) </a></li>
 </ul>
 </li>
 </ul><!--
@@ -319,9 +319,12 @@ number the rooms 1-n</p>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">5</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hello, World!"</span><span class="p">)</span>
+<span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">8</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Hi, my name is Liav!"</span><span class="p">)</span>
     <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">i</span><span class="o">==</span><span class="mi">6</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"Your name isn't Liav Anymore"</span><span class="p">)</span>
+        <span class="k">break</span>
 </pre></div>
 
     </div>
@@ -334,11 +337,13 @@ number the rooms 1-n</p>
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Hello, World!
-Hello, World!
-Hello, World!
-Hello, World!
-Hello, World!
+<pre>Hi, my name is Liav!
+Hi, my name is Liav!
+Hi, my name is Liav!
+Hi, my name is Liav!
+Hi, my name is Liav!
+Hi, my name is Liav!
+Your name isn't Liav Anymore
 </pre>
 </div>
 </div>
@@ -467,7 +472,7 @@ Iteration Statement - cause statements to be executed zero or more times, subjec
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">11</span><span class="p">):</span>
-    <span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="mi">10</span><span class="o">-</span><span class="n">i</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -480,17 +485,17 @@ Iteration Statement - cause statements to be executed zero or more times, subjec
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>0
-1
-2
-3
-4
-5
-6
-7
-8
+<pre>10
 9
-10
+8
+7
+6
+5
+4
+3
+2
+1
+0
 </pre>
 </div>
 </div>
@@ -573,6 +578,24 @@ Iteration Statement - cause statements to be executed zero or more times, subjec
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-cyan-fg">  Cell </span><span class="ansi-green-fg">In [4], line 1</span>
+<span class="ansi-red-fg">    for i in range(starting value, ending value, incremented value):</span>
+                            ^
+<span class="ansi-red-fg">SyntaxError</span><span class="ansi-red-fg">:</span> invalid syntax
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -591,10 +614,11 @@ Iteration Statement - cause statements to be executed zero or more times, subjec
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">i</span><span class="o">=</span><span class="mi">1</span>
-<span class="k">while</span> <span class="n">i</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">:</span>
-	<span class="nb">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-	<span class="n">i</span><span class="o">=</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">number</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="k">while</span> <span class="n">number</span> <span class="o">&lt;</span> <span class="mi">82</span><span class="p">:</span>
+	<span class="k">if</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">3</span> <span class="ow">or</span>  <span class="n">number</span> <span class="o">==</span> <span class="mi">16</span> <span class="ow">or</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">29</span> <span class="ow">or</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">42</span> <span class="ow">or</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">55</span> <span class="ow">or</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">68</span> <span class="ow">or</span> <span class="n">number</span> <span class="o">==</span> <span class="mi">81</span><span class="p">:</span>
+		<span class="nb">print</span><span class="p">(</span><span class="n">number</span><span class="p">)</span>
+	<span class="n">number</span> <span class="o">+=</span> <span class="mi">1</span>
 </pre></div>
 
     </div>
@@ -607,16 +631,13 @@ Iteration Statement - cause statements to be executed zero or more times, subjec
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>1
-2
-3
-4
-5
-6
-7
-8
-9
-10
+<pre>3
+16
+29
+42
+55
+68
+81
 </pre>
 </div>
 </div>
@@ -1129,11 +1150,32 @@ dog
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nums</span><span class="p">[</span><span class="s2">"10"</span><span class="p">,</span> <span class="s2">"15"</span><span class="p">,</span> <span class="s2">"20"</span><span class="p">,</span> <span class="s2">"25"</span><span class="p">,</span> <span class="s2">"30"</span><span class="p">,</span> <span class="s2">"35"</span><span class="p">]</span>
-<span class="nb">min</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">nums</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"10"</span><span class="p">,</span> <span class="s2">"15"</span><span class="p">,</span> <span class="s2">"20"</span><span class="p">,</span> <span class="s2">"25"</span><span class="p">,</span> <span class="s2">"30"</span><span class="p">,</span> <span class="s2">"35"</span><span class="p">]</span>
+<span class="n">minimum</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">nums</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">minimum</span><span class="p">,</span> <span class="s2">"This is the lowest number"</span><span class="p">)</span>
+<span class="n">low</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">nums</span><span class="p">)):</span>
+    <span class="k">if</span> <span class="nb">int</span><span class="p">(</span><span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">])</span> <span class="o">&lt;</span> <span class="n">low</span><span class="p">:</span>
+        <span class="n">low</span> <span class="o">=</span> <span class="n">nums</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"the lowest number in nums is:"</span><span class="p">,</span> <span class="n">low</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>10 This is the lowest number
+the lowest number in nums is: 10
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -1238,8 +1280,8 @@ dog
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="College-Board-Reference-Sheets">
-<a class="anchor" href="#College-Board-Reference-Sheets" aria-hidden="true"><span class="octicon octicon-link"></span></a>College Board Reference Sheets<a class="anchor-link" href="#College-Board-Reference-Sheets"> </a>
+<h3 id="College-Board-Reference-Sheets-(Take-a-few-notes-on-these)">
+<a class="anchor" href="#College-Board-Reference-Sheets-(Take-a-few-notes-on-these)" aria-hidden="true"><span class="octicon octicon-link"></span></a>College Board Reference Sheets (Take a few notes on these)<a class="anchor-link" href="#College-Board-Reference-Sheets-(Take-a-few-notes-on-these)"> </a>
 </h3>
 <p>List Operations</p>
 <figure>
