@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -96,13 +96,182 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#notes">Notes</a></li>
-<li class="toc-entry toc-h1"><a href="#hacks">Hacks</a></li>
+<li class="toc-entry toc-h1"><a href="#notes">Notes</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#understanding-procedures">Understanding Procedures</a></li>
+<li class="toc-entry toc-h2"><a href="#calling-procedures">Calling Procedures</a></li>
+<li class="toc-entry toc-h2"><a href="#determining-the-result-of-a-procedure">Determining the result of a procedure</a></li>
+<li class="toc-entry toc-h2"><a href="#managing-complexity">Managing Complexity</a></li>
+<li class="toc-entry toc-h2"><a href="#developing-procedures">Developing Procedures</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#python">Python:</a></li>
+<li class="toc-entry toc-h3"><a href="#javascript">JavaScript:</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#more-parameters">More Parameters</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#hacks">Hacks</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#quiz-33">Quiz (3/3)</a></li>
+</ul>
+</li>
 </ul><h1 id="notes">
 <a class="anchor" href="#notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes</h1>
 
+<h2 id="understanding-procedures">
+<a class="anchor" href="#understanding-procedures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Understanding Procedures</h2>
+<ul>
+  <li>A procedure is a set of instructions that is given a name which takes in parameters to return values
+    <ul>
+      <li>also called methods and functions</li>
+      <li>Sequencing, selection, and iteration are procedures</li>
+    </ul>
+  </li>
+  <li>Parameters are independent variables used in the procedure to produce a result
+    <ul>
+      <li>Allows procredure to run without knowing the specific input values.</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/alex1.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
+<ul>
+  <li>As you an see, this procedure is named “multiply” its parameters are “x” and “y” and returns “The product of 5 times 3 is 15</li>
+</ul>
+
+<h2 id="calling-procedures">
+<a class="anchor" href="#calling-procedures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calling Procedures</h2>
+<ul>
+  <li>You call a procedure by putting the name of ot follwed by paranthesis with the parameters.
+    <ul>
+      <li>Ex: def math(x)</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="determining-the-result-of-a-procedure">
+<a class="anchor" href="#determining-the-result-of-a-procedure" aria-hidden="true"><span class="octicon octicon-link"></span></a>Determining the result of a procedure</h2>
+<ul>
+  <li>Follow the code line by line to see what eaach line does</li>
+  <li>Use syntax to determine
+    <ul>
+      <li>function parameters and retunr value and statements.</li>
+    </ul>
+  </li>
+  <li>
+    <p>to return the values you write “return” then the expression you want to return that has been defined.</p>
+  </li>
+  <li>As you can see this code originally did not have return statement</li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/alex2.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
+<ul>
+  <li>After debugging it with the return statement “return result” we can see the actual output of the function.</li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/alex3.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
+<h2 id="managing-complexity">
+<a class="anchor" href="#managing-complexity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Managing Complexity</h2>
+<ul>
+  <li>
+<strong>Modularity</strong> - the practice of breaking a complex program into smaller, independent parts or modules that can be used and reused in different parts of the program
+    <ul>
+      <li>Ex: assert “hypotenuse(3, 4) == hypotenuse_abstracted(3, 4) == 5”
+        <ul>
+          <li>They would have the same result.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+<strong>Abstraction</strong> - the practice of hiding the details of how a particular code or system works and exposing only the essential features or functions that are necessary for other parts of the program to use</li>
+  <li>
+<strong>Duplication</strong> - having multiple duplicate code blocks, often decreasing readability and efficiency</li>
+  <li>
+<strong>Logic</strong> - the sequence of steps and operations that a computer follows to execute a program, including the specific instructions and decision-making processes built into the code</li>
+</ul>
+
+<h2 id="developing-procedures">
+<a class="anchor" href="#developing-procedures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Developing Procedures</h2>
+<ul>
+  <li>Parameters store variables and arguments</li>
+  <li>
+    <p>Call functions with procedure names (syntax in javascript and python)</p>
+  </li>
+  <li>Procedure name: the name that was given to a function</li>
+  <li>Arguments provied info to a functio and are usually defined outside of the function then imported into a function with parameters.</li>
+</ul>
+
+<h3 id="python">
+<a class="anchor" href="#python" aria-hidden="true"><span class="octicon octicon-link"></span></a>Python:</h3>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>def <span class="k">function</span><span class="o">(</span>a,b<span class="o">)</span>: <span class="c"># function is defined</span>
+  print<span class="o">(</span>a+b<span class="o">)</span> <span class="c"># prints output of variables</span>
+
+<span class="k">function</span><span class="o">(</span>1,2<span class="o">)</span> <span class="c"># one instance that it can be used</span>
+<span class="k">function</span><span class="o">(</span>2,3<span class="o">)</span> <span class="c"># another instance</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
+5
+</code></pre></div></div>
+
+<ul>
+  <li>defines the function with the parameters then prints their sum
+    <ul>
+      <li>1 + 2 is 3</li>
+      <li>2 + 3 is 5
+        <h3 id="javascript">
+<a class="anchor" href="#javascript" aria-hidden="true"><span class="octicon octicon-link"></span></a>JavaScript:</h3>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nb">Function</span><span class="p">(</span><span class="nx">a</span><span class="p">,</span><span class="nx">b</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="nx">b</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nb">Function</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
+<span class="nb">Function</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">)</span>
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3
+5
+</code></pre></div></div>
+
+<ul>
+  <li>Calls the function with the parameters then adds them together
+    <ul>
+      <li>1 + 2 is 3</li>
+      <li>2 + 3 is 5</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="more-parameters">
+<a class="anchor" href="#more-parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>More Parameters</h2>
+<ul>
+  <li>
+    <p>someetimes parameters will provide input to the function</p>
+  </li>
+  <li>
+    <p>This function provides 2 parameters and uses them as inputes and calling the function compares the 2 numbers.</p>
+  </li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/alex5.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
 <h1 id="hacks">
 <a class="anchor" href="#hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks</h1>
+
+<h2 id="quiz-33">
+<a class="anchor" href="#quiz-33" aria-hidden="true"><span class="octicon octicon-link"></span></a>Quiz (3/3)</h2>
+
+<p><img src="/ominicient-lavebear/images/alex4.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
 
   </div><a class="u-url" href="/ominicient-lavebear/markdown/2022/12/08/3.12-3.13-NotesandHacks.html" hidden></a>
 </article>
