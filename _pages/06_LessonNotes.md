@@ -4,12 +4,12 @@ title: Lesson Notes
 permalink: /lesson_notes/
 ---
 
-|S.NO| Week 1 | Week 2 | Week 3 | Week 4 |   
+|S.NO| Assignment| Assignment |Assignment |Assignment|   
 |-|-|-|-|  
-|1|[3.1-3.2 Notes and Hacks](https://liavb2.github.io/ominicient-lavebear/markdown/2022/11/26/GroupLesson.html)|[3.3-3.4 Notes and Hacks](https://liavb2.github.io/ominicient-lavebear/markdown/2022/11/29/3.3-3.4.html)|[Group Grades](https://liavb2.github.io/ominicient-lavebear/markdown/2022/12/01/LessonGrading.html)|
-|2|[3.5-3.7 Notes and Hacks](https://liavb2.github.io/ominicient-lavebear/markdown/2022/12/01/3.5-3.7.html)|[3.8-3.10 Notes and Hacks](https://liavb2.github.io/ominicient-lavebear/markdown/2022/12/05/3.8and3.10-notesandhacks.html)|[3.9-3.11 Notes and Hacks](https://liavb2.github.io/ominicient-lavebear/markdown/2022/12/06/3.9and3.11.html)|
-|3|[3.12-3.13 Notes and Hacks](https://liavb2.github.io/ominicient-lavebear/markdown/2022/12/08/3.12-3.13-NotesandHacks.html)|-|-|
-|4|-|-|-|
+|Week 1|[3.1-3.2 Notes and Hacks](https://liavb2.github.io/ominicient-lavebear/markdown/2022/11/26/GroupLesson.html)|[3.3-3.4 Notes and Hacks](https://liavb2.github.io/ominicient-lavebear/markdown/2022/11/29/3.3-3.4.html)|[Group Grades](https://liavb2.github.io/ominicient-lavebear/markdown/2022/12/01/LessonGrading.html)|
+|Week 2|[3.5-3.7 Notes and Hacks](https://liavb2.github.io/ominicient-lavebear/markdown/2022/12/01/3.5-3.7.html)|[3.8-3.10 Notes and Hacks](https://liavb2.github.io/ominicient-lavebear/markdown/2022/12/05/3.8and3.10-notesandhacks.html)|[3.9-3.11 Notes and Hacks](https://liavb2.github.io/ominicient-lavebear/markdown/2022/12/06/3.9and3.11.html)|
+|Week 3|[3.12-3.13 Notes and Hacks](https://liavb2.github.io/ominicient-lavebear/markdown/2022/12/08/3.12-3.13-NotesandHacks.html)|-|-|
+|Week 4|-|-|-|
 
 
 # 3.1-3.2 
