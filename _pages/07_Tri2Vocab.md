@@ -6,7 +6,7 @@ permalink: /vocab/
 
 **Add on to this throughout the Tri**
 
-# Vocab We Have Covered in Lessons
+# Unfamiliar Vocab We Have Covered in Lessons
 - Managing complexity, algorithms, sequencing, selection, iteration, Booleans, If Elif and Else Conditionals, Nested Conditionals, For and While loops.
 
 ## Managing Complexity in Lists
