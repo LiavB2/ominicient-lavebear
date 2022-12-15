@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Hacks for Focus Habits
-categories: [markdown]
+categories: [Notes]
 title: Focus Habits and Gratitude
 ---
 

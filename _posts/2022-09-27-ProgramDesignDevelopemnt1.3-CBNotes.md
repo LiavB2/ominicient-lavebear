@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Notes on College Board 1.3 Program design and developement and quiz.
-categories: [Markdown]
+categories: [Notes]
 title: Program Design and Developement College Board 1.3 Notes and Quiz
 ---
 

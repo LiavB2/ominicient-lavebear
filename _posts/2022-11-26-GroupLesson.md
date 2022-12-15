@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Markdown post of the group lesson by Liav Bar, Noor B, Steven W, Nathan C, Ederick W.
-categories: [Markdown]
+categories: [Student Lessons]
 title: 3.1-3.2 Group Lesson
 ---
 

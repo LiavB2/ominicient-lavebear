@@ -6,7 +6,6 @@ toc: true
 comments: true
 permalink: /techtalk/webapi
 image: /images/python_restapi.png
-categories: [3.B, 5.A, 5.B]
 type: pbl
 week: 9
 nb_path: _notebooks/2022-10-17-PBL-webapi_tutorial.ipynb

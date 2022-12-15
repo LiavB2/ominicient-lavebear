@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Markdown post of my portion of the group lesson.
-categories: [Markdown]
+categories: [Student Lessons]
 title: My Portion of the Group Lesson
 ---
 

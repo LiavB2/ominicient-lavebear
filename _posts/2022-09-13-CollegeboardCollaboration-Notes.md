@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Notes on the College Board Collaboration Videos and quiz scores
-categories: [markdown]
+categories: [Notes]
 title: Collaboration Notes
 ---
 

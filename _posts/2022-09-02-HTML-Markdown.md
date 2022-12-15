@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Hacks and assignment for HTML Fragments
-categories: [markdown]
+categories: [HTML]
 title: HTML Fragments
 ---
 

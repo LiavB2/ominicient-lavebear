@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Sprint Backlog for AP Exam Studying 
-categories: [markdown]
+categories: [Notes]
 title: AP Exam Sprint Backlog
 ---
 

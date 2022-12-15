@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Planning out the lesson that my group is going to give.
-categories: [Markdown]
+categories: [Student Lessons]
 title: Lesson Pre-Planning 
 ---
 

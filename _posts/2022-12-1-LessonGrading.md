@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Markdown table of everyones grade for the 3.1-3.2 hacks 
-categories: [Markdown]
+categories: [Student Lessons]
 title: Lesson 3.1-3.2 Group Grades (table)
 ---
 

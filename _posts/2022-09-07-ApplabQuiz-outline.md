@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Hacks and assignment for HTML Fragment
-categories: [markdown]
+categories: [HTML]
 title: AppLab Quiz Outline
 ---
 hi this is a test for my recording

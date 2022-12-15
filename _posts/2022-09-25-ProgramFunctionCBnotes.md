@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Notes on 1.2.1, 1.2.2, and 1.2.3 college board videos, and taking the quiz.
-categories: [Markdown]
+categories: [Notes]
 title: Program Function and Purpose CB Notes and Quiz
 ---
 
