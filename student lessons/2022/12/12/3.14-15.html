@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>3.14-3.15 Libraries and Randomization Notes and Hacks | LB Blogs</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="3.14-3.15 Libraries and Randomization Notes and Hacks" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Markdown post of the group lesson for 3.12-3.13" />
+<meta property="og:description" content="Markdown post of the group lesson for 3.12-3.13" />
+<link rel="canonical" href="https://liavb2.github.io/ominicient-lavebear/student%20lessons/2022/12/12/3.14-15.html" />
+<meta property="og:url" content="https://liavb2.github.io/ominicient-lavebear/student%20lessons/2022/12/12/3.14-15.html" />
+<meta property="og:site_name" content="LB Blogs" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2022-12-12T00:00:00-06:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="3.14-3.15 Libraries and Randomization Notes and Hacks" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2022-12-12T00:00:00-06:00","datePublished":"2022-12-12T00:00:00-06:00","description":"Markdown post of the group lesson for 3.12-3.13","headline":"3.14-3.15 Libraries and Randomization Notes and Hacks","mainEntityOfPage":{"@type":"WebPage","@id":"https://liavb2.github.io/ominicient-lavebear/student%20lessons/2022/12/12/3.14-15.html"},"url":"https://liavb2.github.io/ominicient-lavebear/student%20lessons/2022/12/12/3.14-15.html"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/ominicient-lavebear/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://liavb2.github.io/ominicient-lavebear/feed.xml" title="LB Blogs" /><link rel="shortcut icon" type="image/x-icon" href="/ominicient-lavebear/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
+
+<script>
+function wrap_img(fn) {
+    if (document.attachEvent ? document.readyState === "complete" : document.readyState !== "loading") {
+        var elements = document.querySelectorAll(".post img");
+        Array.prototype.forEach.call(elements, function(el, i) {
+            if (el.getAttribute("title") && (el.className != "emoji")) {
+                const caption = document.createElement('figcaption');
+                var node = document.createTextNode(el.getAttribute("title"));
+                caption.appendChild(node);
+                const wrapper = document.createElement('figure');
+                wrapper.className = 'image';
+                el.parentNode.insertBefore(wrapper, el);
+                el.parentNode.removeChild(el);
+                wrapper.appendChild(el);
+                wrapper.appendChild(caption);
+            }
+        });
+    } else { document.addEventListener('DOMContentLoaded', fn); }
+}
+window.onload = wrap_img;
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function(){
+    // add link icon to anchor tags
+    var elem = document.querySelectorAll(".anchor-link")
+    elem.forEach(e => (e.innerHTML = '<i class="fas fa-link fa-xs"></i>'));
+    });
+</script>
+</head>
+<body><header class="site-header">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/ominicient-lavebear/">LB Blogs</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/ominicient-lavebear/about/">About Creator</a><a class="page-link" href="/ominicient-lavebear/notes/">Notes</a><a class="page-link" href="/ominicient-lavebear/search/">Search</a><a class="page-link" href="/ominicient-lavebear/categories/">Tags</a><a class="page-link" href="/ominicient-lavebear/Submenu/">Submenu</a><a class="page-link" href="/ominicient-lavebear/lesson_notes/">Lesson Notes</a><a class="page-link" href="/ominicient-lavebear/vocab/">Tri 2 Vocab</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">3.14-3.15 Libraries and Randomization Notes and Hacks</h1><p class="page-description">Markdown post of the group lesson for 3.12-3.13</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2022-12-12T00:00:00-06:00" itemprop="datePublished">
+        Dec 12, 2022
+      </time>
+       • <span class="read-time" title="Estimated read time">
+    
+    
+      2 min read
+    
+</span></p>
+
+    
+      <p class="category-tags"><i class="fas fa-tags category-tags-icon"></i></i> 
+      
+        <a class="category-tags-link" href="/ominicient-lavebear/categories/#Student Lessons">Student Lessons</a>
+        
+      
+      </p>
+    
+
+    </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#notes">Notes</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#libraries">Libraries</a></li>
+<li class="toc-entry toc-h2"><a href="#randomization">Randomization</a></li>
+<li class="toc-entry toc-h2"><a href="#random-function">RANDOM function</a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h1"><a href="#hacks">Hacks</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#hack-1-write-a-program-that-uses-a-library-and-explain-your-code">Hack 1: Write a program that uses a library and explain your code</a></li>
+<li class="toc-entry toc-h2"><a href="#hack-2-define-import-random-and-list-other-things-we-can-import-other-than-random">Hack 2: define import random, and list other things we can import other than random.</a></li>
+<li class="toc-entry toc-h2"><a href="#hack-3-random-number-generator-that-simulates-the-situation-also-answer-what-numbers-can-be-outputed-from-random1220-and-what-cant">Hack 3: Random number generator that simulates the situation: Also answer: What numbers can be outputed from RANDOM(12,20) and what can’t?</a></li>
+</ul>
+</li>
+</ul><h1 id="notes">
+<a class="anchor" href="#notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes</h1>
+
+<h2 id="libraries">
+<a class="anchor" href="#libraries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Libraries</h2>
+<ul>
+  <li>Software libraries contain procedures that are used to create new programs</li>
+  <li>Existing segements of code can come from internal or external sources such as a library
+    <ul>
+      <li>Documentation for a library or api is essentail to understand key behaviors in your work.</li>
+    </ul>
+  </li>
+  <li>Library: collection of code from an external source that adds functions and assets to a program
+    <ul>
+      <li>Are called using a special keyword, Import</li>
+    </ul>
+  </li>
+  <li>
+    <p>To install a library, you can use “pip install _____” which is the name of the library.</p>
+  </li>
+  <li>Example: Math Library:</li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/library1.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
+<h2 id="randomization">
+<a class="anchor" href="#randomization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Randomization</h2>
+<ul>
+  <li>“Import random” randomizes options that are inputted between parenthesis ().</li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/library3.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
+<p>####
+    distribution (used in statistics)</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>expovariate()	  |  Returns a random float number based on the Exponential distribution (used in statistics)
+
+gammavariate()	  |  Returns a random float number based on the Gamma distribution (used in statistics)
+
+gauss()	          |  Returns a random float number based on the Gaussian distribution (used in probability theories)
+
+lognormvariate()  |  Returns a random float number based on a log-normal distribution (used in probability theories)
+
+normalvariate()	  |  Returns a random float number based on the normal distribution (used in probability theories)
+
+vonmisesvariate() |  Returns a random float number based on the von Mises distribution (used in directional statistics)
+
+paretovariate()	  |  Returns a random float number based on the Pareto distribution (used in probability theories)
+
+weibullvariate()  |  Returns a random float number based on the Weibull distribution (used in statistics)
+</code></pre></div></div>
+
+<h2 id="random-function">
+<a class="anchor" href="#random-function" aria-hidden="true"><span class="octicon octicon-link"></span></a>RANDOM function</h2>
+<ul>
+  <li>
+    <p>RANDOM(a,b) will give you a random integer between and including numbers a through b</p>
+  </li>
+  <li>
+    <p>Here is a code that I made, using RANDOM, which gives you the output of a coin flip:</p>
+  </li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/library5.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
+<h1 id="hacks">
+<a class="anchor" href="#hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hacks</h1>
+
+<h2 id="hack-1-write-a-program-that-uses-a-library-and-explain-your-code">
+<a class="anchor" href="#hack-1-write-a-program-that-uses-a-library-and-explain-your-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack 1: Write a program that uses a library and explain your code</h2>
+
+<p><img src="/ominicient-lavebear/images/library2.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
+<ul>
+  <li>As you can see, I have used the “math” Library by stating “import math”.</li>
+  <li>I then used “math.factorial” to get the factorial of the input which is 5. The factorial of 5 is 1 x 2 x 3 x 4 x 5 which = 120.</li>
+  <li>I then used python to print “The factorial of 5 is 120</li>
+</ul>
+
+<h2 id="hack-2-define-import-random-and-list-other-things-we-can-import-other-than-random">
+<a class="anchor" href="#hack-2-define-import-random-and-list-other-things-we-can-import-other-than-random" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack 2: define import random, and list other things we can import other than random.</h2>
+
+<ul>
+  <li>Import Random command calls the “random” library which randomizes the values that are inputted between parenthesis ().</li>
+  <li>An example of this would be</li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/library4.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
+<ul>
+  <li>There are many other libraries that you can import such as “math” that does calculations for you, “numpy” that is different math library that includes calculus. “pandas” can merge and index data for you.</li>
+</ul>
+
+<h2 id="hack-3-random-number-generator-that-simulates-the-situation-also-answer-what-numbers-can-be-outputed-from-random1220-and-what-cant">
+<a class="anchor" href="#hack-3-random-number-generator-that-simulates-the-situation-also-answer-what-numbers-can-be-outputed-from-random1220-and-what-cant" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hack 3: Random number generator that simulates the situation: Also answer: What numbers can be outputed from RANDOM(12,20) and what can’t?</h2>
+
+<ul>
+  <li>There is a spinner divided into eight equal parts. 3 parts of the spinner are green, two parts are blue, one part is purple, one part is red, and one part is orange. How can you simulate this situation using a random number generator.</li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/library6.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
+<ul>
+  <li>As you can see, I created this code that does a random number generator using “random.randint(1,8)”  then uses that random number and prints a specific color based on the number that is outputted using “if statements”.
+    <ul>
+      <li>The spinner outputed “orange” meaning that the random number was 8.</li>
+    </ul>
+  </li>
+  <li>The numbers that can be outputted from “RANDOM(12,20) are 12,13,14,15,16,17,18,19, or 20.
+    <ul>
+      <li>Anything besides those numbers are excluded.</li>
+    </ul>
+  </li>
+</ul>
+
+  </div><a class="u-url" href="/ominicient-lavebear/student%20lessons/2022/12/12/3.14-15.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/ominicient-lavebear/"></data>
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col">
+        <p class="feed-subscribe">
+          <a href="/ominicient-lavebear/feed.xml">
+            <svg class="svg-icon orange">
+              <use xlink:href="/ominicient-lavebear/assets/minima-social-icons.svg#rss"></use>
+            </svg><span>Subscribe</span>
+          </a>
+        </p>
+      </div>
+      <div class="footer-col">
+        <p>CSP Blogs by LB</p>
+      </div>
+    </div>
+
+    <div class="social-links"><ul class="social-media-list"><li>
+  <a rel="me" href="” https://github.com/nighthawkcoders “" target="_blank" title="github">
+    <svg class="svg-icon grey">
+      <use xlink:href="/ominicient-lavebear/assets/minima-social-icons.svg#github"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://twitter.com/NighthawkCoding “" target="_blank" title="twitter">
+    <svg class="svg-icon grey">
+      <use xlink:href="/ominicient-lavebear/assets/minima-social-icons.svg#twitter"></use>
+    </svg>
+  </a>
+</li>
+<li>
+  <a rel="me" href="” https://www.youtube.com/channel/UClIKOsDS5dsfzFA3zveDT3Q “" target="_blank" title="youtube">
+    <svg class="svg-icon grey">
+      <use xlink:href="/ominicient-lavebear/assets/minima-social-icons.svg#youtube"></use>
+    </svg>
+  </a>
+</li>
+</ul>
+</div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>
