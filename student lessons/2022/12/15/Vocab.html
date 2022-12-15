@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      3 min read
     
 </span></p>
 
@@ -116,18 +116,30 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#procudeures">Procudeures</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#calling-procedures">Calling Procedures</a></li>
-<li class="toc-entry toc-h3"><a href="#managing-complexity">Managing Complexity</a></li>
-<li class="toc-entry toc-h3"><a href="#parameters">Parameters</a></li>
+<li class="toc-entry toc-h3"><a href="#managing-complexity">Managing Complexity</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#modularity">Modularity</a></li>
+<li class="toc-entry toc-h4"><a href="#abstraction">Abstraction</a></li>
+<li class="toc-entry toc-h4"><a href="#duplication">Duplication</a></li>
+<li class="toc-entry toc-h4"><a href="#logic">Logic</a></li>
 </ul>
 </li>
-<li class="toc-entry toc-h2"><a href="#libraries-and-randomization">Libraries and Randomization</a>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#libraries-and-randomization">Libraries and Randomization</a></li>
+<li class="toc-entry toc-h2"><a href="#library">Library</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#randomization">Randomization</a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h2"><a href="#simulations">Simulations</a>
 <ul>
-<li class="toc-entry toc-h3"><a href="#simulation-vs-experiment">Simulation vs Experiment</a></li>
+<li class="toc-entry toc-h3"><a href="#simulation-vs-experiment">Simulation vs Experiment</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#simulation-advantages">Simulation Advantages</a></li>
+<li class="toc-entry toc-h4"><a href="#disadvantages">Disadvantages</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h3"><a href="#undecidability-vs-unsolvability">Undecidability vs Unsolvability</a></li>
 </ul>
 </li>
@@ -138,7 +150,7 @@ window.onload = wrap_img;
 <h1 id="unfamiliar-vocab-we-have-covered-in-lessons">
 <a class="anchor" href="#unfamiliar-vocab-we-have-covered-in-lessons" aria-hidden="true"><span class="octicon octicon-link"></span></a>Unfamiliar Vocab We Have Covered in Lessons</h1>
 <ul>
-  <li>Managing complexity, algorithms, sequencing, selection, iteration, Booleans, If Elif and Else Conditionals, Nested Conditionals, For and While loops, procedures, parameters, libraries, randomization, simulation, undecidability, unsolvability.</li>
+  <li>Managing complexity, algorithms, sequencing, selection, iteration, Booleans, If Elif and Else Conditionals, Nested Conditionals, For and While loops, procedures, libraries, randomization, simulation, undecidability, unsolvability.</li>
 </ul>
 
 <h2 id="managing-complexity-in-lists">
@@ -228,21 +240,82 @@ window.onload = wrap_img;
 
 <h2 id="procudeures">
 <a class="anchor" href="#procudeures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Procudeures</h2>
+<ul>
+  <li>Parameters store variables and arguments</li>
+  <li>
+    <p>Call functions with procedure names (syntax in javascript and python)</p>
+  </li>
+  <li>Procedure name: the name that was given to a function</li>
+  <li>Arguments provied info to a functio and are usually defined outside of the function then imported into a function with parameters.</li>
+</ul>
 
 <h3 id="calling-procedures">
 <a class="anchor" href="#calling-procedures" aria-hidden="true"><span class="octicon octicon-link"></span></a>Calling Procedures</h3>
+<ul>
+  <li>You call a procedure by putting the name of ot follwed by paranthesis with the parameters.
+    <ul>
+      <li>Ex: def math(x)</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/sqrt.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
 
 <h3 id="managing-complexity">
 <a class="anchor" href="#managing-complexity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Managing Complexity</h3>
 
-<h3 id="parameters">
-<a class="anchor" href="#parameters" aria-hidden="true"><span class="octicon octicon-link"></span></a>Parameters</h3>
+<h4 id="modularity">
+<a class="anchor" href="#modularity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modularity</h4>
+<ul>
+  <li>the practice of breaking a complex program into smaller, independent parts or modules that can be used and reused in different parts of the program
+    <ul>
+      <li>Ex: assert “hypotenuse(3, 4) == hypotenuse_abstracted(3, 4) == 5”
+        <ul>
+          <li>They would have the same result.
+            <h4 id="abstraction">
+<a class="anchor" href="#abstraction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstraction</h4>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>the practice of hiding the details of how a particular code or system works and exposing only the essential features or functions that are necessary for other parts of the program to use
+    <h4 id="duplication">
+<a class="anchor" href="#duplication" aria-hidden="true"><span class="octicon octicon-link"></span></a>Duplication</h4>
+  </li>
+  <li>having multiple duplicate code blocks, often decreasing readability and efficiency
+    <h4 id="logic">
+<a class="anchor" href="#logic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Logic</h4>
+  </li>
+  <li>the sequence of steps and operations that a computer follows to execute a program, including the specific instructions and decision-making processes built into the code</li>
+</ul>
 
 <h2 id="libraries-and-randomization">
 <a class="anchor" href="#libraries-and-randomization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Libraries and Randomization</h2>
 
+<h2 id="library">
+<a class="anchor" href="#library" aria-hidden="true"><span class="octicon octicon-link"></span></a>Library</h2>
+<ul>
+  <li>Library: collection of code from an external source that adds functions and assets to a program
+    <ul>
+      <li>Are called using a special keyword, Import</li>
+    </ul>
+  </li>
+  <li>
+    <p>To install a library, you can use “pip install _____” which is the name of the library.</p>
+  </li>
+  <li>Example: Math Library:</li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/library1.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
 <h3 id="randomization">
 <a class="anchor" href="#randomization" aria-hidden="true"><span class="octicon octicon-link"></span></a>Randomization</h3>
+<ul>
+  <li>“Import random” randomizes options that are inputted between parenthesis ().</li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/library3.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
 
 <h2 id="simulations">
 <a class="anchor" href="#simulations" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulations</h2>
@@ -250,8 +323,39 @@ window.onload = wrap_img;
 <h3 id="simulation-vs-experiment">
 <a class="anchor" href="#simulation-vs-experiment" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulation vs Experiment</h3>
 
+<h4 id="simulation-advantages">
+<a class="anchor" href="#simulation-advantages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Simulation Advantages</h4>
+<ul>
+  <li>Can be safer
+    <ul>
+      <li>More cost-effective</li>
+      <li>More efficient</li>
+      <li>More data in less time
+        <h4 id="disadvantages">
+<a class="anchor" href="#disadvantages" aria-hidden="true"><span class="octicon octicon-link"></span></a>Disadvantages</h4>
+      </li>
+    </ul>
+  </li>
+  <li>Not as accurate as experiments
+    <ul>
+      <li>outside factors not included (ex: in rolling dice simulation gravity and air resistance)</li>
+      <li>when a situation already has set results/data (won’t change)</li>
+      <li>examples: a score in a game, most purchased food, average yearly wage</li>
+    </ul>
+  </li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/ava2.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
 <h3 id="undecidability-vs-unsolvability">
 <a class="anchor" href="#undecidability-vs-unsolvability" aria-hidden="true"><span class="octicon octicon-link"></span></a>Undecidability vs Unsolvability</h3>
+
+<ul>
+  <li>Unsolvable: is that no algorithm can be written to get the answer to it</li>
+  <li>Undecidable: There is no code that can find the answer, because it is too complext, but there is an answer.</li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/yasha1.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
 
   </div><a class="u-url" href="/ominicient-lavebear/student%20lessons/2022/12/15/Vocab.html" hidden></a>
 </article>

@@ -101,7 +101,14 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#understanding-procedures">Understanding Procedures</a></li>
 <li class="toc-entry toc-h2"><a href="#calling-procedures">Calling Procedures</a></li>
 <li class="toc-entry toc-h2"><a href="#determining-the-result-of-a-procedure">Determining the result of a procedure</a></li>
-<li class="toc-entry toc-h2"><a href="#managing-complexity">Managing Complexity</a></li>
+<li class="toc-entry toc-h2"><a href="#managing-complexity">Managing Complexity</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#modularity">Modularity</a></li>
+<li class="toc-entry toc-h4"><a href="#abstraction">Abstraction</a></li>
+<li class="toc-entry toc-h4"><a href="#duplication">Duplication</a></li>
+<li class="toc-entry toc-h4"><a href="#logic">Logic</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#developing-procedures">Developing Procedures</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#python">Python:</a></li>
@@ -194,23 +201,30 @@ window.onload = wrap_img;
 
 <h2 id="managing-complexity">
 <a class="anchor" href="#managing-complexity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Managing Complexity</h2>
+<h4 id="modularity">
+<a class="anchor" href="#modularity" aria-hidden="true"><span class="octicon octicon-link"></span></a>Modularity</h4>
 <ul>
-  <li>
-<strong>Modularity</strong> - the practice of breaking a complex program into smaller, independent parts or modules that can be used and reused in different parts of the program
+  <li>the practice of breaking a complex program into smaller, independent parts or modules that can be used and reused in different parts of the program
     <ul>
       <li>Ex: assert “hypotenuse(3, 4) == hypotenuse_abstracted(3, 4) == 5”
         <ul>
-          <li>They would have the same result.</li>
+          <li>They would have the same result.
+            <h4 id="abstraction">
+<a class="anchor" href="#abstraction" aria-hidden="true"><span class="octicon octicon-link"></span></a>Abstraction</h4>
+          </li>
         </ul>
       </li>
     </ul>
   </li>
-  <li>
-<strong>Abstraction</strong> - the practice of hiding the details of how a particular code or system works and exposing only the essential features or functions that are necessary for other parts of the program to use</li>
-  <li>
-<strong>Duplication</strong> - having multiple duplicate code blocks, often decreasing readability and efficiency</li>
-  <li>
-<strong>Logic</strong> - the sequence of steps and operations that a computer follows to execute a program, including the specific instructions and decision-making processes built into the code</li>
+  <li>the practice of hiding the details of how a particular code or system works and exposing only the essential features or functions that are necessary for other parts of the program to use
+    <h4 id="duplication">
+<a class="anchor" href="#duplication" aria-hidden="true"><span class="octicon octicon-link"></span></a>Duplication</h4>
+  </li>
+  <li>having multiple duplicate code blocks, often decreasing readability and efficiency
+    <h4 id="logic">
+<a class="anchor" href="#logic" aria-hidden="true"><span class="octicon octicon-link"></span></a>Logic</h4>
+  </li>
+  <li>the sequence of steps and operations that a computer follows to execute a program, including the specific instructions and decision-making processes built into the code</li>
 </ul>
 
 <h2 id="developing-procedures">
