@@ -2,7 +2,6 @@
 toc: true
 layout: post
 description: Blog about the tools check for tri 2
-categories: [Tools]
 title: Tools Check 
 ---
 

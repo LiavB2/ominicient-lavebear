@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Display of successful AWS Deployment, curl command, docker command, and edits to flask site.
-categories: [AWS]
+categories: []
 title: AWS Deployment
 ---
 
