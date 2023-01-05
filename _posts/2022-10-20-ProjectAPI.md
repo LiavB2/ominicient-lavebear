@@ -5,7 +5,6 @@ title: Project Testing Area
 toc: true
 badges: true
 comments: true
-categories: [jupyter, Scrum Project]
 nb_path: _notebooks/2022-10-20-ProjectAPI.ipynb
 layout: notebook
 ---
