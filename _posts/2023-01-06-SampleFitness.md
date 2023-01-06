@@ -6,7 +6,6 @@ categories: [Notes]
 title: Fitness Frontend
 ---
 
-<!DOCTYPE html>
 <html>
 <head>
   <title>Fitness Tracker</title>
@@ -59,7 +58,7 @@ title: Fitness Frontend
     </section>
   </main>
   <footer>
-    <p>Copyright 2022</p>
+    <p>Made by Liav Bar</p>
   </footer>
   <script src="main.js"></script>
 </body>
