@@ -36,3 +36,9 @@ title: Creative, Collaborative, and Quality Culture Notes and Hacks
 - Always be identifiyig potential areas of improvement.
 
 # Hacks: Make Group Manifesto
+
+1. Create a project that satisfies the teachers expectations and the developers
+2. Have a product that goes above and beyond the project criteria and is beneficial to others
+3. Don't worry about making mistakes! Mistakes are learning opportunities!
+4. We will respect each others time and commitment and strive to be reliable and meet the deadlines on time
+5. Support and encourage each others personal and professional growth
