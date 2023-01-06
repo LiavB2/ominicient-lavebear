@@ -6,6 +6,9 @@ categories: [Notes]
 title: CPT Tri 2 Group Ideas
 ---
 
+# Scrum Board
+[Here is the link to our Scrum Board](https://github.com/users/LiavB2/projects/3)
+
 # Frontend ideation: Here are a few ideas we have that can possibly meet the college board requirements
 - We plan on making a convienient exercise tracker web-app. We will do this by implementing wearable integration, user personalization, goal setting, weather-based activity suggestions, meal planning, and exercise tracking.
     - user personalization: This will include exercise suggestions based on the users height, weight, BMI, age, and gender.
