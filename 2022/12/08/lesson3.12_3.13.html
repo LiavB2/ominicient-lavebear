@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      13 min read
+      18 min read
     
 </span></p>
 
@@ -304,6 +304,48 @@ window.onload = wrap_img;
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Question: What is are correct names for a procedure? 
+ A) Method 
+ B) Function 
+ C) Both
+Answer: c
+Correct :) 
+
+Question: What is a procedure? 
+ A) Sequencing 
+ B) Selection 
+ C) Iteration 
+ D) All
+Answer: d
+Correct :) 
+
+Question: Use this for following question: 
+ def inchesToFeet(lengthInches): 
+	 lengthFeet = lengthInches / 12 
+	 return lengthFeet 
+
+ What is the procedure name, the parameter, and what the procedure returns? 
+ A) feetToInches, lengthInches, lengthMeters 
+ B) inchesToFeet, lengthInches, lengthFeet 
+ C) inchesToFeet, lengthFeet, lengthInches 
+ D) lengthInches, inchesToFeet, lengthFeet
+Answer: B
+Correct :) 
+
+Score: 3 / 3
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -952,6 +994,43 @@ For example:</li>
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">x</span><span class="o">=</span><span class="mi">49</span>
+<span class="kn">import</span> <span class="nn">math</span>
+<span class="k">def</span> <span class="nf">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+    <span class="n">squareroot</span> <span class="o">=</span> <span class="n">x</span> <span class="o">**</span> <span class="mf">0.5</span>
+    <span class="k">return</span> <span class="n">squareroot</span>
+<span class="n">squareroot</span> <span class="o">=</span> <span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"sqrt of "</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="s2">"= "</span><span class="p">,</span> <span class="n">squareroot</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>sqrt of  49 =  7.0
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -1013,6 +1092,354 @@ For example:</li>
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">maximum</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span><span class="n">num2</span><span class="p">):</span>
+    <span class="n">p</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="n">l</span> <span class="o">=</span> <span class="s2">""</span>
+    <span class="k">if</span> <span class="n">num1</span> <span class="o">&gt;</span> <span class="n">num2</span><span class="p">:</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="s2">"higher"</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">num1</span>
+    <span class="k">elif</span> <span class="n">num2</span> <span class="o">&gt;</span> <span class="n">num1</span><span class="p">:</span>
+        <span class="n">p</span> <span class="o">=</span> <span class="s2">"lower"</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="n">num2</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">p</span><span class="o">=</span> <span class="s2">"equal"</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">return</span> <span class="n">p</span><span class="p">,</span> <span class="n">l</span>
+
+<span class="k">def</span> <span class="nf">next</span><span class="p">(</span><span class="n">num3</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">num3</span><span class="p">:</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="nb">int</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">maximum</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">4</span><span class="p">))</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>('equal', 0)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mine</span><span class="p">(</span><span class="n">ls</span><span class="p">):</span>
+    <span class="n">c</span> <span class="o">=</span> <span class="n">ls</span> <span class="o">-</span> <span class="mi">10</span>
+    <span class="k">return</span> <span class="n">c</span>
+
+<span class="k">def</span> <span class="nf">yours</span><span class="p">(</span><span class="n">hn</span><span class="p">):</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">hn</span> <span class="o">+</span> <span class="mi">10</span>
+    <span class="k">return</span> <span class="n">d</span>
+
+<span class="k">def</span> <span class="nf">yoursmine</span><span class="p">(</span><span class="n">ll</span><span class="p">):</span>
+    <span class="n">f</span> <span class="o">=</span> <span class="n">ll</span> <span class="o">-</span> <span class="mi">10</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">50</span><span class="p">,</span> <span class="mi">60</span><span class="p">):</span>
+    <span class="c1"># i = 50</span>
+    <span class="n">dd</span> <span class="o">=</span> <span class="n">mine</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="c1"># dd = 40</span>
+    <span class="k">if</span> <span class="n">dd</span> <span class="o">&gt;</span> <span class="mi">10</span><span class="p">:</span>
+        <span class="n">d</span> <span class="o">=</span> <span class="n">yours</span><span class="p">(</span><span class="n">dd</span><span class="p">)</span>
+        <span class="c1"># d = 50</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">k</span> <span class="o">=</span> <span class="n">yoursmine</span><span class="p">(</span><span class="n">dd</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">k</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">main_procedure</span><span class="p">():</span>
+    <span class="c1"># Main procedure code goes here</span>
+
+    <span class="c1"># Generate a list of words</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">generate_words</span><span class="p">()</span>
+
+    <span class="c1"># Print the list of words</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">generate_words</span><span class="p">():</span>
+    <span class="c1"># Code for generating a list of words goes here</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"apple"</span><span class="p">,</span> <span class="s2">"banana"</span><span class="p">,</span> <span class="s2">"cherry"</span><span class="p">,</span> <span class="s2">"date"</span><span class="p">,</span> <span class="s2">"elderberry"</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">words</span>
+
+<span class="c1"># Call the main procedure to run the code</span>
+<span class="n">main_procedure</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>['apple', 'banana', 'cherry', 'date', 'elderberry']
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="c1"># This is the main procedure where data is abstracted</span>
+
+    <span class="c1"># Get the data that we want to abstract</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">get_data</span><span class="p">()</span>
+
+    <span class="c1"># Process the data to extract only the relevant information</span>
+    <span class="n">processed_data</span> <span class="o">=</span> <span class="n">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+
+    <span class="c1"># Store the processed data in a database</span>
+    <span class="n">store_data</span><span class="p">(</span><span class="n">processed_data</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_data</span><span class="p">():</span>
+    <span class="c1"># This is a sub-procedure that retrieves the data that we want to abstract</span>
+
+    <span class="c1"># Get the data from a file or database</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span> <span class="p">,</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">]</span>
+    <span class="k">return</span> <span class="n">data</span>
+
+<span class="k">def</span> <span class="nf">process_data</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="c1"># This is a sub-procedure that processes the data to extract only the relevant information</span>
+
+    <span class="n">processed_data</span> <span class="o">=</span> <span class="nb">sum</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">processed_data</span>
+
+<span class="k">def</span> <span class="nf">store_data</span><span class="p">(</span><span class="n">processed_data</span><span class="p">):</span>
+    <span class="c1"># This is a sub-procedure that stores the processed data in a database</span>
+
+    <span class="c1"># Store the data in the database</span>
+    <span class="o">...</span>
+
+<span class="c1"># Call the main procedure to start the program</span>
+<span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+  <span class="c1"># Define a list of foods</span>
+  <span class="n">foods</span> <span class="o">=</span> <span class="p">[</span><span class="s2">"pizza"</span><span class="p">,</span> <span class="s2">"tacos"</span><span class="p">,</span> <span class="s2">"burgers"</span><span class="p">,</span> <span class="s2">"sushi"</span><span class="p">]</span>
+
+  <span class="c1"># Call the print_foods sub-procedure</span>
+  <span class="n">print_foods</span><span class="p">(</span><span class="n">foods</span><span class="p">)</span>
+
+  <span class="c1"># Call the add_food sub-procedure</span>
+  <span class="n">new_food</span> <span class="o">=</span> <span class="n">add_food</span><span class="p">()</span>
+  <span class="n">foods</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_food</span><span class="p">)</span>
+
+  <span class="c1"># Call the print_foods sub-procedure again</span>
+  <span class="n">print_foods</span><span class="p">(</span><span class="n">foods</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">print_foods</span><span class="p">(</span><span class="n">foods</span><span class="p">):</span>
+  <span class="c1"># Print out the list of foods</span>
+  <span class="k">for</span> <span class="n">food</span> <span class="ow">in</span> <span class="n">foods</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">food</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">add_food</span><span class="p">():</span>
+  <span class="c1"># Prompt the user for a new food to add to the list</span>
+  <span class="n">new_food</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter a new food to add: "</span><span class="p">)</span>
+  <span class="k">return</span> <span class="n">new_food</span>
+
+<span class="c1"># Call the main procedure to run the program</span>
+<span class="n">main</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>pizza
+tacos
+burgers
+sushi
+pizza
+tacos
+burgers
+sushi
+falafel
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">split_string</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="c1"># use the split() method to split the string into a list of words</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">s</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">" "</span><span class="p">)</span>
+
+	<span class="c1"># initialize a new list to hold all non-empty strings</span>
+    <span class="n">new_words</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">word</span> <span class="o">!=</span> <span class="s2">""</span><span class="p">:</span>
+            <span class="c1"># add all non-empty substrings of `words` to `new_words`</span>
+            <span class="n">new_words</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">words</span>
+
+<span class="c1"># this function takes a list of words as input and returns the number of words</span>
+<span class="c1"># that start with the given letter (case-insensitive)</span>
+<span class="k">def</span> <span class="nf">count_words_starting_with_letter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="n">letter</span><span class="p">):</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="c1"># loop through the list of words and check if each word starts with the given letter</span>
+    <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="c1"># use the lower() method to make the comparison case-insensitive</span>
+        <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="n">letter</span><span class="p">):</span>
+            <span class="n">count</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">count</span>
+
+<span class="c1"># this function takes a string as input and returns the number of words that start with 'a'</span>
+<span class="k">def</span> <span class="nf">count_words_starting_with_a_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="c1"># use the split_string() function to split the input string into a list of words</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">split_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    
+    <span class="c1"># use the count_words_starting_with_letter() function to count the number of words</span>
+    <span class="c1"># that start with 'a' in the list of words</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">count_words_starting_with_letter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">count</span>
+
+<span class="c1"># see above</span>
+<span class="k">def</span> <span class="nf">count_words_starting_with_d_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="n">words</span> <span class="o">=</span> <span class="n">split_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+    <span class="n">count</span> <span class="o">=</span> <span class="n">count_words_starting_with_letter</span><span class="p">(</span><span class="n">words</span><span class="p">,</span> <span class="s2">"d"</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">count</span>
+
+<span class="c1"># example usage:</span>
+<span class="n">s</span> <span class="o">=</span> <span class="s2">"   This is  a  test  string! Don't you think this is cool? "</span>
+<span class="n">a_count</span> <span class="o">=</span> <span class="n">count_words_starting_with_a_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="n">d_count</span> <span class="o">=</span> <span class="n">count_words_starting_with_d_in_string</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Words starting with a:"</span><span class="p">,</span> <span class="n">a_count</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Words starting with d:"</span><span class="p">,</span> <span class="n">d_count</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Words starting with a: 1
+Words starting with d: 1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
