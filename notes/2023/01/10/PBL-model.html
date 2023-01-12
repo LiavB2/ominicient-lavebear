@@ -130,7 +130,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#Class-and-Object-Code">Class and Object Code </a></li>
 <li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
 <li class="toc-entry toc-h2"><a href="#Start-Code-for-Hacks">Start Code for Hacks </a></li>
-<li class="toc-entry toc-h1"><a href="#Date-of-Birth-Attribute">Date of Birth Attribute </a></li>
+<li class="toc-entry toc-h1"><a href="#My-Class-Code">My Class Code </a></li>
 <li class="toc-entry toc-h1"><a href="#Graduation-Year-Attribute">Graduation Year Attribute </a></li>
 <li class="toc-entry toc-h1"><a href="#Init-attribute">Init attribute </a></li>
 <li class="toc-entry toc-h1"><a href="#Self-Attribute">Self Attribute </a></li>
@@ -442,8 +442,8 @@ Test 4, make a dictionary
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Date-of-Birth-Attribute">
-<a class="anchor" href="#Date-of-Birth-Attribute" aria-hidden="true"><span class="octicon octicon-link"></span></a>Date of Birth Attribute<a class="anchor-link" href="#Date-of-Birth-Attribute"> </a>
+<h1 id="My-Class-Code">
+<a class="anchor" href="#My-Class-Code" aria-hidden="true"><span class="octicon octicon-link"></span></a>My Class Code<a class="anchor-link" href="#My-Class-Code"> </a>
 </h1>
 </div>
 </div>
@@ -455,19 +455,46 @@ Test 4, make a dictionary
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span><span class="p">,</span> <span class="n">timedelta</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">date</span><span class="p">,</span> <span class="n">timedelta</span> 
+<span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
-<span class="k">class</span> <span class="nc">Person</span><span class="p">:</span>
-    <span class="c1"># Setter and Getter</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
+<span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
+    <span class="c1"># Constructor:</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current_grade</span><span class="p">,</span> <span class="n">age</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">age</span> <span class="o">=</span> <span class="n">age</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">date_of_birth</span> <span class="o">=</span> <span class="p">(</span><span class="n">date</span><span class="o">.</span><span class="n">today</span><span class="p">()</span> <span class="o">-</span> <span class="n">timedelta</span><span class="p">(</span><span class="n">days</span><span class="o">=</span><span class="p">(</span><span class="mi">365</span> <span class="o">*</span> <span class="n">age</span><span class="p">)))</span><span class="o">.</span><span class="n">isoformat</span><span class="p">()</span>
-    
-    <span class="k">def</span> <span class="nf">get_date_of_birth</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        
+        <span class="n">current_year</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">current_grade</span> <span class="o">=</span> <span class="n">current_grade</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">graduation_year</span> <span class="o">=</span> <span class="n">current_year</span> <span class="o">+</span> <span class="p">(</span><span class="mi">12</span> <span class="o">-</span> <span class="n">current_grade</span><span class="p">)</span>
+    <span class="c1"># Getters:</span>
+    <span class="k">def</span> <span class="nf">getDOB</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">date_of_birth</span>
+    
+    <span class="k">def</span> <span class="nf">getClassOf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">graduation_year</span>
 
-<span class="n">person</span> <span class="o">=</span> <span class="n">Person</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Date of Birth: "</span><span class="p">,</span> <span class="n">person</span><span class="o">.</span><span class="n">get_date_of_birth</span><span class="p">())</span>
+    <span class="k">def</span> <span class="nf">getAge</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">age</span>
+
+    <span class="c1"># Setters    </span>
+    <span class="k">def</span> <span class="nf">setDOB</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">DOB</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">date_of_birth</span> <span class="o">=</span> <span class="n">DOB</span>
+
+    <span class="k">def</span> <span class="nf">setClassOf</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">ClassOf</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">ClassOf</span> <span class="o">=</span> <span class="n">ClassOf</span>
+
+    <span class="k">def</span> <span class="nf">setAge</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Age</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Age</span> <span class="o">=</span> <span class="n">Age</span>
+
+<span class="n">student1</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="mi">25</span><span class="p">)</span>
+<span class="n">student2</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">17</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Student 1 Date of Birth: "</span><span class="p">,</span> <span class="n">student1</span><span class="o">.</span><span class="n">getDOB</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Student 2 Date of Birth: "</span><span class="p">,</span> <span class="n">student2</span><span class="o">.</span><span class="n">getDOB</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Student 1 is Class of"</span><span class="p">,</span> <span class="n">student1</span><span class="o">.</span><span class="n">getClassOf</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Student 2 is Class of"</span><span class="p">,</span> <span class="n">student2</span><span class="o">.</span><span class="n">getClassOf</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Student 1 Age is"</span><span class="p">,</span> <span class="n">student1</span><span class="o">.</span><span class="n">getAge</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Student 2 Age is"</span><span class="p">,</span> <span class="n">student2</span><span class="o">.</span><span class="n">getAge</span><span class="p">())</span>
 </pre></div>
 
     </div>
@@ -480,7 +507,12 @@ Test 4, make a dictionary
 <div class="output_area">
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Date of Birth:  2003-01-15
+<pre>Student 1 Date of Birth:  1998-01-17
+Student 2 Date of Birth:  2006-01-15
+Student 1 is Class of 2015
+Student 2 is Class of 2024
+Student 1 Age is 25
+Student 2 Age is 17
 </pre>
 </div>
 </div>
@@ -510,17 +542,17 @@ Test 4, make a dictionary
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">datetime</span> <span class="kn">import</span> <span class="n">datetime</span>
 
 <span class="k">class</span> <span class="nc">Student</span><span class="p">:</span>
-    <span class="c1"># Setter and Getter: </span>
+    <span class="c1"># Setter: </span>
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">current_grade</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
         <span class="n">current_year</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span><span class="o">.</span><span class="n">year</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">current_grade</span> <span class="o">=</span> <span class="n">current_grade</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">graduation_year</span> <span class="o">=</span> <span class="n">current_year</span> <span class="o">+</span> <span class="p">(</span><span class="mi">12</span> <span class="o">-</span> <span class="n">current_grade</span><span class="p">)</span>
-    
-    <span class="k">def</span> <span class="nf">classOf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="c1"># Getter</span>
+    <span class="k">def</span> <span class="nf">getClassOf</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">graduation_year</span>
 
 <span class="n">student</span> <span class="o">=</span> <span class="n">Student</span><span class="p">(</span><span class="mi">11</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Class of"</span><span class="p">,</span> <span class="n">student</span><span class="o">.</span><span class="n">classOf</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Class of"</span><span class="p">,</span> <span class="n">student</span><span class="o">.</span><span class="n">getClassOf</span><span class="p">())</span>
 </pre></div>
 
     </div>
