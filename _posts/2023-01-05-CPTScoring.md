@@ -64,3 +64,63 @@ title: Performance Task Scoring 1-2
 ## How this will help me meet the college board requirements on my own project
 - Completing this assignment gave me a very good runthrough of how the performance task should look like, and I will definitely come back to this post for reference in the near furure when I am working on my own create performance task.
 
+# Template:
+
+
+
+# **Sample **
+
+Row 1: Program Purpose and Function 
+- [] Demonstrates an input, output, and program functionality
+- [] Written Response describes the purpose, functionality, and input/output of the program
+- [] Point?
+
+
+Row 2: Data Abstraction 
+- [] Includes two program segments: 1. that shows how data has been stored in a list. 2. that shows the data in the same list used to fulfill the program purpose
+- [] Identifies the name of the variable representing the list being used
+- [] Describes what data in the list is representing the program
+- [] Point?
+
+
+Row 3: Managing Complexity
+- [] Includes a code segment that shows a list that manages the complexity of the program
+- [] Explains how this list manages the complexity and explains why the program would work differently or not at all without this list.
+- [] Point?
+
+
+Row 4: Procedural Abstraction 
+- [] Includes two program code segments: 1. showing a student developed procedure with at least one parameter that has an effect on the procedure. 2. one shows where the procedure is being called
+- []  Describes what this procedure does and how it contributes to the functionality of the program
+- [] Point?
+
+
+Row 5: Algorithm Implementation 
+- [] Includes a program code segment of an algorithm that has sequencing, iteration, and selection
+- [] explains in detail how the algorithm works, with enough detail that someone could recreate it.
+- [] Point?
+
+
+Row 6: Testing 
+- [] Describes two calls to the selected procedure identified in written response 3.c Each call must pass a different argument(s) that causes a different segment of code in the algorithm to execute. 
+- [] Describes the conditions tested by each call to the procedure
+- [] Identifies the result of each call
+- [] Point?
+
+|Reporting Category|My Score|College Board Score|Comments|
+|-|-|-|-|
+|Program Purpose and Function||||
+|Data Abstraction||||
+|Managing Complexity||||
+|Procedural Abstraction||||
+|Algorithm Implementation||||
+|Testing||||
+
+## My Score: 
+## College Board Score: 
+
+### Discrepencies between my scoring and Collegeboard?
+- 
+
+### Criteria and why a submision may have failed to meet the standard
+- 
