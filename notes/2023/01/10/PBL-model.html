@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      11 min read
+      12 min read
     
 </span></p>
 
@@ -138,6 +138,7 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#Design-For-CPT-Project-Application">Design For CPT Project Application </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#Explaination">Explaination </a></li>
+<li class="toc-entry toc-h2"><a href="#Later-Edits">Later Edits </a></li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#Init-attribute">Init attribute </a></li>
@@ -566,32 +567,90 @@ Student 2 Age is 17
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">class</span> <span class="nc">Athlete</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">json</span>
+
+<span class="k">class</span> <span class="nc">Athlete</span><span class="p">:</span>
     <span class="c1"># Constructor:</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Weight</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">Bench</span><span class="p">:</span> <span class="nb">int</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">Weight</span> <span class="o">=</span> <span class="n">Weight</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">Bench</span> <span class="o">=</span> <span class="n">Weight</span> <span class="o">+</span> <span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">Weight</span><span class="p">,</span> <span class="n">Bench</span><span class="p">,</span> <span class="n">Squat</span><span class="p">,</span> <span class="n">Press</span><span class="p">,</span> <span class="n">Pushup</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Weight</span> <span class="o">=</span> <span class="n">Weight</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Bench</span> <span class="o">=</span> <span class="n">Weight</span> <span class="o">+</span> <span class="p">(</span><span class="mi">50</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Squat</span> <span class="o">=</span> <span class="n">Weight</span> <span class="o">*</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Press</span> <span class="o">=</span> <span class="n">Weight</span> <span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Pushup</span> <span class="o">=</span> <span class="n">Bench</span> <span class="o">/</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
     
     <span class="c1"># Getters:</span>
-    <span class="k">def</span> <span class="nf">getWeight</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Weight</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Weight</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Weight</span>
     
-    <span class="k">def</span> <span class="nf">getBench</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Bench</span>
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Bench</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Bench</span>
 
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Squat</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Squat</span>   
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Press</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Press</span> 
+    
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">Pushup</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_Pushup</span> 
+   
     <span class="c1"># Setters    </span>
-    <span class="k">def</span> <span class="nf">setWeight</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">weight</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">Weight</span> <span class="o">=</span> <span class="n">weight</span>
+    <span class="nd">@Weight</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Weight</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">weight</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Weight</span> <span class="o">=</span> <span class="n">weight</span>
 
-    <span class="k">def</span> <span class="nf">setBench</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bench</span><span class="p">):</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">Bench</span> <span class="o">=</span> <span class="n">bench</span>
+    <span class="nd">@Bench</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Bench</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">bench</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Bench</span> <span class="o">=</span> <span class="n">bench</span>
 
-<span class="n">Athlete1</span> <span class="o">=</span> <span class="n">Athlete</span><span class="p">(</span><span class="mi">130</span><span class="p">,</span> <span class="mi">180</span><span class="p">)</span>
-<span class="n">Athlete2</span> <span class="o">=</span> <span class="n">Athlete</span><span class="p">(</span><span class="mi">190</span><span class="p">,</span> <span class="mi">240</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 1 Weighs "</span><span class="p">,</span> <span class="n">Athlete1</span><span class="o">.</span><span class="n">getWeight</span><span class="p">(),</span> <span class="s2">"lbs"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 1 Bench Presses "</span><span class="p">,</span> <span class="n">Athlete1</span><span class="o">.</span><span class="n">getBench</span><span class="p">(),</span> <span class="s2">"lbs"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 2 Weighs "</span><span class="p">,</span> <span class="n">Athlete2</span><span class="o">.</span><span class="n">getWeight</span><span class="p">(),</span> <span class="s2">"lbs"</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 2 Bench Presses "</span><span class="p">,</span> <span class="n">Athlete2</span><span class="o">.</span><span class="n">getBench</span><span class="p">(),</span> <span class="s2">"lbs"</span><span class="p">)</span>
+    <span class="nd">@Squat</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Squat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">squat</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Squat</span> <span class="o">=</span> <span class="n">squat</span>
+
+    <span class="nd">@Press</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Press</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">press</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_Press</span> <span class="o">=</span> <span class="n">press</span>
+
+    <span class="nd">@Pushup</span><span class="o">.</span><span class="n">setter</span>
+    <span class="k">def</span> <span class="nf">Pushup</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pushup</span><span class="p">):</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">Pushup</span> <span class="o">=</span> <span class="n">pushup</span>
+
+    <span class="nd">@property</span>
+    <span class="k">def</span> <span class="nf">dictionary</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">dict</span> <span class="o">=</span> <span class="p">{</span>
+            <span class="s2">"Weight"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Weight</span><span class="p">,</span>
+            <span class="s2">"Bench"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Bench</span><span class="p">,</span>
+            <span class="s2">"Squat"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Squat</span><span class="p">,</span>
+            <span class="s2">"Press"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Press</span><span class="p">,</span>
+            <span class="s2">"Pushup"</span> <span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">Pushup</span><span class="p">,</span>
+        <span class="p">}</span>
+        <span class="k">return</span> <span class="nb">dict</span>
+
+    <span class="k">def</span> <span class="fm">__str__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dictionary</span><span class="p">)</span>
+    
+    <span class="k">def</span> <span class="fm">__repr__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="sa">f</span><span class="s1">'Athlete(Weight=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_Weight</span><span class="si">}</span><span class="s1">, Bench=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_Bench</span><span class="si">}</span><span class="s1">, Squat=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_Squat</span><span class="si">}</span><span class="s1">, Press=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_Press</span><span class="si">}</span><span class="s1">, Pushup=</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_Pushup</span><span class="si">}</span><span class="s1">)'</span>
+
+<span class="n">Athlete1</span> <span class="o">=</span> <span class="n">Athlete</span><span class="p">(</span><span class="mi">130</span><span class="p">,</span> <span class="mi">180</span><span class="p">,</span> <span class="mi">260</span><span class="p">,</span> <span class="mi">65</span><span class="p">,</span> <span class="mi">36</span><span class="p">)</span>
+<span class="n">Athlete2</span> <span class="o">=</span> <span class="n">Athlete</span><span class="p">(</span><span class="mi">190</span><span class="p">,</span> <span class="mi">240</span><span class="p">,</span> <span class="mi">380</span><span class="p">,</span> <span class="mi">95</span><span class="p">,</span> <span class="mi">48</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 1 Weighs "</span><span class="p">,</span> <span class="n">Athlete1</span><span class="o">.</span><span class="n">Weight</span><span class="p">,</span> <span class="s2">"lbs"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 1 Bench Presses "</span><span class="p">,</span> <span class="n">Athlete1</span><span class="o">.</span><span class="n">Bench</span><span class="p">,</span> <span class="s2">"lbs"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 1 Squats "</span><span class="p">,</span> <span class="n">Athlete1</span><span class="o">.</span><span class="n">Squat</span><span class="p">,</span> <span class="s2">"lbs"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 1 Presses "</span><span class="p">,</span> <span class="n">Athlete1</span><span class="o">.</span><span class="n">Press</span><span class="p">,</span> <span class="s2">"lbs"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 1 Can do "</span><span class="p">,</span> <span class="n">Athlete1</span><span class="o">.</span><span class="n">Pushup</span><span class="p">,</span> <span class="s2">"push-ups"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 2 Weighs "</span><span class="p">,</span> <span class="n">Athlete2</span><span class="o">.</span><span class="n">Weight</span><span class="p">,</span> <span class="s2">"lbs"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 2 Bench Presses "</span><span class="p">,</span> <span class="n">Athlete2</span><span class="o">.</span><span class="n">Bench</span><span class="p">,</span> <span class="s2">"lbs"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 2 Squats "</span><span class="p">,</span> <span class="n">Athlete2</span><span class="o">.</span><span class="n">Squat</span><span class="p">,</span> <span class="s2">"lbs"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 2 Presses "</span><span class="p">,</span> <span class="n">Athlete2</span><span class="o">.</span><span class="n">Press</span><span class="p">,</span> <span class="s2">"lbs"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">"Athlete 2 Can do "</span><span class="p">,</span> <span class="n">Athlete2</span><span class="o">.</span><span class="n">Pushup</span><span class="p">,</span> <span class="s2">"push-ups"</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Athlete1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">Athlete2</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -606,8 +665,16 @@ Student 2 Age is 17
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Athlete 1 Weighs  130 lbs
 Athlete 1 Bench Presses  180 lbs
+Athlete 1 Squats  260 lbs
+Athlete 1 Presses  65.0 lbs
+Athlete 1 Can do  36.0 push-ups
 Athlete 2 Weighs  190 lbs
 Athlete 2 Bench Presses  240 lbs
+Athlete 2 Squats  380 lbs
+Athlete 2 Presses  95.0 lbs
+Athlete 2 Can do  48.0 push-ups
+{"Weight": 130, "Bench": 180, "Squat": 260, "Press": 65.0, "Pushup": 36.0}
+{"Weight": 190, "Bench": 240, "Squat": 380, "Press": 95.0, "Pushup": 48.0}
 </pre>
 </div>
 </div>
@@ -632,6 +699,12 @@ Athlete 2 Bench Presses  240 lbs
 <li>I began with constructing the Weight and Bench attributes that signify how much an athlete weighs and bench presses</li>
 <li>I then used the Setter and Getter method to call them</li>
 <li>Finally I assigned each attribute to Athlete1 and Athlete2 and printed them.</li>
+</ul>
+<h2 id="Later-Edits">
+<a class="anchor" href="#Later-Edits" aria-hidden="true"><span class="octicon octicon-link"></span></a><strong>Later Edits</strong><a class="anchor-link" href="#Later-Edits"> </a>
+</h2>
+<ul>
+<li>In later edits, Steven and I were able to add @ decorators, and use the def__str function to print athlete 1 and athlete 2 and their attributes.</li>
 </ul>
 
 </div>
