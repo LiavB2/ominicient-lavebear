@@ -41,10 +41,10 @@ So far, the navbar, homepage, and workout logger have been coded. Ofcourse, all 
 
 ## Workout Logger (with code)
 
+![]({{site.baseurl}}/images/cpt6.png "https://github.com/LiavB2/ominicient-lavebear") 
+
 ![]({{site.baseurl}}/images/cpt3.png "https://github.com/LiavB2/ominicient-lavebear") 
 
 ![]({{site.baseurl}}/images/cpt4.png "https://github.com/LiavB2/ominicient-lavebear") 
 
 ![]({{site.baseurl}}/images/cpt5.png "https://github.com/LiavB2/ominicient-lavebear") 
-
-![]({{site.baseurl}}/images/cpt6.png "https://github.com/LiavB2/ominicient-lavebear") 
