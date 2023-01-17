@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Ideation, manifesto and SASS for tri 2 group CPT
-categories: [Notes]
+categories: [CPT]
 title: CPT Tri 2 Group Ideas
 ---
 

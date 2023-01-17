@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: APCSP Create a Performance Task example scoring 
-categories: [Notes]
+categories: [CPT]
 title: Performance Task Scoring 1-2
 ---
 

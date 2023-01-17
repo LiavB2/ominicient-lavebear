@@ -2,7 +2,7 @@
 toc: true
 layout: post
 description: Front end that we can possibly use for our Etracker project
-categories: [Notes]
+categories: [CPT]
 title: Fitness Frontend
 ---
 
