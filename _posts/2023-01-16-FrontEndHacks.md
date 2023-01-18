@@ -79,7 +79,7 @@ So far, the navbar, homepage, and workout logger have been coded. Ofcourse, all 
 </table>
 
 
-# Add an entry
+## Add an entry
 <table>
     <tr>
         <th><label for="athlete">Athlete</label></th>
@@ -98,7 +98,7 @@ So far, the navbar, homepage, and workout logger have been coded. Ofcourse, all 
     </tr>
 </table>
 
-# Remove an entry
+## Remove an entry
 <table>
     <tr>
         <th><label for="num">Entry Number to Remove</label></th>
