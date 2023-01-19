@@ -3,7 +3,7 @@ toc: true
 layout: post
 description: Tables that log Gym Hours
 categories: [CPT]
-title: Sample Feature CPT Project Table (Gym Hours)
+title: CPT Project Table (Gym Hours)
 ---
 
 ## Gym Logging
