@@ -55,7 +55,8 @@ title: Athlete Stats Feature College Board Overview
 ## Line 6: Testing
 - There will be 4 (or more depending on each datapoint that I add) calls, based on each exersize max that I code.
 - The condition that will be tested is the how great the number is in comparison to every other number that has been inputted for that parameter. Basically the condition is if it is the greatest weight that has been inputted for that exersize.
-- The result of each call, for the max weight table, will be the max weight (of each parameter) that was abstracted from the procedure. 
+- The result of each call, for the max weight table, will be the max weight (of each parameter) that was abstracted from the procedure.
+- If Age > 18 then print min weight, ifelse print max weight.
 
 
 # What I Will Show in My Video
