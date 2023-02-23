@@ -2,7 +2,7 @@
 keywords: fastai
 description: Display of the code from the identifying and fixing errors lesson
 title: Identifying and Correcting Errors
-layout: default
+layout: base
 badges: false
 permalink: /collegeboard/error
 image: /images/apcsp.png
