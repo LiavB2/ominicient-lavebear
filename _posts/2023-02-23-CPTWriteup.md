@@ -6,7 +6,7 @@ categories: [CPT]
 title: Create a Performance Task Writeup for Stats Feature
 ---
 
-# [Video]()
+# [Video](https://clipchamp.com/watch/urYOPfIh1FN)
 
 # Writeup
 
