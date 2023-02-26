@@ -49,13 +49,13 @@ title: Create a Performance Task Writeup for Stats Feature
 
 - Procedure with Parameters:
 
-![]({{site.baseurl}}/images/3.c.i.png "https://github.com/LiavB2/ominicient-lavebear")
-
 ![]({{site.baseurl}}/images/3.c.ii1.png "https://github.com/LiavB2/ominicient-lavebear")
 
 ![]({{site.baseurl}}/images/3.c.ii2.png "https://github.com/LiavB2/ominicient-lavebear")
 
 - Call:
+
+![]({{site.baseurl}}/images/3.c.i.png "https://github.com/LiavB2/ominicient-lavebear")
 
 ![]({{site.baseurl}}/images/3.c.ii3.png "https://github.com/LiavB2/ominicient-lavebear")
 
