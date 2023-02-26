@@ -44,19 +44,33 @@ title: Create a Performance Task Writeup for Stats Feature
 ### 3.b.v.
 - The database managaes the complexity of this stat tracking program as the program could never work without it. Without this database, the inputs that the user completes on the frontend would go nowhere and there would be no program entirely. Due to the abundance of this database, the stats that are inputted by the user can be saved and ultimately outputted onto the frontend table.
 
-3.c.
-3.c.i.
+## 3.c.
+### 3.c.i.
+
+- Procedure with Parameters:
 
 ![]({{site.baseurl}}/images/3.c.i.png "https://github.com/LiavB2/ominicient-lavebear")
-
-3.c.ii.
 
 ![]({{site.baseurl}}/images/3.c.ii1.png "https://github.com/LiavB2/ominicient-lavebear")
 
 ![]({{site.baseurl}}/images/3.c.ii2.png "https://github.com/LiavB2/ominicient-lavebear")
 
-3.c.iii
-- 
+- Call:
+
+![]({{site.baseurl}}/images/3.c.ii3.png "https://github.com/LiavB2/ominicient-lavebear")
+
+![]({{site.baseurl}}/images/3.c.ii4.png "https://github.com/LiavB2/ominicient-lavebear")
+
+### 3.c.ii
+
+![]({{site.baseurl}}/images/3.c.iii.png "https://github.com/LiavB2/ominicient-lavebear")
+
+![]({{site.baseurl}}/images/3.c.iii2.png "https://github.com/LiavB2/ominicient-lavebear")
+
+![]({{site.baseurl}}/images/3.c.iii3.png "https://github.com/LiavB2/ominicient-lavebear")
+
+### 3.c.iii
+- These code segments display the two procedures that are abundant in this program: Create function and read function. Both functions utilize the parameters of Age, Weight, Bench, Squat, Pullup, Mile. The functions both utilize the data that was inputted by the user which is jsonified into json formatted data. This data is then fetched seperately into the create (post) and read functions. The read function displays the data onto the table which allows the user to see it. Whereas the create function allows the user to input new data that is then outputted using the read function. Overall, the Create function allows for the user input while the read function allows for the output that is seen on the front end.
 
 3.c.iv.
 - 
