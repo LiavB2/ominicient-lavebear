@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      8 min read
     
 </span></p>
 
@@ -98,11 +98,35 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#22-data-compression-notes">2.2 Data Compression Notes</a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#displaying-images-in-python-jupyter-notebook">Displaying images in Python Jupyter notebook</a>
+<li class="toc-entry toc-h2"><a href="#image-files-and-size">Image Files and Size</a>
 <ul>
+<li class="toc-entry toc-h3"><a href="#questions">Questions</a></li>
+<li class="toc-entry toc-h3"><a href="#displaying-images-in-python-jupyter-notebook">Displaying images in Python Jupyter notebook</a></li>
 <li class="toc-entry toc-h3"><a href="#ipython">IPython</a></li>
-<li class="toc-entry toc-h3"><a href="#pathlib">pathlib</a></li>
-<li class="toc-entry toc-h3"><a href="#data-structures-and-oop">Data Structures and OOP</a></li>
+<li class="toc-entry toc-h3"><a href="#pathlib">pathlib</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#questions-1">Questions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#reading-and-encoding-images">Reading and Encoding Images</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#base-64">Base 64</a></li>
+<li class="toc-entry toc-h3"><a href="#numpy">Numpy</a></li>
+<li class="toc-entry toc-h3"><a href="#io-bytesio">io, BytesIO</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#questions-2">Questions</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#data-structures-imperative-programming-style-and-working-with-images">Data Structures, Imperative Programming Style, and Working with Images</a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#imperative-programing">Imperative Programing</a></li>
+<li class="toc-entry toc-h3"><a href="#oop">OOP</a></li>
+<li class="toc-entry toc-h3"><a href="#differences">Differences</a></li>
+<li class="toc-entry toc-h3"><a href="#questions-3">Questions</a></li>
 </ul>
 </li>
 </ul>
@@ -112,6 +136,9 @@ window.onload = wrap_img;
 
 <h1 id="22-data-compression-notes">
 <a class="anchor" href="#22-data-compression-notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2 Data Compression Notes</h1>
+
+<h2 id="image-files-and-size">
+<a class="anchor" href="#image-files-and-size" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image Files and Size</h2>
 
 <p><img src="/ominicient-lavebear/images/lossy.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
 
@@ -126,8 +153,38 @@ window.onload = wrap_img;
   <li>Often when we work with files we use c: and cd to take us towards a certain directory</li>
 </ul>
 
-<h2 id="displaying-images-in-python-jupyter-notebook">
-<a class="anchor" href="#displaying-images-in-python-jupyter-notebook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Displaying images in Python Jupyter notebook</h2>
+<h3 id="questions">
+<a class="anchor" href="#questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions</h3>
+<ul>
+  <li>Describe some of the meta data and considerations when managing Image files. Describe how these relate to Data Compression …
+    <ul>
+      <li>File Type, PNG and JPG are two types used in this lab
+        <ul>
+          <li>It is important to know the file type of the image file, such as PNG or JPG, as different file types have different compression techniques and levels of compression</li>
+        </ul>
+      </li>
+      <li>Size, height and width, number of pixels
+        <ul>
+          <li>Size, height and width, number of pixels: The size of an image file is measured in terms of the number of pixels it contains, which is determined by its height and width.</li>
+          <li>The more pixels an image has, the larger its file size will be. It is important to consider the size of the image file as it can affect the loading time of the image.</li>
+        </ul>
+      </li>
+      <li>Visual perception, lossy compression
+        <ul>
+          <li>When compressing image files, it is important to consider how the compression will affect the visual quality of the image. Lossy compression techniques, which reduce file size by discarding some of the image data, can result in a loss of visual quality that may be noticeable to the human eye.</li>
+          <li>Data compression is the process of reducing the size of an image file by removing or compressing redundant information.
+            <ul>
+              <li>This can be achieved through lossy or lossless compression techniques. Lossy compression techniques discard some of the image data, resulting in a smaller file size but reduced image quality, while lossless compression techniques maintain image quality but may not achieve as much compression.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="displaying-images-in-python-jupyter-notebook">
+<a class="anchor" href="#displaying-images-in-python-jupyter-notebook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Displaying images in Python Jupyter notebook</h3>
 <blockquote>
   <p>Python Libraries and Concepts used for Jupyter and Files/Directories</p>
 </blockquote>
@@ -142,36 +199,173 @@ window.onload = wrap_img;
 <a class="anchor" href="#pathlib" aria-hidden="true"><span class="octicon octicon-link"></span></a>pathlib</h3>
 <blockquote>
   <p>File paths are different on Windows versus Mac and Linux.  This can cause problems in a project as you work and deploy on different Operating Systems (OS’s), pathlib is a solution to this problem.</p>
-  <ul>
-    <li>What are commands you use in terminal to access files?</li>
-    <li>What are the command you use in Windows terminal to access files?</li>
-    <li>What are some of the major differences?</li>
-  </ul>
 </blockquote>
 
+<h4 id="questions-1">
+<a class="anchor" href="#questions-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions</h4>
 <ul>
-  <li>Provide what you observed, struggled with, or leaned while playing with this code.</li>
-  <li>Why is path a big deal when working with images?</li>
-  <li>How does the meta data source and label relate to Unit 5 topics?</li>
-  <li>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?</li>
+  <li>What are commands you use in terminal to access files?
+    <ul>
+      <li>ls - list the contents of the current directory</li>
+      <li>cd - change directory to a specified location</li>
+      <li>pwd - print the current working directory</li>
+      <li>mkdir - create a new directory</li>
+      <li>rm - remove a file or directory</li>
+      <li>cp - copy a file or directory</li>
+      <li>mv - move a file or directory</li>
+    </ul>
+  </li>
+  <li>What are the command you use in Windows terminal to access files?
+    <ul>
+      <li>dir - list the contents of the current directory</li>
+      <li>cd - change directory to a specified location</li>
+      <li>cd.. - move up one directory level</li>
+      <li>md - create a new directory</li>
+      <li>rd - remove a directory</li>
+      <li>copy - copy a file or directory</li>
+      <li>move - move a file or directory</li>
+    </ul>
+  </li>
+  <li>What are some of the major differences?
+    <ul>
+      <li>One of the major differences between the two sets of commands is the syntax used. In Linux/Unix, commands and file paths are typically separated by forward slashes, while in Windows, they are separated by backslashes.</li>
+      <li>Additionally, Linux/Unix commands are often shorter and more concise, using single-letter flags to modify their behavior, while Windows commands are often longer and more descriptive, using full words and phrases to specify options and parameters.</li>
+      <li>Another difference is that Windows commands are typically case-insensitive, while Linux/Unix commands are case-sensitive.</li>
+    </ul>
+  </li>
+  <li>Why is path a big deal when working with images?
+    <ul>
+      <li>Path is a big deal when working with images because it allows the software or application to locate the image file on the computer or network. Without the correct path, the software or application will not be able to find and display the image. This is particularly important when working with images in programming, where the path is specified in code and needs to be accurate.</li>
+    </ul>
+  </li>
+  <li>How does the meta data source and label relate to Unit 5 topics?
+    <ul>
+      <li>The metadata source and label are important in Unit 5 topics, particularly in the context of supervised learning. Metadata such as image dimensions, file type, and compression type can provide useful information about the image and help in preprocessing and feature extraction.</li>
+      <li>Labels can also provide important information about the image, such as the object or category it belongs to, which can be used to train and test machine learning models.</li>
+    </ul>
+  </li>
+  <li>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?
+    <ul>
+      <li>IPython is an interactive command-line shell for Python that provides enhanced functionality, such as tab completion, object introspection, and inline plotting. It is particularly useful in Jupyter Notebooks, where it allows for interactive exploration and analysis of data.
+        <ul>
+          <li>In Jupyter Notebooks, IPython can be used with both Pandas and Images.
+            <ul>
+              <li>With Pandas, IPython allows for interactive data exploration and manipulation, making it easier to analyze and clean data.</li>
+              <li>With Images, IPython can be used to display and manipulate images inline, allowing for real-time visualization and preprocessing of images. This can be especially useful in computer vision tasks where image preprocessing and analysis is an important part of the workflow.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 
-<h3 id="data-structures-and-oop">
-<a class="anchor" href="#data-structures-and-oop" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Structures and OOP</h3>
+<p><img src="/ominicient-lavebear/images/code1.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
+<h2 id="reading-and-encoding-images">
+<a class="anchor" href="#reading-and-encoding-images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading and Encoding Images</h2>
 <ul>
   <li>When we are now working on this data and images unit</li>
-  <li>Base 64 converts binary encoded data into an encoded scheme of 24 bits and 6 base64 bits.
+</ul>
+
+<h3 id="base-64">
+<a class="anchor" href="#base-64" aria-hidden="true"><span class="octicon octicon-link"></span></a>Base 64</h3>
+<ul>
+  <li>converts binary encoded data into an encoded scheme of 24 bits and 6 base64 bits.
     <ul>
       <li>It is used to transport and embed binary images into textual assets such as HTML and CSS</li>
-      <li>First 3 letters of my name in Base64: TGlh</li>
+      <li>First 3 letters of my name in Base64: TGlh
+        <h3 id="numpy">
+<a class="anchor" href="#numpy" aria-hidden="true"><span class="octicon octicon-link"></span></a>Numpy</h3>
+      </li>
     </ul>
   </li>
-  <li>Numpy is an artificial intelligence data science tool
+  <li>an artificial intelligence data science tool
     <ul>
-      <li>Mort uses them to manipulate and grab images</li>
+      <li>Mort uses them to manipulate and grab images
+        <h3 id="io-bytesio">
+<a class="anchor" href="#io-bytesio" aria-hidden="true"><span class="octicon octicon-link"></span></a>io, BytesIO</h3>
+      </li>
+    </ul>
+  </li>
+  <li>Input and Output (I/O) is a fundamental of all Computer Programming. Input/output (I/O) buffering is a technique used to optimize I/O operations.
+    <ul>
+      <li>In large quantities of data, how many frames of input the server currently has queued is the buffer.
+        <h4 id="questions-2">
+<a class="anchor" href="#questions-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions</h4>
+      </li>
+    </ul>
+  </li>
+  <li>Where have you been a consumer of buffering?
+    <ul>
+      <li>As a consumer, buffering is a common issue that I often encounter. Buffering occurs when the playback of media content is interrupted due to slow internet connection, network congestion, or limited system resources. When buffering occurs, the media content will stop playing and a loading icon or message may be displayed while the content is being buffered. This is really annoying and a big part of my digital expirience.</li>
+    </ul>
+  </li>
+  <li>From your consumer experience, what effects have you experienced from buffering?
+    <ul>
+      <li>Interruptions in media playback: Buffering can cause interruptions in media playback, which can be frustrating for the consumer, especially if the content is being streamed in real-time or contains important information.</li>
+      <li>Delayed or slow playback: Buffering can cause delayed or slow playback, which can negatively affect the user’s experience and perception of the quality of the media content.</li>
+      <li>Reduced image quality: Buffering can cause the image quality of media content to be reduced due to compression and other techniques used to speed up buffering.</li>
+    </ul>
+  </li>
+  <li>How do these effects apply to images?
+    <ul>
+      <li>In the context of images, buffering may occur when displaying large images or when loading images from a slow network or storage device.</li>
+      <li>This can result in delayed or slow image loading, which can affect the user’s experience and perception of the image quality.</li>
+      <li>In addition, images that are compressed or resized for faster loading may lose some of their quality and detail, which can negatively impact the user’s viewing experience.</li>
     </ul>
   </li>
 </ul>
+
+<h2 id="data-structures-imperative-programming-style-and-working-with-images">
+<a class="anchor" href="#data-structures-imperative-programming-style-and-working-with-images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Structures, Imperative Programming Style, and Working with Images</h2>
+<blockquote>
+  <p>Most data structures classes require Object Oriented Programming (OOP). Since this class is lined up with a College Course, OOP will be talked about often. Functionality in remainder of this Blog is the same as the prior implementation</p>
+</blockquote>
+
+<h3 id="imperative-programing">
+<a class="anchor" href="#imperative-programing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Imperative Programing</h3>
+<ul>
+  <li>a programming paradigm that emphasizes giving the computer a set of instructions to follow, which are executed sequentially.
+    <ul>
+      <li>It is often compared to a list of steps that a person might take to complete a task.</li>
+    </ul>
+  </li>
+  <li>Imperative programming languages focus on the “how” of a task rather than the “what” or “why”. Examples of imperative programming languages include C, Fortran, and Assembly</li>
+</ul>
+
+<h3 id="oop">
+<a class="anchor" href="#oop" aria-hidden="true"><span class="octicon octicon-link"></span></a>OOP</h3>
+<ul>
+  <li>a programming paradigm that focuses on objects as the fundamental unit of programming. OOP is based on the idea that objects are made up of data and behavior, and that objects interact with each other to perform tasks.
+    <ul>
+      <li>The key features of OOP include encapsulation, inheritance, and polymorphism.</li>
+      <li>Examples of OOP languages include Java, Python, and Ruby.</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="differences">
+<a class="anchor" href="#differences" aria-hidden="true"><span class="octicon octicon-link"></span></a>Differences</h3>
+<ul>
+  <li>Data and behavior: In imperative programming, data and behavior are often separate, and functions or procedures manipulate data. In OOP, data and behavior are encapsulated within objects.</li>
+  <li>Procedural vs. Object-Oriented: Imperative programming is often procedural, meaning that it relies on a series of procedures or functions to accomplish a task. OOP is based on objects that interact with each other to accomplish a task.</li>
+  <li>Abstraction: OOP provides abstraction, meaning that objects can hide their internal workings and expose only a public interface. Imperative programming is less abstract, and typically exposes more of the internal workings of a program.</li>
+  <li>Flexibility: OOP is generally more flexible and adaptable than imperative programming, due to its ability to encapsulate data and behavior within objects. Imperative programming can be more rigid, as it is often based on a series of procedures or functions that are executed sequentially.</li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/code2.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
+
+<h3 id="questions-3">
+<a class="anchor" href="#questions-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions</h3>
+<ul>
+  <li>Does this code seem like a series of steps are being performed?</li>
+  <li>Describe Grey Scale algorithm in English or Pseudo code?</li>
+  <li>Describe scale image? What is before and after on pixels in three images?</li>
+  <li>Is scale image a type of compression? If so, line it up with College Board terms described?</li>
+</ul>
+
+<p><img src="/ominicient-lavebear/images/code3.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
 
 <h1 id="22-data-compression-hacks">
 <a class="anchor" href="#22-data-compression-hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.2 Data Compression Hacks</h1>
