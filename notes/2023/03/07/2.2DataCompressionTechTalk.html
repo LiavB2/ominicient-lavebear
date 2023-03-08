@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      11 min read
     
 </span></p>
 
@@ -125,8 +125,11 @@ window.onload = wrap_img;
 <ul>
 <li class="toc-entry toc-h3"><a href="#imperative-programing">Imperative Programing</a></li>
 <li class="toc-entry toc-h3"><a href="#oop">OOP</a></li>
-<li class="toc-entry toc-h3"><a href="#differences">Differences</a></li>
-<li class="toc-entry toc-h3"><a href="#questions-3">Questions</a></li>
+<li class="toc-entry toc-h3"><a href="#differences">Differences</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#questions-3">Questions</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -356,13 +359,65 @@ window.onload = wrap_img;
 
 <p><img src="/ominicient-lavebear/images/code2.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
 
-<h3 id="questions-3">
-<a class="anchor" href="#questions-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions</h3>
+<h4 id="questions-3">
+<a class="anchor" href="#questions-3" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions</h4>
 <ul>
   <li>Does this code seem like a series of steps are being performed?</li>
-  <li>Describe Grey Scale algorithm in English or Pseudo code?</li>
-  <li>Describe scale image? What is before and after on pixels in three images?</li>
-  <li>Is scale image a type of compression? If so, line it up with College Board terms described?</li>
+  <li>Describe Grey Scale algorithm in English or Pseudo code?
+    <ul>
+      <li>A grayscale algorithm converts a color image into a black and white image by removing the color information and retaining only the luminance or brightness values of each pixel. The algorithm works as follows:
+        <ol>
+          <li>Load the color image into memory.</li>
+          <li>Iterate through each pixel of the image.</li>
+          <li>For each pixel, calculate the grayscale value using the formula:</li>
+          <li>grayscale = (0.299 * red) + (0.587 * green) + (0.114 * blue)
+  where red, green, and blue are the color values of the pixel.</li>
+          <li>Assign the calculated grayscale value to the pixel.</li>
+          <li>Save the grayscale image to disk.</li>
+        </ol>
+      </li>
+    </ul>
+  </li>
+  <li>Describe scale image? What is before and after on pixels in three images?
+    <ul>
+      <li>A scaled image is an image that has been resized to either be smaller or larger than its original size. Scaling an image involves changing the number of pixels that make up the image, which can affect its overall quality and clarity.</li>
+      <li>In order to scale an image, a mathematical formula is used to determine how the pixels should be adjusted.</li>
+      <li>When scaling an image to be larger, new pixels are added to the image to increase its size. Conversely, when scaling an image to be smaller, some of the original pixels are removed or combined to decrease its size.</li>
+      <li>Examples:
+        <ul>
+          <li>
+            <p>Image 1:
+  Original size: 1000 x 1000 pixels
+  Scaled size: 500 x 500 pixels (50% of original size)</p>
+          </li>
+          <li>
+            <p>Image 2:
+  Original size: 1000 x 1000 pixels
+  Scaled size: 2000 x 2000 pixels (200% of original size)</p>
+          </li>
+          <li>
+            <p>Image 3:
+  Original size: 1000 x 1000 pixels
+  Scaled size: 100 x 100 pixels (10% of original size)</p>
+          </li>
+        </ul>
+      </li>
+      <li>Is scale image a type of compression? If so, line it up with College Board terms described?
+        <ul>
+          <li>Scaling an image is not considered a type of compression because it does not involve any reduction in the file size of the image. When an image is compressed, the file size is reduced by either removing some of the data or by encoding the data in a more efficient way.
+            <ul>
+              <li>Compression is usually used to reduce the file size of an image to make it easier to store, transmit or load.</li>
+            </ul>
+          </li>
+          <li>On the other hand, scaling an image is simply a process of resizing the image to make it larger or smaller without reducing its file size or changing its format. Scaling an image can, however, impact the visual quality of the image.
+            <ul>
+              <li>If the image is scaled down, the reduction in the number of pixels may lead to loss of details or blurriness. If the image is scaled up, it may result in pixelation or distortion.</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
 </ul>
 
 <p><img src="/ominicient-lavebear/images/code3.png" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>

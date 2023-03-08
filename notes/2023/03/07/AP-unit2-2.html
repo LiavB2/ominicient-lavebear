@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      19 min read
     
 </span></p>
 
@@ -126,10 +126,37 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#Image-Files-and-Size-Code-and-Notes">Image Files and Size Code and Notes </a></li>
+<li class="toc-entry toc-h1"><a href="#Image-Files-and-Size-Code-and-Notes">Image Files and Size Code and Notes </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Questions">Questions </a></li>
+<li class="toc-entry toc-h3"><a href="#Displaying-images-in-Python-Jupyter-notebook">Displaying images in Python Jupyter notebook </a></li>
+<li class="toc-entry toc-h3"><a href="#IPython">IPython </a></li>
+<li class="toc-entry toc-h3"><a href="#pathlib">pathlib </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Questions">Questions </a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toc-entry toc-h1"><a href="#Reading-and-Encoding-Images-(2-implementations-follow)-and-Data-Structures,-Imperative-Programming-Style,-and-working-with-Images-Code-and-Notes">Reading and Encoding Images (2 implementations follow) and Data Structures, Imperative Programming Style, and working with Images Code and Notes </a>
 <ul>
-<li class="toc-entry toc-h2"><a href="#Data-Structures-and-OOP-Code-and-Notes">Data Structures and OOP Code and Notes </a></li>
+<li class="toc-entry toc-h2"><a href="#Reading-and-Encoding-Images">Reading and Encoding Images </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Base-64">Base 64 </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Data-Structures,-Imperative-Programming-Style,-and-Working-with-Images">Data Structures, Imperative Programming Style, and Working with Images </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Imperative-Programing">Imperative Programing </a></li>
+<li class="toc-entry toc-h3"><a href="#OOP">OOP </a></li>
+<li class="toc-entry toc-h3"><a href="#Differences">Differences </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Data-Structures-and-OOP-Code-and-Notes">Data Structures and OOP Code and Notes </a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#Questions">Questions </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#Hacks">Hacks </a></li>
 </ul>
 </li>
@@ -145,9 +172,127 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<p><img src="https://m.media-amazon.com/images/I/4199zzjb7KS._AC_.jpg" alt="Happy Face"></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Image-Files-and-Size-Code-and-Notes">
 <a class="anchor" href="#Image-Files-and-Size-Code-and-Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Image Files and Size Code and Notes<a class="anchor-link" href="#Image-Files-and-Size-Code-and-Notes"> </a>
 </h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li>We shrink files in order to save speed and storage.<ul>
+<li>Reduction of bits saves storage and saves transmision time</li>
+</ul>
+</li>
+<li>Lossy data reduces data but the original is not recovered</li>
+<li>Lossless data lets you restore and recover</li>
+<li>Often when we work with files we use c: and cd to take us towards a certain directory</li>
+</ul>
+<h3 id="Questions">
+<a class="anchor" href="#Questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions<a class="anchor-link" href="#Questions"> </a>
+</h3>
+<ul>
+<li>Describe some of the meta data and considerations when managing Image files. Describe how these relate to Data Compression ...<ul>
+<li>File Type, PNG and JPG are two types used in this lab<ul>
+<li>It is important to know the file type of the image file, such as PNG or JPG, as different file types have different compression techniques and levels of compression</li>
+</ul>
+</li>
+<li>Size, height and width, number of pixels<ul>
+<li>Size, height and width, number of pixels: The size of an image file is measured in terms of the number of pixels it contains, which is determined by its height and width. </li>
+<li>The more pixels an image has, the larger its file size will be. It is important to consider the size of the image file as it can affect the loading time of the image.</li>
+</ul>
+</li>
+<li>Visual perception, lossy compression<ul>
+<li>When compressing image files, it is important to consider how the compression will affect the visual quality of the image. Lossy compression techniques, which reduce file size by discarding some of the image data, can result in a loss of visual quality that may be noticeable to the human eye.</li>
+<li>Data compression is the process of reducing the size of an image file by removing or compressing redundant information. <ul>
+<li>This can be achieved through lossy or lossless compression techniques. Lossy compression techniques discard some of the image data, resulting in a smaller file size but reduced image quality, while lossless compression techniques maintain image quality but may not achieve as much compression.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="Displaying-images-in-Python-Jupyter-notebook">
+<a class="anchor" href="#Displaying-images-in-Python-Jupyter-notebook" aria-hidden="true"><span class="octicon octicon-link"></span></a>Displaying images in Python Jupyter notebook<a class="anchor-link" href="#Displaying-images-in-Python-Jupyter-notebook"> </a>
+</h3>
+<blockquote>
+<p>Python Libraries and Concepts used for Jupyter and Files/Directories</p>
+</blockquote>
+<h3 id="IPython">
+<a class="anchor" href="#IPython" aria-hidden="true"><span class="octicon octicon-link"></span></a>IPython<a class="anchor-link" href="#IPython"> </a>
+</h3>
+<blockquote>
+<p>Support visualization of data in Jupyter notebooks.  Visualization is specific to View, for the web visualization needs to be converted to HTML.</p>
+</blockquote>
+<h3 id="pathlib">
+<a class="anchor" href="#pathlib" aria-hidden="true"><span class="octicon octicon-link"></span></a>pathlib<a class="anchor-link" href="#pathlib"> </a>
+</h3>
+<blockquote>
+<p>File paths are different on Windows versus Mac and Linux.  This can cause problems in a project as you work and deploy on different Operating Systems (OS's), pathlib is a solution to this problem.</p>
+</blockquote>
+<h4 id="Questions">
+<a class="anchor" href="#Questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions<a class="anchor-link" href="#Questions"> </a>
+</h4>
+<ul>
+<li>What are commands you use in terminal to access files?<ul>
+<li>ls - list the contents of the current directory</li>
+<li>cd - change directory to a specified location</li>
+<li>pwd - print the current working directory</li>
+<li>mkdir - create a new directory</li>
+<li>rm - remove a file or directory</li>
+<li>cp - copy a file or directory</li>
+<li>mv - move a file or directory</li>
+</ul>
+</li>
+<li>What are the command you use in Windows terminal to access files?<ul>
+<li>dir - list the contents of the current directory</li>
+<li>cd - change directory to a specified location</li>
+<li>cd.. - move up one directory level</li>
+<li>md - create a new directory</li>
+<li>rd - remove a directory</li>
+<li>copy - copy a file or directory</li>
+<li>move - move a file or directory</li>
+</ul>
+</li>
+<li>What are some of the major differences?<ul>
+<li>One of the major differences between the two sets of commands is the syntax used. In Linux/Unix, commands and file paths are typically separated by forward slashes, while in Windows, they are separated by backslashes. </li>
+<li>Additionally, Linux/Unix commands are often shorter and more concise, using single-letter flags to modify their behavior, while Windows commands are often longer and more descriptive, using full words and phrases to specify options and parameters. </li>
+<li>Another difference is that Windows commands are typically case-insensitive, while Linux/Unix commands are case-sensitive.</li>
+</ul>
+</li>
+<li>Why is path a big deal when working with images?<ul>
+<li>Path is a big deal when working with images because it allows the software or application to locate the image file on the computer or network. Without the correct path, the software or application will not be able to find and display the image. This is particularly important when working with images in programming, where the path is specified in code and needs to be accurate.</li>
+</ul>
+</li>
+<li>How does the meta data source and label relate to Unit 5 topics?<ul>
+<li>The metadata source and label are important in Unit 5 topics, particularly in the context of supervised learning. Metadata such as image dimensions, file type, and compression type can provide useful information about the image and help in preprocessing and feature extraction. </li>
+<li>Labels can also provide important information about the image, such as the object or category it belongs to, which can be used to train and test machine learning models.</li>
+</ul>
+</li>
+<li>Look up IPython, describe why this is interesting in Jupyter Notebooks for both Pandas and Images?<ul>
+<li>IPython is an interactive command-line shell for Python that provides enhanced functionality, such as tab completion, object introspection, and inline plotting. It is particularly useful in Jupyter Notebooks, where it allows for interactive exploration and analysis of data.<ul>
+<li>In Jupyter Notebooks, IPython can be used with both Pandas and Images. <ul>
+<li>With Pandas, IPython allows for interactive data exploration and manipulation, making it easier to analyze and clean data. </li>
+<li>With Images, IPython can be used to display and manipulate images inline, allowing for real-time visualization and preprocessing of images. This can be especially useful in computer vision tasks where image preprocessing and analysis is an important part of the workflow.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -239,6 +384,90 @@ window.onload = wrap_img;
 <h1 id="Reading-and-Encoding-Images-(2-implementations-follow)-and-Data-Structures,-Imperative-Programming-Style,-and-working-with-Images-Code-and-Notes">
 <a class="anchor" href="#Reading-and-Encoding-Images-(2-implementations-follow)-and-Data-Structures,-Imperative-Programming-Style,-and-working-with-Images-Code-and-Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading and Encoding Images (2 implementations follow) and Data Structures, Imperative Programming Style, and working with Images Code and Notes<a class="anchor-link" href="#Reading-and-Encoding-Images-(2-implementations-follow)-and-Data-Structures,-Imperative-Programming-Style,-and-working-with-Images-Code-and-Notes"> </a>
 </h1>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Reading-and-Encoding-Images">
+<a class="anchor" href="#Reading-and-Encoding-Images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Reading and Encoding Images<a class="anchor-link" href="#Reading-and-Encoding-Images"> </a>
+</h2>
+<ul>
+<li>When we are now working on this data and images unit</li>
+</ul>
+<h3 id="Base-64">
+<a class="anchor" href="#Base-64" aria-hidden="true"><span class="octicon octicon-link"></span></a>Base 64<a class="anchor-link" href="#Base-64"> </a>
+</h3>
+<ul>
+<li>converts binary encoded data into an encoded scheme of 24 bits and 6 base64 bits. <ul>
+<li>It is used to transport and embed binary images into textual assets such as HTML and CSS</li>
+<li>First 3 letters of my name in Base64: TGlh
+### Numpy </li>
+</ul>
+</li>
+<li>an artificial intelligence data science tool<ul>
+<li>Mort uses them to manipulate and grab images
+### io, BytesIO </li>
+</ul>
+</li>
+<li>Input and Output (I/O) is a fundamental of all Computer Programming. Input/output (I/O) buffering is a technique used to optimize I/O operations.<ul>
+<li>In large quantities of data, how many frames of input the server currently has queued is the buffer. 
+#### Questions</li>
+</ul>
+</li>
+<li>Where have you been a consumer of buffering?<ul>
+<li>As a consumer, buffering is a common issue that I often encounter. Buffering occurs when the playback of media content is interrupted due to slow internet connection, network congestion, or limited system resources. When buffering occurs, the media content will stop playing and a loading icon or message may be displayed while the content is being buffered. This is really annoying and a big part of my digital expirience.</li>
+</ul>
+</li>
+<li>From your consumer experience, what effects have you experienced from buffering?     <ul>
+<li>Interruptions in media playback: Buffering can cause interruptions in media playback, which can be frustrating for the consumer, especially if the content is being streamed in real-time or contains important information.</li>
+<li>Delayed or slow playback: Buffering can cause delayed or slow playback, which can negatively affect the user's experience and perception of the quality of the media content.</li>
+<li>Reduced image quality: Buffering can cause the image quality of media content to be reduced due to compression and other techniques used to speed up buffering.</li>
+</ul>
+</li>
+<li>How do these effects apply to images?<ul>
+<li>In the context of images, buffering may occur when displaying large images or when loading images from a slow network or storage device.</li>
+<li>This can result in delayed or slow image loading, which can affect the user's experience and perception of the image quality. </li>
+<li>In addition, images that are compressed or resized for faster loading may lose some of their quality and detail, which can negatively impact the user's viewing experience.</li>
+</ul>
+</li>
+</ul>
+<h2 id="Data-Structures,-Imperative-Programming-Style,-and-Working-with-Images">
+<a class="anchor" href="#Data-Structures,-Imperative-Programming-Style,-and-Working-with-Images" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Structures, Imperative Programming Style, and Working with Images<a class="anchor-link" href="#Data-Structures,-Imperative-Programming-Style,-and-Working-with-Images"> </a>
+</h2>
+<blockquote>
+<p>Most data structures classes require Object Oriented Programming (OOP). Since this class is lined up with a College Course, OOP will be talked about often. Functionality in remainder of this Blog is the same as the prior implementation</p>
+</blockquote>
+<h3 id="Imperative-Programing">
+<a class="anchor" href="#Imperative-Programing" aria-hidden="true"><span class="octicon octicon-link"></span></a>Imperative Programing<a class="anchor-link" href="#Imperative-Programing"> </a>
+</h3>
+<ul>
+<li>a programming paradigm that emphasizes giving the computer a set of instructions to follow, which are executed sequentially. <ul>
+<li>It is often compared to a list of steps that a person might take to complete a task. </li>
+</ul>
+</li>
+<li>Imperative programming languages focus on the "how" of a task rather than the "what" or "why". Examples of imperative programming languages include C, Fortran, and Assembly</li>
+</ul>
+<h3 id="OOP">
+<a class="anchor" href="#OOP" aria-hidden="true"><span class="octicon octicon-link"></span></a>OOP<a class="anchor-link" href="#OOP"> </a>
+</h3>
+<ul>
+<li>a programming paradigm that focuses on objects as the fundamental unit of programming. OOP is based on the idea that objects are made up of data and behavior, and that objects interact with each other to perform tasks. <ul>
+<li>The key features of OOP include encapsulation, inheritance, and polymorphism. </li>
+<li>Examples of OOP languages include Java, Python, and Ruby.</li>
+</ul>
+</li>
+</ul>
+<h3 id="Differences">
+<a class="anchor" href="#Differences" aria-hidden="true"><span class="octicon octicon-link"></span></a>Differences<a class="anchor-link" href="#Differences"> </a>
+</h3>
+<ul>
+<li>Data and behavior:In imperative programming, data and behavior are often separate, and functions or procedures manipulate data. In OOP, data and behavior are encapsulated within objects.- Procedural vs. Object-Oriented: Imperative programming is often procedural, meaning that it relies on a series of procedures or functions to accomplish a task. OOP is based on objects that interact with each other to accomplish a task.</li>
+<li>Abstraction: OOP provides abstraction, meaning that objects can hide their internal workings and expose only a public interface. Imperative programming is less abstract, and typically exposes more of the internal workings of a program.</li>
+<li>Flexibility: OOP is generally more flexible and adaptable than imperative programming, due to its ability to encapsulate data and behavior within objects. Imperative programming can be more rigid, as it is often based on a series of procedures or functions that are executed sequentially.</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -498,6 +727,67 @@ Scaled size:  (320, 240)
 <h2 id="Data-Structures-and-OOP-Code-and-Notes">
 <a class="anchor" href="#Data-Structures-and-OOP-Code-and-Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Structures and OOP Code and Notes<a class="anchor-link" href="#Data-Structures-and-OOP-Code-and-Notes"> </a>
 </h2>
+<h4 id="Questions">
+<a class="anchor" href="#Questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Questions<a class="anchor-link" href="#Questions"> </a>
+</h4>
+<ul>
+<li>Does this code seem like a series of steps are being performed?</li>
+<li>
+<p>Describe Grey Scale algorithm in English or Pseudo code?</p>
+<ul>
+<li>A grayscale algorithm converts a color image into a black and white image by removing the color information and retaining only the luminance or brightness values of each pixel. The algorithm works as follows:<ol>
+<li>Load the color image into memory.</li>
+<li>Iterate through each pixel of the image.</li>
+<li>For each pixel, calculate the grayscale value using the formula:</li>
+<li>grayscale = (0.299 <em> red) + (0.587 </em> green) + (0.114 * blue)
+where red, green, and blue are the color values of the pixel.</li>
+<li>Assign the calculated grayscale value to the pixel.</li>
+<li>Save the grayscale image to disk.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>Describe scale image? What is before and after on pixels in three images?</p>
+<ul>
+<li>A scaled image is an image that has been resized to either be smaller or larger than its original size. Scaling an image involves changing the number of pixels that make up the image, which can affect its overall quality and clarity.</li>
+<li>In order to scale an image, a mathematical formula is used to determine how the pixels should be adjusted. </li>
+<li>When scaling an image to be larger, new pixels are added to the image to increase its size. Conversely, when scaling an image to be smaller, some of the original pixels are removed or combined to decrease its size.</li>
+<li>
+<p>Examples:</p>
+<ul>
+<li>
+<p>Image 1:
+Original size: 1000 x 1000 pixels
+Scaled size: 500 x 500 pixels (50% of original size)</p>
+</li>
+<li>
+<p>Image 2:
+Original size: 1000 x 1000 pixels
+Scaled size: 2000 x 2000 pixels (200% of original size)</p>
+</li>
+<li>
+<p>Image 3:
+Original size: 1000 x 1000 pixels
+Scaled size: 100 x 100 pixels (10% of original size)</p>
+</li>
+</ul>
+</li>
+<li>Is scale image a type of compression? If so, line it up with College Board terms described?<ul>
+<li>Scaling an image is not considered a type of compression because it does not involve any reduction in the file size of the image. When an image is compressed, the file size is reduced by either removing some of the data or by encoding the data in a more efficient way. <ul>
+<li>Compression is usually used to reduce the file size of an image to make it easier to store, transmit or load.</li>
+</ul>
+</li>
+<li>On the other hand, scaling an image is simply a process of resizing the image to make it larger or smaller without reducing its file size or changing its format. Scaling an image can, however, impact the visual quality of the image. <ul>
+<li>If the image is scaled down, the reduction in the number of pixels may lead to loss of details or blurriness. If the image is scaled up, it may result in pixelation or distortion.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
 </div>
 </div>
 </div>
@@ -814,7 +1104,10 @@ Scaled size:  (320, 240)
 <ul>
 <li>Add this Blog to you own Blogging site.</li>
 <li>In the Blog add a Happy Face image.</li>
-<li>Have Happy Face Image open when Tech Talk starts, running on localhost.  Don't tell anyone. Show to Teacher.</li>
+<li>Have Happy Face Image open when Tech Talk starts, running on localhost.  Don't tell anyone. Show to Teacher.<ul>
+<li><strong>See Above</strong></li>
+</ul>
+</li>
 </ul>
 <p>AP Prep</p>
 <ul>
@@ -838,6 +1131,70 @@ Scaled size:  (320, 240)
 </div>
 </div>
 </div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span>
+
+<span class="c1"># Load image file</span>
+<span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">"ceramics.png"</span><span class="p">)</span>
+
+<span class="c1"># Convert image to numpy array</span>
+<span class="n">img_array</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+<span class="c1"># Create blue scale</span>
+<span class="n">blue_scale</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">img_array</span><span class="p">)</span>
+<span class="n">blue_scale</span><span class="p">[:,:,</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">img_array</span><span class="p">[:,:,</span><span class="mi">2</span><span class="p">]</span>
+
+<span class="c1"># Convert blue scale back to image</span>
+<span class="n">blue_img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">fromarray</span><span class="p">(</span><span class="n">blue_scale</span><span class="p">)</span>
+
+<span class="c1"># Save blue image</span>
+<span class="n">blue_img</span><span class="o">.</span><span class="n">save</span><span class="p">(</span><span class="s2">"blue_ceramics.png"</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">FileNotFoundError</span>                         Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-07-AP-unit2-2.ipynb Cell 12</span> in <span class="ansi-cyan-fg">&lt;cell line: 5&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-07-AP-unit2-2.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=1'&gt;2&lt;/a&gt;</span> from PIL import Image
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-07-AP-unit2-2.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=3'&gt;4&lt;/a&gt;</span> # Load image file
+<span class="ansi-green-fg">----&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-07-AP-unit2-2.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=4'&gt;5&lt;/a&gt;</span> img = Image.open("ceramics.png")
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-07-AP-unit2-2.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=6'&gt;7&lt;/a&gt;</span> # Convert image to numpy array
+<span class="ansi-green-intense-fg ansi-bold">      &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-07-AP-unit2-2.ipynb#X23sdnNjb2RlLXJlbW90ZQ%3D%3D?line=7'&gt;8&lt;/a&gt;</span> img_array = np.array(img)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/PIL/Image.py:2953</span>, in <span class="ansi-cyan-fg">open</span><span class="ansi-blue-fg">(fp, mode, formats)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2950</span>     filename = fp
+<span class="ansi-green-intense-fg ansi-bold">   2952</span> if filename:
+<span class="ansi-green-fg">-&gt; 2953</span>     fp = builtins.open(filename, "rb")
+<span class="ansi-green-intense-fg ansi-bold">   2954</span>     exclusive_fp = True
+<span class="ansi-green-intense-fg ansi-bold">   2956</span> try:
+
+<span class="ansi-red-fg">FileNotFoundError</span>: [Errno 2] No such file or directory: 'ceramics.png'</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
 </div>
 
 
