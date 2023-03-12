@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      12 min read
+      23 min read
     
 </span></p>
 
@@ -153,8 +153,39 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#Example-of-larger-data-set">Example of larger data set </a></li>
 <li class="toc-entry toc-h1"><a href="#APIs-are-a-Source-for-Writing-Programs-with-Data">APIs are a Source for Writing Programs with Data </a></li>
 <li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a></li>
-<li class="toc-entry toc-h1"><a href="#My-Fitness-Dataset:">My Fitness Dataset: </a>
+<li class="toc-entry toc-h1"><a href="#My-Fitness-Dataset:">My Fitness Dataset: </a></li>
+<li class="toc-entry toc-h1"><a href="#2.3-College-Board-Questions-Explainations">2.3 College Board Questions Explainations </a>
 <ul>
+<li class="toc-entry toc-h2"><a href="#Data-Compression">Data Compression </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Q1-Advantage-of-lossless-over-lossy-compression">Q1 Advantage of lossless over lossy compression </a></li>
+<li class="toc-entry toc-h3"><a href="#Q2-Compression-algorithm-for-storing-a-data-file">Q2 Compression algorithm for storing a data file </a></li>
+<li class="toc-entry toc-h3"><a href="#Q3-True-Statement-about-compression">Q3 True Statement about compression </a></li>
+<li class="toc-entry toc-h3"><a href="#Application-of-these-questions">Application of these questions </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Extracting-Information-From-Data">Extracting Information From Data </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Q1-Challenge-due-to-lack-of-unique-ID">Q1 Challenge due to lack of unique ID </a></li>
+<li class="toc-entry toc-h3"><a href="#Q2-Challenge-in-analyzing-data-from-many-counties">Q2 Challenge in analyzing data from many counties </a></li>
+<li class="toc-entry toc-h3"><a href="#Q3-Challemges-with-city-data-entered-by-users">Q3 Challemges with city data entered by users </a></li>
+<li class="toc-entry toc-h3"><a href="#Q4-Determine-Artist-with-the-most-concert-attendees">Q4 Determine Artist with the most concert attendees </a></li>
+<li class="toc-entry toc-h3"><a href="#Q5-Information-determined-using-dashboard-metadata">Q5 Information determined using dashboard metadata </a></li>
+<li class="toc-entry toc-h3"><a href="#Q6-Information-from-student-work-habit-survey">Q6 Information from student work habit survey </a></li>
+<li class="toc-entry toc-h3"><a href="#Application-of-these-questions">Application of these questions </a></li>
+</ul>
+</li>
+<li class="toc-entry toc-h2"><a href="#Using-Programs-with-Data">Using Programs with Data </a>
+<ul>
+<li class="toc-entry toc-h3"><a href="#Q1-Bookstore-Spreadsheet">Q1 Bookstore Spreadsheet </a></li>
+<li class="toc-entry toc-h3"><a href="#Q2-Clothing-store-ssales-information">Q2 Clothing store ssales information </a></li>
+<li class="toc-entry toc-h3"><a href="#Q3-Data-files-to-contact-customers-who-use-batteries">Q3 Data files to contact customers who use batteries </a></li>
+<li class="toc-entry toc-h3"><a href="#Q4-Museum-photograph-spreadsheet">Q4 Museum photograph spreadsheet </a></li>
+<li class="toc-entry toc-h3"><a href="#Q5-Radio-Show-Spreadheet">Q5 Radio Show Spreadheet </a></li>
+<li class="toc-entry toc-h3"><a href="#Use-of-Databases-to-display-animal-information">Use of Databases to display animal information </a></li>
+<li class="toc-entry toc-h3"><a href="#Application-of-these-questions">Application of these questions </a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h2"><a href="#Hack-Helpers">Hack Helpers </a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#Titanic-Data">Titanic Data </a></li>
@@ -705,33 +736,46 @@ window.onload = wrap_img;
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Etracker User Data:'</span><span class="p">)</span>
 
 <span class="c1"># Calculate some basic statistics</span>
+
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Age:'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'User Max age:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'User Min Age:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Mean User age:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Median User age:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Mode User age:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">age_stats</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Max'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+             <span class="s1">'Min'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+             <span class="s1">'Mean'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+             <span class="s1">'Median'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+             <span class="s1">'Mode'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Age'</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]}</span>
+
+<span class="k">for</span> <span class="n">stat</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">age_stats</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'User </span><span class="si">{</span><span class="n">stat</span><span class="si">}</span><span class="s1"> age: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Weight:'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'User Max weight:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'User Min weight:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Mean User weight:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Median User weight:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Mode User weight:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">weight_stats</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Max'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+             <span class="s1">'Min'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+             <span class="s1">'Mean'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+             <span class="s1">'Median'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+             <span class="s1">'Mode'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Weight'</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]}</span>
+
+<span class="k">for</span> <span class="n">stat</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">weight_stats</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'User </span><span class="si">{</span><span class="n">stat</span><span class="si">}</span><span class="s1"> Weight: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'Height:'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'User Max Height:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'User Min Height:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Mean User Height:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Median User Height:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Mode User Height:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">height_stats</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Max'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+             <span class="s1">'Min'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+             <span class="s1">'Mean'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+             <span class="s1">'Median'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+             <span class="s1">'Mode'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'Height'</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]}</span>
+
+<span class="k">for</span> <span class="n">stat</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">height_stats</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'User </span><span class="si">{</span><span class="n">stat</span><span class="si">}</span><span class="s1"> Height: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 
 <span class="nb">print</span><span class="p">(</span><span class="s1">'BMI:'</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'User Max BMI:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'BMI'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'User Min BMI:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'BMI'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Mean User BMI:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'BMI'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Median User BMI:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'BMI'</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">())</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">'Mode User BMI:'</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">'BMI'</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">bmi_stats</span> <span class="o">=</span> <span class="p">{</span><span class="s1">'Max'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'BMI'</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(),</span>
+             <span class="s1">'Min'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'BMI'</span><span class="p">]</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span>
+             <span class="s1">'Mean'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'BMI'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(),</span>
+             <span class="s1">'Median'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'BMI'</span><span class="p">]</span><span class="o">.</span><span class="n">median</span><span class="p">(),</span>
+             <span class="s1">'Mode'</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">'BMI'</span><span class="p">]</span><span class="o">.</span><span class="n">mode</span><span class="p">()[</span><span class="mi">0</span><span class="p">]}</span>
+
+<span class="k">for</span> <span class="n">stat</span><span class="p">,</span> <span class="n">value</span> <span class="ow">in</span> <span class="n">height_stats</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s1">'User </span><span class="si">{</span><span class="n">stat</span><span class="si">}</span><span class="s1"> BMI: </span><span class="si">{</span><span class="n">value</span><span class="si">}</span><span class="s1">'</span><span class="p">)</span>
 </pre></div>
 
     </div>
@@ -753,28 +797,28 @@ window.onload = wrap_img;
 Etracker User Data:
 Age:
 User Max age: 56
-User Min Age: 19
-Mean User age: 35.8
-Median User age: 32.0
-Mode User age: 19
+User Min age: 19
+User Mean age: 35.8
+User Median age: 32.0
+User Mode age: 19
 Weight:
-User Max weight: 92.3
-User Min weight: 61.8
-Mean User weight: 75.9
-Median User weight: 75.5
-Mode User weight: 61.8
+User Max Weight: 92.3
+User Min Weight: 61.8
+User Mean Weight: 75.9
+User Median Weight: 75.5
+User Mode Weight: 61.8
 Height:
 User Max Height: 190
 User Min Height: 160
-Mean User Height: 174.0
-Median User Height: 175.0
-Mode User Height: 160
-BMI
-User Max BMI: 26.6
-User Min BMI: 23.3
-Mean User BMI: 24.9
-Median User BMI: 25.0
-Mode User BMI: 23.3
+User Mean Height: 174.0
+User Median Height: 175.0
+User Mode Height: 160
+BMI:
+User Max BMI: 190
+User Min BMI: 160
+User Mean BMI: 174.0
+User Median BMI: 175.0
+User Mode BMI: 160
 </pre>
 </div>
 </div>
@@ -785,6 +829,151 @@ Mode User BMI: 23.3
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="2.3-College-Board-Questions-Explainations">
+<a class="anchor" href="#2.3-College-Board-Questions-Explainations" aria-hidden="true"><span class="octicon octicon-link"></span></a>2.3 College Board Questions Explainations<a class="anchor-link" href="#2.3-College-Board-Questions-Explainations"> </a>
+</h1>
+<h2 id="Data-Compression">
+<a class="anchor" href="#Data-Compression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Data Compression<a class="anchor-link" href="#Data-Compression"> </a>
+</h2>
+<h3 id="Q1-Advantage-of-lossless-over-lossy-compression">
+<a class="anchor" href="#Q1-Advantage-of-lossless-over-lossy-compression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q1 Advantage of lossless over lossy compression<a class="anchor-link" href="#Q1-Advantage-of-lossless-over-lossy-compression"> </a>
+</h3>
+<ul>
+<li>The question asks us to determine what an advantage of lossless compressed algorithm over a lossy one.</li>
+<li>Of course the only option that made sense was a lossless compression can guarentee reconsturction of original data, while lossy cannot. This is the obvious choice because this is the main difference between lossy and lossless that we learned, so this must be the correct answer</li>
+</ul>
+<h3 id="Q2-Compression-algorithm-for-storing-a-data-file">
+<a class="anchor" href="#Q2-Compression-algorithm-for-storing-a-data-file" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q2 Compression algorithm for storing a data file<a class="anchor-link" href="#Q2-Compression-algorithm-for-storing-a-data-file"> </a>
+</h3>
+<ul>
+<li>The question gives us a situation of a user who wants to save a datafile on an online storage. They want to reduce the size of the file and they ask us which type would be the best in the case that they want to be able to restore the file to its original version</li>
+<li>Of course the only right iption would be using a lossless compression, because being able to recover the file is the main purpose of using it.</li>
+</ul>
+<h3 id="Q3-True-Statement-about-compression">
+<a class="anchor" href="#Q3-True-Statement-about-compression" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q3 True Statement about compression<a class="anchor-link" href="#Q3-True-Statement-about-compression"> </a>
+</h3>
+<ul>
+<li>The question gives us a situation of a software developer for a social media platform. They want us to suggest whihch type of image compression they should use for their site.</li>
+<li>They should most likely use lossy compression since it provices less transmission time, as the information is not necessarily lost when this type is used.</li>
+</ul>
+<h3 id="Application-of-these-questions">
+<a class="anchor" href="#Application-of-these-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Application of these questions<a class="anchor-link" href="#Application-of-these-questions"> </a>
+</h3>
+<ul>
+<li>The main purpose of these questions were so that we were able to differentiate lossy and lossless image compression. I now am very familiar with their definitions.</li>
+<li>I can apply this to my daily life, because I use social media every day, so I am now more familiar with the type of image compression that these social media companies most likely use.</li>
+</ul>
+<h2 id="Extracting-Information-From-Data">
+<a class="anchor" href="#Extracting-Information-From-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Extracting Information From Data<a class="anchor-link" href="#Extracting-Information-From-Data"> </a>
+</h2>
+<h3 id="Q1-Challenge-due-to-lack-of-unique-ID">
+<a class="anchor" href="#Q1-Challenge-due-to-lack-of-unique-ID" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q1 Challenge due to lack of unique ID<a class="anchor-link" href="#Q1-Challenge-due-to-lack-of-unique-ID"> </a>
+</h3>
+<ul>
+<li>This question gives a situation about a reasearcher that is analyzing data about some students about a rrelationshiip between gpa and absences. They have access to a database, but it only takes into account the name of the students.</li>
+<li>THe progblem askes us why is it bad to not have unique IDs for each student, and this is most defniately because you could possibly confuse two students if they have the same name./</li>
+</ul>
+<h3 id="Q2-Challenge-in-analyzing-data-from-many-counties">
+<a class="anchor" href="#Q2-Challenge-in-analyzing-data-from-many-counties" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q2 Challenge in analyzing data from many counties<a class="anchor-link" href="#Q2-Challenge-in-analyzing-data-from-many-counties"> </a>
+</h3>
+<ul>
+<li>Some researches want to analyze pollution in 3000 US counties but they ask what a possible problem with this could be.</li>
+<li>THe only correct option that would come to mind is that different counteies morganize data in different ways. This has to be true because the researchers cannot expect everyone to organize their data in the same way so it would be very hard to combine all their files into one spot and analyze them.</li>
+</ul>
+<h3 id="Q3-Challemges-with-city-data-entered-by-users">
+<a class="anchor" href="#Q3-Challemges-with-city-data-entered-by-users" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q3 Challemges with city data entered by users<a class="anchor-link" href="#Q3-Challemges-with-city-data-entered-by-users"> </a>
+</h3>
+<ul>
+<li>The question asks us for possible problems with a program where users input a city name and info about it is outputted</li>
+<li>The obvious problems that come to mind are that people might mispell or even enter abbreviations of the city, so the program would not take into account possible erros of the user.</li>
+</ul>
+<h3 id="Q4-Determine-Artist-with-the-most-concert-attendees">
+<a class="anchor" href="#Q4-Determine-Artist-with-the-most-concert-attendees" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q4 Determine Artist with the most concert attendees<a class="anchor-link" href="#Q4-Determine-Artist-with-the-most-concert-attendees"> </a>
+</h3>
+<ul>
+<li>The program has the purpsose of finding the greatest attneance of a few concerts ina  month, and asks what type of data they should add besides date, revenue and artist.</li>
+<li>The food and drinks, length of show, and start of show have absolutely nothing to do with the amount of tickets sold, and average ticket price would make sense to be able to count how mant people went since we already theoretically know how much money was made from tickets, so using the average ticket price would easily allow us to find a rough estimate of how many people showed up.</li>
+</ul>
+<h3 id="Q5-Information-determined-using-dashboard-metadata">
+<a class="anchor" href="#Q5-Information-determined-using-dashboard-metadata" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q5 Information determined using dashboard metadata<a class="anchor-link" href="#Q5-Information-determined-using-dashboard-metadata"> </a>
+</h3>
+<ul>
+<li>image data from the view of a car driver is sstored every second and captures the cars sepepd at theat specifc data and time. The problem asks what datapoint would be found without using metadate.</li>
+<li>Of course this would be the bumber of bikes that passed by the car, since the rest of the options are found using averages or calculations (or metadate) based on the data given, while number of bikes is the only concrete data option.</li>
+</ul>
+<h3 id="Q6-Information-from-student-work-habit-survey">
+<a class="anchor" href="#Q6-Information-from-student-work-habit-survey" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q6 Information from student work habit survey<a class="anchor-link" href="#Q6-Information-from-student-work-habit-survey"> </a>
+</h3>
+<ul>
+<li>The question asks us to analyze what questions can be answered based on the responces from a survey that a teacher gave to their students. It aaks about how long hw takes, how long you study for tests, and if you enjoy those subjects</li>
+<li>Based on these survey questions, the teacher would definately be able to answer which subjects the students like, since thats the entire last question (I) and be able to see if students spend more time studying or doing hw (II) so those are for sure the two right answer choices.</li>
+</ul>
+<h3 id="Application-of-these-questions">
+<a class="anchor" href="#Application-of-these-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Application of these questions<a class="anchor-link" href="#Application-of-these-questions"> </a>
+</h3>
+<ul>
+<li>THese questions were very efficient and benefital in insuring that we are able to understand the different ways to extract data and be able to solve various problems in the methods to do so. It also checked in on if we understand what metadata is, which will definately prepare us for collegeboard well.</li>
+<li>As a programmer, these questions will benefit me greatly, so I will know to always look for problems in a dataset that I am analyzing, as well as be able to understand what the outcome I want is thoroughly. </li>
+</ul>
+<h2 id="Using-Programs-with-Data">
+<a class="anchor" href="#Using-Programs-with-Data" aria-hidden="true"><span class="octicon octicon-link"></span></a>Using Programs with Data<a class="anchor-link" href="#Using-Programs-with-Data"> </a>
+</h2>
+<h3 id="Q1-Bookstore-Spreadsheet">
+<a class="anchor" href="#Q1-Bookstore-Spreadsheet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q1 Bookstore Spreadsheet<a class="anchor-link" href="#Q1-Bookstore-Spreadsheet"> </a>
+</h3>
+<ul>
+<li>The question gives us a spreadheet about some books in a bookstore where the employee wants to count the numebr of books that are a mystery, under $10 and have at least one copy in stock. </li>
+<li>The expression that gives us that would for sure be "(genre = "mystery") AND ((1 ≤ num) AND (cost &lt; 10.00))" because the output is supposed to reqire all of that data so AND would be required and OR statements would result to an output of false</li>
+</ul>
+<h3 id="Q2-Clothing-store-ssales-information">
+<a class="anchor" href="#Q2-Clothing-store-ssales-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q2 Clothing store ssales information<a class="anchor-link" href="#Q2-Clothing-store-ssales-information"> </a>
+</h3>
+<ul>
+<li>A store owner tracks dates, payment method, number of itmes, and dollars paid for every transaction and the question asks us which statemtn is true during a 7 day period.</li>
+<li>The owner will of course be able to track the number of items purchased throughout that 7 week period since they can just add up the number of items purchased and matching that to the amount of transactions on each day. I don't see what this question has to do with programming is, but it was quite simple to solve.</li>
+</ul>
+<h3 id="Q3-Data-files-to-contact-customers-who-use-batteries">
+<a class="anchor" href="#Q3-Data-files-to-contact-customers-who-use-batteries" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q3 Data files to contact customers who use batteries<a class="anchor-link" href="#Q3-Data-files-to-contact-customers-who-use-batteries"> </a>
+</h3>
+<ul>
+<li>A company uses data files about their customers, products, and purchases. They want to know how to use these data files to determine who would be best fit to target in an email campaign for their rechargable batery pack. </li>
+<li>THe best option would be to compare the customer IDs to items purchased IDs in order to determine the profiles which would possibly need or want this specific rechargable battery pack.</li>
+</ul>
+<h3 id="Q4-Museum-photograph-spreadsheet">
+<a class="anchor" href="#Q4-Museum-photograph-spreadsheet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q4 Museum photograph spreadsheet<a class="anchor-link" href="#Q4-Museum-photograph-spreadsheet"> </a>
+</h3>
+<ul>
+<li>There is a spreadsheet of inofor about pics in a museums collection with the photographer, subject, year, abd publicly available (T/F) A program wants to find which photographer took the oldest picture in the collection and the problem asks how you would do so.</li>
+<li>This is quite simple. The best option would be to filter by photographer and sort them by year, or vice versa. This would output the years of each photo, in order, as compared to the photographer that took the photos. </li>
+</ul>
+<h3 id="Q5-Radio-Show-Spreadheet">
+<a class="anchor" href="#Q5-Radio-Show-Spreadheet" aria-hidden="true"><span class="octicon octicon-link"></span></a>Q5 Radio Show Spreadheet<a class="anchor-link" href="#Q5-Radio-Show-Spreadheet"> </a>
+</h3>
+<ul>
+<li>A spreadsheet has info about the schedule for a college rado station inclding show name, gnere, day, start time, and end time. A programmer waantst o be able to count the number of shows that are both a talk show and on a Sat/Sun. </li>
+<li>Of course te best expressoon to output a ture statemnt for this situation would be (genre = "talk") AND ((day = "Saturday") OR (day = "Sunday")) because they must be a talk show AND either OR Sat/SUN which is filtered by the first AND statement that signifies that it requires both a talk show and on the specific date and the OR statemtn to signify either Sat or sunday.</li>
+</ul>
+<h3 id="Use-of-Databases-to-display-animal-information">
+<a class="anchor" href="#Use-of-Databases-to-display-animal-information" aria-hidden="true"><span class="octicon octicon-link"></span></a>Use of Databases to display animal information<a class="anchor-link" href="#Use-of-Databases-to-display-animal-information"> </a>
+</h3>
+<ul>
+<li>A preserve develops an exibit with various facts about each animal based on the selection that each guest makes. The preserve has two databases of information available to use for the exhibit. The first database contains information for each animal’s name, classification, skin type, and thermoregulation. The second database contains information for each animal’s name, lifestyle, average life span, and top speed. The problem asks how these daabases can help develop the interactive exhibit.</li>
+<li>It is quite obvious that both of these databases are required for the information that they want to display at this interactive exhibit, because they contain the specific data that they are looking for.</li>
+</ul>
+<h3 id="Application-of-these-questions">
+<a class="anchor" href="#Application-of-these-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Application of these questions<a class="anchor-link" href="#Application-of-these-questions"> </a>
+</h3>
+<ul>
+<li>These questions are moreover less about programming specifically but they gave us a great idea on how to analyze the data, specifc outputs, and purposes of various databases, datasets, and spreadsheets.</li>
+<li>This will be very benefitial for our programming futures, since it gave us situations that could be very similar to those for our projects in the future, and gave us the problem solving and data analyzation skills neccessary in order to do so.</li>
+</ul>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -877,6 +1066,51 @@ Mode User BMI: 23.3
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Titanic Data
+Index(['survived', 'pclass', 'sex', 'age', 'sibsp', 'parch', 'fare',
+       'embarked', 'class', 'who', 'adult_male', 'deck', 'embark_town',
+       'alive', 'alone'],
+      dtype='object')
+     survived  pclass     sex   age  sibsp  parch   class     fare  \
+0           0       3    male  22.0      1      0   Third   7.2500   
+1           1       1  female  38.0      1      0   First  71.2833   
+2           1       3  female  26.0      0      0   Third   7.9250   
+3           1       1  female  35.0      1      0   First  53.1000   
+4           0       3    male  35.0      0      0   Third   8.0500   
+..        ...     ...     ...   ...    ...    ...     ...      ...   
+886         0       2    male  27.0      0      0  Second  13.0000   
+887         1       1  female  19.0      0      0   First  30.0000   
+888         0       3  female   NaN      1      2   Third  23.4500   
+889         1       1    male  26.0      0      0   First  30.0000   
+890         0       3    male  32.0      0      0   Third   7.7500   
+
+     embark_town  
+0    Southampton  
+1      Cherbourg  
+2    Southampton  
+3    Southampton  
+4    Southampton  
+..           ...  
+886  Southampton  
+887  Southampton  
+888  Southampton  
+889    Cherbourg  
+890   Queenstown  
+
+[891 rows x 9 columns]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -920,6 +1154,46 @@ Mode User BMI: 23.3
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>     survived  pclass  sex   age  sibsp  parch      fare  alone  embarked_C  \
+0           0       3    1  22.0      1      0    7.2500      0         0.0   
+1           1       1    0  38.0      1      0   71.2833      0         1.0   
+2           1       3    0  26.0      0      0    7.9250      1         0.0   
+3           1       1    0  35.0      1      0   53.1000      0         0.0   
+4           0       3    1  35.0      0      0    8.0500      1         0.0   
+..        ...     ...  ...   ...    ...    ...       ...    ...         ...   
+705         0       2    1  39.0      0      0   26.0000      1         0.0   
+706         1       2    0  45.0      0      0   13.5000      1         0.0   
+707         1       1    1  42.0      0      0   26.2875      1         0.0   
+708         1       1    0  22.0      0      0  151.5500      1         0.0   
+710         1       1    0  24.0      0      0   49.5042      1         1.0   
+
+     embarked_Q  embarked_S  
+0           0.0         1.0  
+1           0.0         0.0  
+2           0.0         1.0  
+3           0.0         1.0  
+4           0.0         1.0  
+..          ...         ...  
+705         0.0         1.0  
+706         0.0         1.0  
+707         1.0         0.0  
+708         0.0         1.0  
+710         0.0         0.0  
+
+[564 rows x 11 columns]
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -967,6 +1241,31 @@ Mode User BMI: 23.3
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>survived       0.000000
+pclass         2.464072
+sex            0.844311
+age           31.073353
+sibsp          0.562874
+parch          0.398204
+fare          24.835902
+alone          0.616766
+embarked_C     0.185629
+embarked_Q     0.038922
+embarked_S     0.775449
+dtype: float64
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
