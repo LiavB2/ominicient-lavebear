@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      7 min read
+      11 min read
     
 </span></p>
 
@@ -119,12 +119,15 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
-<li class="toc-entry toc-h1"><a href="#Database-and-SQLAlchemy">Database and SQLAlchemy </a>
+<li class="toc-entry toc-h1"><a href="#Database-and-SQLAlchemy">Database and SQLAlchemy </a></li>
+<li class="toc-entry toc-h1"><a href="#Notes">Notes </a>
 <ul>
 <li class="toc-entry toc-h2"><a href="#Imports-and-Flask-Objects">Imports and Flask Objects </a></li>
+<li class="toc-entry toc-h2"><a href="#APP-and-DB-are-objects-we-have-been-using-all-year">APP and DB are objects we have been using all year </a></li>
 <li class="toc-entry toc-h2"><a href="#Model-Definition">Model Definition </a></li>
 <li class="toc-entry toc-h2"><a href="#Initial-Data">Initial Data </a></li>
 <li class="toc-entry toc-h2"><a href="#Check-for-given-Credentials-in-users-table-in-sqlite.db">Check for given Credentials in users table in sqlite.db </a></li>
+<li class="toc-entry toc-h2"><a href="#>-Use-of-ORM-Query-object-and-custom-methods-to-identify-user-to-credentials-uid-and-password">&gt; Use of ORM Query object and custom methods to identify user to credentials uid and password </a></li>
 <li class="toc-entry toc-h2"><a href="#Create-a-new-User-in-table-in-Sqlite.db">Create a new User in table in Sqlite.db </a></li>
 <li class="toc-entry toc-h2"><a href="#Reading-users-table-in-sqlite.db">Reading users table in sqlite.db </a></li>
 </ul>
@@ -175,6 +178,19 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Notes">
+<a class="anchor" href="#Notes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Notes<a class="anchor-link" href="#Notes"> </a>
+</h1>
+<ul>
+<li>Objects have data and they have methods.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Imports-and-Flask-Objects">
 <a class="anchor" href="#Imports-and-Flask-Objects" aria-hidden="true"><span class="octicon octicon-link"></span></a>Imports and Flask Objects<a class="anchor-link" href="#Imports-and-Flask-Objects"> </a>
 </h2>
@@ -183,8 +199,14 @@ window.onload = wrap_img;
 </blockquote>
 <ul>
 <li>Comment on where you have observed these working?  Provide a defintion of purpose.<ol>
-<li>Flask app object</li>
-<li>SQLAlchemy db object</li>
+<li>Flask app object<ul>
+<li>This Flask app object app object containss the routs and blueprints that reside to the HTTP server in the Flask</li>
+</ul>
+</li>
+<li>SQLAlchemy db object<ul>
+<li>THe method where the SQLite database interaccts with an ergonomic ORM (Object Relational Mapping (ORM) is a technique used in creating a "bridge" between object-oriented programs and, in most cases, relational database) in the SQAlchemy db object.</li>
+</ul>
+</li>
 </ol>
 </li>
 </ul>
@@ -234,6 +256,20 @@ window.onload = wrap_img;
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="APP-and-DB-are-objects-we-have-been-using-all-year">
+<a class="anchor" href="#APP-and-DB-are-objects-we-have-been-using-all-year" aria-hidden="true"><span class="octicon octicon-link"></span></a>APP and DB are objects we have been using all year<a class="anchor-link" href="#APP-and-DB-are-objects-we-have-been-using-all-year"> </a>
+</h2>
+<ul>
+<li>APP and the db Alchemy, this data is getting assinged into this object</li>
+<li>Flask is a template and we havent assigned anything to it yet.</li>
+</ul>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Model-Definition">
 <a class="anchor" href="#Model-Definition" aria-hidden="true"><span class="octicon octicon-link"></span></a>Model Definition<a class="anchor-link" href="#Model-Definition"> </a>
 </h2>
@@ -241,15 +277,45 @@ window.onload = wrap_img;
 <p>Define columns, initialization, and CRUD methods for users table in sqlite.db</p>
 </blockquote>
 <ul>
-<li>Comment on these items in the class, purpose and defintion.<ul>
-<li>class User</li>
-<li>db.Model inheritance</li>
 <li>
-<em>init</em> method</li>
-<li>
-<code>@property</code>, <code>@&lt;column&gt;.setter</code>
+<p>Comment on these items in the class, purpose and defintion.</p>
+<ul>
+<li>class User<ul>
+<li>Class user is defining the template for user. It is a class definition template. WE use this template to create objects like user.</li>
+<li>We need a user template because we have different users, but we shouldn't start from scratch for each one. </li>
+</ul>
 </li>
-<li>create, read, update, delete methods</li>
+<li>db.Model inheritance<ul>
+<li>Defining a class is called inheritance. For class user we are inheriting the ability for out class to use databast properties, methods, and attributes. The code is defined somewhere else but we are going to inherit all the properties.</li>
+<li>Since we inherited these methods, we are able to use them to add to our template.</li>
+</ul>
+</li>
+<li>
+<em>init</em> method<ul>
+<li>Usually called "constructor" and means that the init method is used to help us instantiate an object from our class user template.</li>
+<li>With the init method we look at U1 and we bas username, ID, etc. The init method will set the properties as attributes are parameters that instantuate a U1 object. </li>
+</ul>
+</li>
+<li>
+<code>@property</code>, <code>@&lt;column&gt;.setter</code><ul>
+<li>We want to see what is inside as well as change the attribute once we created them (setters and getters).<ul>
+<li>setters let us change the attriubtes, getters allow us to retrive data out of the object.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>create, read, update, delete methods</p>
+<ul>
+<li>typicly when you create a class you use these methods in order to make it easier to interact with the properties of the database.</li>
+</ul>
+</li>
+<li>
+<p>This next code is a definition template, so we wont get a response out of it</p>
+<ul>
+<li>it is a point of reference as of now, becuase we have not referenced or instantuatied it yet.</li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -281,6 +347,7 @@ window.onload = wrap_img;
 <span class="c1"># -- b.) User represents data we want to store, something that is built on db.Model</span>
 <span class="c1"># -- c.) SQLAlchemy ORM is layer on top of SQLAlchemy Core, then SQLAlchemy engine, SQL</span>
 <span class="k">class</span> <span class="nc">User</span><span class="p">(</span><span class="n">db</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
+<span class="c1"># Class user is defining the template for user. It is a class definition template. WE use this template to create objects like user.</span>
     <span class="n">__tablename__</span> <span class="o">=</span> <span class="s1">'users'</span>  <span class="c1"># table name is plural, class name is singular</span>
 
     <span class="c1"># Define the User schema with "vars" from object</span>
@@ -405,6 +472,8 @@ window.onload = wrap_img;
         <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
         <span class="k">return</span> <span class="kc">None</span>
     
+    <span class="c1"># THis is a definition template, so we wont get a response out of it</span>
+    <span class="c1">## it is a point of reference as of now, becuase we have not referenced or instantuatied it yet.</span>
 </pre></div>
 
     </div>
@@ -425,9 +494,18 @@ window.onload = wrap_img;
 </blockquote>
 <ul>
 <li>Comment on how these work?<ol>
-<li>Create All Tables from db Object</li>
-<li>User Object Constructors</li>
-<li>Try / Except </li>
+<li>Create All Tables from db Object<ul>
+<li>The db.create_all() method on the db object creates all the relevant SQL tables based on the defined models.</li>
+</ul>
+</li>
+<li>User Object Constructors<ul>
+<li>Instantaniate the instance of the user class with the specific parameters</li>
+</ul>
+</li>
+<li>Try / Except <ul>
+<li>Finds python exceptions that could possibly be found and print an error messaage if any of these are caught.</li>
+</ul>
+</li>
 </ol>
 </li>
 </ul>
@@ -478,6 +556,25 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Created new uid toby
+Created new uid niko
+Created new uid lex
+Created new uid whit
+Created new uid indi
+Created new uid raven
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -487,13 +584,23 @@ window.onload = wrap_img;
 <h2 id="Check-for-given-Credentials-in-users-table-in-sqlite.db">
 <a class="anchor" href="#Check-for-given-Credentials-in-users-table-in-sqlite.db" aria-hidden="true"><span class="octicon octicon-link"></span></a>Check for given Credentials in users table in sqlite.db<a class="anchor-link" href="#Check-for-given-Credentials-in-users-table-in-sqlite.db"> </a>
 </h2>
-<blockquote>
-<p>Use of ORM Query object and custom methods to identify user to credentials uid and password</p>
-</blockquote>
+<h2 id="&gt;-Use-of-ORM-Query-object-and-custom-methods-to-identify-user-to-credentials-uid-and-password">
+<a class="anchor" href="#&gt;-Use-of-ORM-Query-object-and-custom-methods-to-identify-user-to-credentials-uid-and-password" aria-hidden="true"><span class="octicon octicon-link"></span></a>&gt; Use of ORM Query object and custom methods to identify user to credentials uid and password<a class="anchor-link" href="#&gt;-Use-of-ORM-Query-object-and-custom-methods-to-identify-user-to-credentials-uid-and-password"> </a>
+</h2>
+<pre><code>- Enables us to do query methdods on the data that is in our class
+    - IN this case we are doing it for the user ID in the database and return only the first match.
+
+</code></pre>
 <ul>
 <li>Comment on purpose of following<ol>
-<li>User.query.filter_by</li>
-<li>user.password</li>
+<li>User.query.filter_by<ul>
+<li>Filter by a certain table column and return all relevant rows</li>
+</ul>
+</li>
+<li>user.password<ul>
+<li>Retrieve the password column entry for a specific row from the database</li>
+</ul>
+</li>
 </ol>
 </li>
 </ul>
@@ -523,10 +630,26 @@ window.onload = wrap_img;
         <span class="k">return</span> <span class="kc">True</span>
     <span class="k">return</span> <span class="kc">False</span>
         
-<span class="c1">#check_credentials("indi", "123qwerty")</span>
+<span class="n">check_credentials</span><span class="p">(</span><span class="s2">"indi"</span><span class="p">,</span> <span class="s2">"123qwerty"</span><span class="p">)</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>True</pre>
+</div>
+
+</div>
+
 </div>
 </div>
 
@@ -544,10 +667,22 @@ window.onload = wrap_img;
 </blockquote>
 <ul>
 <li>Comment on purpose of following<ol>
-<li>user.find_by_uid() and try/except</li>
-<li>user = User(...)</li>
-<li>user.dob and try/except</li>
-<li>user.create() and try/except</li>
+<li>user.find_by_uid() and try/except<ul>
+<li>find_by_uid returns the user row corresponding to a unique ID and returns None if the user does not exist. See above for try/except.</li>
+</ul>
+</li>
+<li>user = User(...)<ul>
+<li>The user object constructors (found in code)</li>
+</ul>
+</li>
+<li>user.dob and try/except<ul>
+<li>Get the dob column entry for each respective row entry</li>
+</ul>
+</li>
+<li>user.create() and try/except<ul>
+<li>Creates rows in the database with the daata that the current intance of the user created.</li>
+</ul>
+</li>
 </ol>
 </li>
 </ul>
@@ -605,6 +740,21 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Created
+ {'id': 7, 'name': 'Liav Bar', 'uid': 'LaveBear2', 'dob': '08-09-2006', 'age': 16}
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -619,8 +769,14 @@ window.onload = wrap_img;
 </blockquote>
 <ul>
 <li>Comment on purpose of following<ol>
-<li>User.query.all</li>
-<li>json_ready assignment, google List Comprehension</li>
+<li>User.query.all<ul>
+<li>Returns the rows in the corresponding user class table</li>
+</ul>
+</li>
+<li>json_ready assignment, google List Comprehension<ul>
+<li>Reads the user interies in the table and storesthem in a list of python objects.</li>
+</ul>
+</li>
 </ol>
 </li>
 </ul>
