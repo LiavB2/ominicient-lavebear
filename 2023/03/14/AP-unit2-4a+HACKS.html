@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      10 min read
+      14 min read
     
 </span></p>
 
@@ -496,6 +496,240 @@ window.onload = wrap_img;
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">IntegrityError</span>                            Traceback (most recent call last)
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:1964</span>, in <span class="ansi-cyan-fg">Connection._exec_single_context</span><span class="ansi-blue-fg">(self, dialect, context, statement, parameters)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1963</span>     if not evt_handled:
+<span class="ansi-green-fg">-&gt; 1964</span>         self.dialect.do_execute(
+<span class="ansi-green-intense-fg ansi-bold">   1965</span>             cursor, str_statement, effective_parameters, context
+<span class="ansi-green-intense-fg ansi-bold">   1966</span>         )
+<span class="ansi-green-intense-fg ansi-bold">   1968</span> if self._has_events or self.engine._has_events:
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py:748</span>, in <span class="ansi-cyan-fg">DefaultDialect.do_execute</span><span class="ansi-blue-fg">(self, cursor, statement, parameters, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">    747</span> def do_execute(self, cursor, statement, parameters, context=None):
+<span class="ansi-green-fg">--&gt; 748</span>     cursor.execute(statement, parameters)
+
+<span class="ansi-red-fg">IntegrityError</span>: UNIQUE constraint failed: etrack_users._date
+
+The above exception was the direct cause of the following exception:
+
+<span class="ansi-red-fg">IntegrityError</span>                            Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a+HACKS.ipynb Cell 10</span> in <span class="ansi-cyan-fg">etrack_user.create</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=45'&gt;46&lt;/a&gt;</span> db.session.add(self)  # add prepares to persist person object to Users table
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=46'&gt;47&lt;/a&gt;</span> db.session.commit()  # SqlAlchemy "unit of work pattern" requires a manual commit
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=47'&gt;48&lt;/a&gt;</span> return self
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/scoping.py:553</span>, in <span class="ansi-cyan-fg">scoped_session.commit</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    515</span> r"""Flush pending changes and commit the current transaction.
+<span class="ansi-green-intense-fg ansi-bold">    516</span> 
+<span class="ansi-green-intense-fg ansi-bold">    517</span> .. container:: class_bases
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    550</span> 
+<span class="ansi-green-intense-fg ansi-bold">    551</span> """  # noqa: E501
+<span class="ansi-green-fg">--&gt; 553</span> return self._proxied.commit()
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py:1903</span>, in <span class="ansi-cyan-fg">Session.commit</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1901</span>     trans = self._autobegin_t()
+<span class="ansi-green-fg">-&gt; 1903</span> trans.commit(_to_root=True)
+
+File <span class="ansi-green-fg">&lt;string&gt;:2</span>, in <span class="ansi-cyan-fg">commit</span><span class="ansi-blue-fg">(self, _to_root)</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/state_changes.py:137</span>, in <span class="ansi-cyan-fg">_StateChange.declare_states.&lt;locals&gt;._go</span><span class="ansi-blue-fg">(fn, self, *arg, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    136</span> try:
+<span class="ansi-green-fg">--&gt; 137</span>     ret_value = fn(self, *arg, **kw)
+<span class="ansi-green-intense-fg ansi-bold">    138</span> except:
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py:1218</span>, in <span class="ansi-cyan-fg">SessionTransaction.commit</span><span class="ansi-blue-fg">(self, _to_root)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1217</span>     with self._expect_state(SessionTransactionState.PREPARED):
+<span class="ansi-green-fg">-&gt; 1218</span>         self._prepare_impl()
+<span class="ansi-green-intense-fg ansi-bold">   1220</span> if self._parent is None or self.nested:
+
+File <span class="ansi-green-fg">&lt;string&gt;:2</span>, in <span class="ansi-cyan-fg">_prepare_impl</span><span class="ansi-blue-fg">(self)</span>
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/state_changes.py:137</span>, in <span class="ansi-cyan-fg">_StateChange.declare_states.&lt;locals&gt;._go</span><span class="ansi-blue-fg">(fn, self, *arg, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">    136</span> try:
+<span class="ansi-green-fg">--&gt; 137</span>     ret_value = fn(self, *arg, **kw)
+<span class="ansi-green-intense-fg ansi-bold">    138</span> except:
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py:1193</span>, in <span class="ansi-cyan-fg">SessionTransaction._prepare_impl</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1192</span>         break
+<span class="ansi-green-fg">-&gt; 1193</span>     self.session.flush()
+<span class="ansi-green-intense-fg ansi-bold">   1194</span> else:
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py:4155</span>, in <span class="ansi-cyan-fg">Session.flush</span><span class="ansi-blue-fg">(self, objects)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4154</span>     self._flushing = True
+<span class="ansi-green-fg">-&gt; 4155</span>     self._flush(objects)
+<span class="ansi-green-intense-fg ansi-bold">   4156</span> finally:
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py:4292</span>, in <span class="ansi-cyan-fg">Session._flush</span><span class="ansi-blue-fg">(self, objects)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4291</span> with util.safe_reraise():
+<span class="ansi-green-fg">-&gt; 4292</span>     transaction.rollback(_capture_exception=True)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/util/langhelpers.py:147</span>, in <span class="ansi-cyan-fg">safe_reraise.__exit__</span><span class="ansi-blue-fg">(self, type_, value, traceback)</span>
+<span class="ansi-green-intense-fg ansi-bold">    146</span>     self._exc_info = None  # remove potential circular references
+<span class="ansi-green-fg">--&gt; 147</span>     raise exc_value.with_traceback(exc_tb)
+<span class="ansi-green-intense-fg ansi-bold">    148</span> else:
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/session.py:4252</span>, in <span class="ansi-cyan-fg">Session._flush</span><span class="ansi-blue-fg">(self, objects)</span>
+<span class="ansi-green-intense-fg ansi-bold">   4251</span> try:
+<span class="ansi-green-fg">-&gt; 4252</span>     flush_context.execute()
+<span class="ansi-green-intense-fg ansi-bold">   4253</span> finally:
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py:467</span>, in <span class="ansi-cyan-fg">UOWTransaction.execute</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">    466</span> for rec in topological.sort(self.dependencies, postsort_actions):
+<span class="ansi-green-fg">--&gt; 467</span>     rec.execute(self)
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/unitofwork.py:644</span>, in <span class="ansi-cyan-fg">SaveUpdateAll.execute</span><span class="ansi-blue-fg">(self, uow)</span>
+<span class="ansi-green-intense-fg ansi-bold">    642</span> @util.preload_module("sqlalchemy.orm.persistence")
+<span class="ansi-green-intense-fg ansi-bold">    643</span> def execute(self, uow):
+<span class="ansi-green-fg">--&gt; 644</span>     util.preloaded.orm_persistence.save_obj(
+<span class="ansi-green-intense-fg ansi-bold">    645</span>         self.mapper,
+<span class="ansi-green-intense-fg ansi-bold">    646</span>         uow.states_for_mapper_hierarchy(self.mapper, False, False),
+<span class="ansi-green-intense-fg ansi-bold">    647</span>         uow,
+<span class="ansi-green-intense-fg ansi-bold">    648</span>     )
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py:93</span>, in <span class="ansi-cyan-fg">save_obj</span><span class="ansi-blue-fg">(base_mapper, states, uowtransaction, single)</span>
+<span class="ansi-green-intense-fg ansi-bold">     85</span>     _emit_update_statements(
+<span class="ansi-green-intense-fg ansi-bold">     86</span>         base_mapper,
+<span class="ansi-green-intense-fg ansi-bold">     87</span>         uowtransaction,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">     90</span>         update,
+<span class="ansi-green-intense-fg ansi-bold">     91</span>     )
+<span class="ansi-green-fg">---&gt; 93</span>     _emit_insert_statements(
+<span class="ansi-green-intense-fg ansi-bold">     94</span>         base_mapper,
+<span class="ansi-green-intense-fg ansi-bold">     95</span>         uowtransaction,
+<span class="ansi-green-intense-fg ansi-bold">     96</span>         mapper,
+<span class="ansi-green-intense-fg ansi-bold">     97</span>         table,
+<span class="ansi-green-intense-fg ansi-bold">     98</span>         insert,
+<span class="ansi-green-intense-fg ansi-bold">     99</span>     )
+<span class="ansi-green-intense-fg ansi-bold">    101</span> _finalize_insert_update_commands(
+<span class="ansi-green-intense-fg ansi-bold">    102</span>     base_mapper,
+<span class="ansi-green-intense-fg ansi-bold">    103</span>     uowtransaction,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">    119</span>     ),
+<span class="ansi-green-intense-fg ansi-bold">    120</span> )
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/orm/persistence.py:1020</span>, in <span class="ansi-cyan-fg">_emit_insert_statements</span><span class="ansi-blue-fg">(base_mapper, uowtransaction, mapper, table, insert, bookkeeping, use_orm_insert_stmt, execution_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1018</span> multiparams = [rec[2] for rec in records]
+<span class="ansi-green-fg">-&gt; 1020</span> result = connection.execute(
+<span class="ansi-green-intense-fg ansi-bold">   1021</span>     statement, multiparams, execution_options=execution_options
+<span class="ansi-green-intense-fg ansi-bold">   1022</span> )
+<span class="ansi-green-intense-fg ansi-bold">   1023</span> if bookkeeping:
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:1414</span>, in <span class="ansi-cyan-fg">Connection.execute</span><span class="ansi-blue-fg">(self, statement, parameters, execution_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1413</span> else:
+<span class="ansi-green-fg">-&gt; 1414</span>     return meth(
+<span class="ansi-green-intense-fg ansi-bold">   1415</span>         self,
+<span class="ansi-green-intense-fg ansi-bold">   1416</span>         distilled_parameters,
+<span class="ansi-green-intense-fg ansi-bold">   1417</span>         execution_options or NO_OPTIONS,
+<span class="ansi-green-intense-fg ansi-bold">   1418</span>     )
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/sql/elements.py:486</span>, in <span class="ansi-cyan-fg">ClauseElement._execute_on_connection</span><span class="ansi-blue-fg">(self, connection, distilled_params, execution_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">    485</span>         assert isinstance(self, Executable)
+<span class="ansi-green-fg">--&gt; 486</span>     return connection._execute_clauseelement(
+<span class="ansi-green-intense-fg ansi-bold">    487</span>         self, distilled_params, execution_options
+<span class="ansi-green-intense-fg ansi-bold">    488</span>     )
+<span class="ansi-green-intense-fg ansi-bold">    489</span> else:
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:1638</span>, in <span class="ansi-cyan-fg">Connection._execute_clauseelement</span><span class="ansi-blue-fg">(self, elem, distilled_parameters, execution_options)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1630</span> compiled_sql, extracted_params, cache_hit = elem._compile_w_cache(
+<span class="ansi-green-intense-fg ansi-bold">   1631</span>     dialect=dialect,
+<span class="ansi-green-intense-fg ansi-bold">   1632</span>     compiled_cache=compiled_cache,
+<span class="ansi-green-fg">   (...)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1636</span>     linting=self.dialect.compiler_linting | compiler.WARN_LINTING,
+<span class="ansi-green-intense-fg ansi-bold">   1637</span> )
+<span class="ansi-green-fg">-&gt; 1638</span> ret = self._execute_context(
+<span class="ansi-green-intense-fg ansi-bold">   1639</span>     dialect,
+<span class="ansi-green-intense-fg ansi-bold">   1640</span>     dialect.execution_ctx_cls._init_compiled,
+<span class="ansi-green-intense-fg ansi-bold">   1641</span>     compiled_sql,
+<span class="ansi-green-intense-fg ansi-bold">   1642</span>     distilled_parameters,
+<span class="ansi-green-intense-fg ansi-bold">   1643</span>     execution_options,
+<span class="ansi-green-intense-fg ansi-bold">   1644</span>     compiled_sql,
+<span class="ansi-green-intense-fg ansi-bold">   1645</span>     distilled_parameters,
+<span class="ansi-green-intense-fg ansi-bold">   1646</span>     elem,
+<span class="ansi-green-intense-fg ansi-bold">   1647</span>     extracted_params,
+<span class="ansi-green-intense-fg ansi-bold">   1648</span>     cache_hit=cache_hit,
+<span class="ansi-green-intense-fg ansi-bold">   1649</span> )
+<span class="ansi-green-intense-fg ansi-bold">   1650</span> if has_events:
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:1842</span>, in <span class="ansi-cyan-fg">Connection._execute_context</span><span class="ansi-blue-fg">(self, dialect, constructor, statement, parameters, execution_options, *args, **kw)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1841</span> else:
+<span class="ansi-green-fg">-&gt; 1842</span>     return self._exec_single_context(
+<span class="ansi-green-intense-fg ansi-bold">   1843</span>         dialect, context, statement, parameters
+<span class="ansi-green-intense-fg ansi-bold">   1844</span>     )
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:1983</span>, in <span class="ansi-cyan-fg">Connection._exec_single_context</span><span class="ansi-blue-fg">(self, dialect, context, statement, parameters)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1982</span> except BaseException as e:
+<span class="ansi-green-fg">-&gt; 1983</span>     self._handle_dbapi_exception(
+<span class="ansi-green-intense-fg ansi-bold">   1984</span>         e, str_statement, effective_parameters, cursor, context
+<span class="ansi-green-intense-fg ansi-bold">   1985</span>     )
+<span class="ansi-green-intense-fg ansi-bold">   1987</span> return result
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:2326</span>, in <span class="ansi-cyan-fg">Connection._handle_dbapi_exception</span><span class="ansi-blue-fg">(self, e, statement, parameters, cursor, context, is_sub_exec)</span>
+<span class="ansi-green-intense-fg ansi-bold">   2325</span>     assert sqlalchemy_exception is not None
+<span class="ansi-green-fg">-&gt; 2326</span>     raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+<span class="ansi-green-intense-fg ansi-bold">   2327</span> else:
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/base.py:1964</span>, in <span class="ansi-cyan-fg">Connection._exec_single_context</span><span class="ansi-blue-fg">(self, dialect, context, statement, parameters)</span>
+<span class="ansi-green-intense-fg ansi-bold">   1963</span>     if not evt_handled:
+<span class="ansi-green-fg">-&gt; 1964</span>         self.dialect.do_execute(
+<span class="ansi-green-intense-fg ansi-bold">   1965</span>             cursor, str_statement, effective_parameters, context
+<span class="ansi-green-intense-fg ansi-bold">   1966</span>         )
+<span class="ansi-green-intense-fg ansi-bold">   1968</span> if self._has_events or self.engine._has_events:
+
+File <span class="ansi-green-fg">~/anaconda3/lib/python3.9/site-packages/sqlalchemy/engine/default.py:748</span>, in <span class="ansi-cyan-fg">DefaultDialect.do_execute</span><span class="ansi-blue-fg">(self, cursor, statement, parameters, context)</span>
+<span class="ansi-green-intense-fg ansi-bold">    747</span> def do_execute(self, cursor, statement, parameters, context=None):
+<span class="ansi-green-fg">--&gt; 748</span>     cursor.execute(statement, parameters)
+
+<span class="ansi-red-fg">IntegrityError</span>: (sqlite3.IntegrityError) UNIQUE constraint failed: etrack_users._date
+[SQL: INSERT INTO etrack_users (_date, "_savedWorkouts") VALUES (?, ?)]
+[parameters: ('25 February 2023', &lt;memory at 0x7ff6f67a1a00&gt;)]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a+HACKS.ipynb Cell 10</span> in <span class="ansi-cyan-fg">initEtrackUsers</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span> try:
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span>     row.create()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span> except IntegrityError:
+
+<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a+HACKS.ipynb Cell 10</span> in <span class="ansi-cyan-fg">etrack_user.create</span><span class="ansi-blue-fg">(self)</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=47'&gt;48&lt;/a&gt;</span>     return self
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=48'&gt;49&lt;/a&gt;</span> except IntegrityError:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=49'&gt;50&lt;/a&gt;</span>     db.session.remove()
+
+<span class="ansi-red-fg">NameError</span>: name 'IntegrityError' is not defined
+
+During handling of the above exception, another exception occurred:
+
+<span class="ansi-red-fg">NameError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a+HACKS.ipynb Cell 10</span> in <span class="ansi-cyan-fg">&lt;cell line: 17&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=14'&gt;15&lt;/a&gt;</span>                 db.session.remove()
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=15'&gt;16&lt;/a&gt;</span>                 print(f"Records exist, duplicate username, or error: {row.date}")
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=16'&gt;17&lt;/a&gt;</span> initEtrackUsers()
+
+<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a+HACKS.ipynb Cell 10</span> in <span class="ansi-cyan-fg">initEtrackUsers</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span> try:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span>     row.create()
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span> except IntegrityError:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=13'&gt;14&lt;/a&gt;</span>     '''fails with bad or duplicate data'''
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-14-AP-unit2-4a%2BHACKS.ipynb#X12sdnNjb2RlLXJlbW90ZQ%3D%3D?line=14'&gt;15&lt;/a&gt;</span>     db.session.remove()
+
+<span class="ansi-red-fg">NameError</span>: name 'IntegrityError' is not defined</pre>
+</div>
+</div>
+
+</div>
+</div>
+
 </div>
     
 
@@ -642,7 +876,7 @@ window.onload = wrap_img;
     <span class="n">savedWorkouts</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your workout"</span><span class="p">)</span>
     
     <span class="c1"># Initialize User object before date</span>
-    <span class="n">user</span> <span class="o">=</span> <span class="n">etrack_user</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="n">date</span><span class="p">,</span> <span class="n">savedWorkouts</span><span class="o">=</span><span class="p">[</span><span class="n">savedWorkouts</span><span class="p">])</span>
+    <span class="n">user</span> <span class="o">=</span> <span class="n">etrack_user</span><span class="p">(</span><span class="n">date</span><span class="o">=</span><span class="n">date</span><span class="p">,</span> <span class="n">savedWorkouts</span><span class="o">=</span><span class="n">savedWorkouts</span><span class="p">)</span>
            
     <span class="c1"># write object to database</span>
     <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
@@ -666,7 +900,7 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Created
- {'date': '15 March 2023', 'savedWorkouts': ['225 lb Squat']}
+ {'date': '26 March 2023', 'savedWorkouts': '225lb Bench'}
 </pre>
 </div>
 </div>
@@ -747,7 +981,7 @@ window.onload = wrap_img;
 <div class="output_text output_subarea output_execute_result">
 <pre>[{'date': '25 February 2023',
   'savedWorkouts': ['This is a test of the new table']},
- {'date': '15 March 2023', 'savedWorkouts': ['225 lb Squat']}]</pre>
+ {'date': '25 March 2023', 'savedWorkouts': ['135 lb Bench']}]</pre>
 </div>
 
 </div>
@@ -831,9 +1065,9 @@ window.onload = wrap_img;
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Found
- {'date': '15 March 2023', 'savedWorkouts': ['225 lb Squat']}
+ {'date': '12 March 2023', 'savedWorkouts': '2 Mile Run'}
 Created
- {'date': '15 March 2023', 'savedWorkouts': '225 lb squat'}
+ {'date': '12 March 2023', 'savedWorkouts': '3 Mile Run'}
 </pre>
 </div>
 </div>
@@ -884,7 +1118,7 @@ Created
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Found
- {'date': '15 March 2023', 'savedWorkouts': ['225 lb Squat']}
+ {'date': '12 March 2023', 'savedWorkouts': '2 Mile Run'}
 Deleted
 
 </pre>
