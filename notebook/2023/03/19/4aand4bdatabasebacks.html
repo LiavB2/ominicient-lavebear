@@ -288,7 +288,7 @@ window.onload = wrap_img;
     <span class="n">connection</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
     
-    <span class="c1"># Fetch all the records from books table</span>
+    <span class="c1"># Fetch all the records from exersize table</span>
     <span class="n">results</span> <span class="o">=</span> <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s1">'SELECT * FROM exersizes'</span><span class="p">)</span><span class="o">.</span><span class="n">fetchall</span><span class="p">()</span>
 
     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">results</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
@@ -356,7 +356,7 @@ window.onload = wrap_img;
     <span class="n">cursor</span> <span class="o">=</span> <span class="n">connection</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
 
     <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># Updating review for the book</span>
+        <span class="c1"># Updating review for the exersize</span>
         <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE exersizes SET _review = ? WHERE _id = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">review</span><span class="p">,</span> <span class="n">exersizeId</span><span class="p">))</span>
         <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"Review for the exersize is updated to </span><span class="si">{</span><span class="n">review</span><span class="si">}</span><span class="s2">"</span><span class="p">)</span>
