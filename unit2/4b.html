@@ -253,7 +253,7 @@ I added a menu interface at the bottom, which allows the employee to execute met
     <span class="c1"># returns dictionary</span>
     <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="p">{</span>
-            <span class="s2">"uid"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">uid</span><span class="p">,</span>
+            <span class="s2">"eid"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">eid</span><span class="p">,</span>
             <span class="s2">"bench"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">bench</span><span class="p">,</span>
             <span class="s2">"squat"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">squat</span><span class="p">,</span>
             <span class="s2">"pullup"</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">pullup</span><span class="p">,</span>
@@ -261,18 +261,18 @@ I added a menu interface at the bottom, which allows the employee to execute met
 
     <span class="c1"># CRUD update: updates user name, password, phone</span>
     <span class="c1"># returns self</span>
-    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">uid</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">bench</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">squat</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">pullup</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">eid</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">bench</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">squat</span><span class="o">=</span><span class="s2">""</span><span class="p">,</span> <span class="n">pullup</span><span class="o">=</span><span class="s2">""</span><span class="p">):</span>
         <span class="sd">"""only updates values with length"""</span>
-        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">uid</span> <span class="o">=</span> <span class="n">uid</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">eid</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">eid</span> <span class="o">=</span> <span class="n">eid</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">bench</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">bench</span> <span class="o">=</span> <span class="n">bench</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">squat</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">squat</span><span class="p">(</span><span class="n">squat</span><span class="p">)</span>
         <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">pullup</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">pullup</span><span class="p">(</span><span class="n">pullup</span><span class="p">)</span>
-        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
         <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">db</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
         <span class="k">return</span> <span class="bp">self</span>
 
     <span class="c1"># CRUD delete: remove self</span>
@@ -352,6 +352,28 @@ Created new athlete 3
 </div>
 </div>
 
+</div>
+</div>
+
+</div>
+    
+
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">find_by_eid</span><span class="p">(</span><span class="n">eid</span><span class="p">):</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="c1"># ORM allows us to do query methods on our data</span>
+        <span class="c1"># only returns the match to the first match to the database</span>
+        <span class="n">athlete</span> <span class="o">=</span> <span class="n">Athlete</span><span class="o">.</span><span class="n">query</span><span class="o">.</span><span class="n">filter_by</span><span class="p">(</span><span class="n">_eid</span><span class="o">=</span><span class="n">eid</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">athlete</span> <span class="c1"># returns user object</span>
+</pre></div>
+
+    </div>
 </div>
 </div>
 
@@ -459,10 +481,10 @@ Created new athlete 3
     <span class="k">try</span><span class="p">:</span>
         <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"DELETE FROM athletes WHERE _eid = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">eid</span><span class="p">,))</span>
         <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="c1"># The uid was not found in the table</span>
+            <span class="c1"># The eid was not found in the table</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No eid </span><span class="si">{</span><span class="n">eid</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="c1"># The uid was found in the table and the row was deleted</span>
+            <span class="c1"># The eid was found in the table and the row was deleted</span>
             <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with eid </span><span class="si">{</span><span class="n">eid</span><span class="si">}</span><span class="s2"> was successfully deleted"</span><span class="p">)</span>
         <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
     <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
@@ -488,35 +510,42 @@ Created new athlete 3
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">update</span><span class="p">():</span>
-    <span class="n">eid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter new athlete id number to update to"</span><span class="p">)</span>
-    <span class="n">bench</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your new max bench to update"</span><span class="p">)</span>
-    <span class="n">squat</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your new max squat to update"</span><span class="p">)</span>
-    <span class="n">pullup</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your new max pullup to update"</span><span class="p">)</span>
-    <span class="c1"># Connect to the database file</span>
-    <span class="n">conn</span> <span class="o">=</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">connect</span><span class="p">(</span><span class="n">database</span><span class="p">)</span>
-
-    <span class="c1"># Create a cursor object to execute SQL commands</span>
-    <span class="n">cursor</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">cursor</span><span class="p">()</span>
-
-    <span class="k">try</span><span class="p">:</span>
-        <span class="c1"># Execute an SQL command to update data in a table</span>
-        <span class="n">cursor</span><span class="o">.</span><span class="n">execute</span><span class="p">(</span><span class="s2">"UPDATE athletes SET _bench = ?, SET _squat = ?, SET _pullup = ? WHERE _eid = ?"</span><span class="p">,</span> <span class="p">(</span><span class="n">eid</span><span class="p">,</span> <span class="n">bench</span><span class="p">,</span> <span class="n">squat</span><span class="p">,</span> <span class="n">pullup</span><span class="p">))</span>
-        <span class="k">if</span> <span class="n">cursor</span><span class="o">.</span><span class="n">rowcount</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="c1"># The uid was not found in the table</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"No eid </span><span class="si">{</span><span class="n">eid</span><span class="si">}</span><span class="s2"> was not found in the table"</span><span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"The row with athlete id </span><span class="si">{</span><span class="n">eid</span><span class="si">}</span><span class="s2"> the bench,squat,pullup have been successfully updated"</span><span class="p">)</span>
-            <span class="n">conn</span><span class="o">.</span><span class="n">commit</span><span class="p">()</span>
-    <span class="k">except</span> <span class="n">sqlite3</span><span class="o">.</span><span class="n">Error</span> <span class="k">as</span> <span class="n">error</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"Error while executing the UPDATE:"</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
-        
-    
-    <span class="c1"># Close the cursor and connection objects</span>
-    <span class="n">cursor</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-    <span class="n">conn</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="n">eid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter Athlete ID:"</span><span class="p">)</span>
+    <span class="n">Athlete</span> <span class="o">=</span> <span class="n">find_by_eid</span><span class="p">(</span><span class="n">eid</span><span class="p">)</span>
+    <span class="n">bench</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter new bench"</span><span class="p">)</span>
+    <span class="n">squat</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter new squat"</span><span class="p">)</span>
+    <span class="n">pullup</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter pullup"</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="nb">object</span> <span class="o">=</span> <span class="n">Athlete</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">_bench</span><span class="o">=</span><span class="n">bench</span><span class="p">,</span><span class="n">_squat</span><span class="o">=</span><span class="n">squat</span><span class="p">,</span> <span class="n">_pullup</span><span class="o">=</span><span class="n">pullup</span><span class="p">)</span> 
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">"</span><span class="si">{</span><span class="n">eid</span><span class="si">}</span><span class="s2">-- has been updated: </span><span class="si">{</span><span class="nb">object</span><span class="si">}</span><span class="s2"> "</span><span class="p">)</span>
+        <span class="k">except</span><span class="p">:</span>  <span class="c1"># error raised if object not found</span>
+           <span class="p">(</span><span class="sa">f</span><span class="s2">"The task, </span><span class="si">{</span><span class="n">eid</span><span class="si">}</span><span class="s2"> was not found."</span><span class="p">)</span>
+    <span class="n">db</span> <span class="o">=</span> <span class="n">read</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"Here is the updated DB with all updated Athletes:"</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">db</span><span class="p">)</span>  
+<span class="n">update</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(1, '1', 225, 400, 12)
+(2, '2', 135, 225, 22)
+(5, '5', 135, 140, 24)
+Here is the updated DB with all updated Athletes:
+None
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -530,26 +559,54 @@ Created new athlete 3
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">updateq</span><span class="p">():</span>
-    <span class="n">uid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your athlete id: "</span><span class="p">)</span>
-    <span class="n">userupdate</span> <span class="o">=</span> <span class="n">find_by_uid</span><span class="p">(</span><span class="n">uid</span><span class="p">)</span>  
-    <span class="n">name</span> <span class="o">=</span> <span class="s2">"aditya"</span>
-    <span class="n">uidfor</span> <span class="o">=</span> <span class="s2">"nav"</span>
-    <span class="n">password</span> <span class="o">=</span> <span class="s2">"Arnav"</span>
-
-    <span class="k">if</span> <span class="n">userupdate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">updateA</span><span class="p">():</span>    
+    <span class="n">eid</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the Athete ID to update: "</span><span class="p">)</span>
+    <span class="n">Athlete</span> <span class="o">=</span> <span class="n">find_by_eid</span><span class="p">(</span><span class="n">eid</span><span class="p">)</span>
+    
+    <span class="c1"># Request new values for the QB attributes</span>
+    <span class="n">bench</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their new Bench Press"</span><span class="p">)</span>
+    <span class="n">squat</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their new Squat "</span><span class="p">)</span>
+    <span class="n">pullup</span> <span class="o">=</span> <span class="nb">input</span><span class="p">(</span><span class="s2">"Enter their new pullup"</span><span class="p">)</span>
+   
+    
+    <span class="k">if</span> <span class="n">Athlete</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
         <span class="k">with</span> <span class="n">app</span><span class="o">.</span><span class="n">app_context</span><span class="p">():</span>
-            <span class="n">userupdate</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">,</span> <span class="n">password</span> <span class="o">=</span> <span class="n">password</span><span class="p">)</span>
-            
+            <span class="n">Athlete</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">bench</span><span class="o">=</span><span class="n">bench</span><span class="p">,</span> <span class="n">squat</span><span class="o">=</span><span class="n">squat</span><span class="p">,</span> <span class="n">pullup</span><span class="o">=</span><span class="n">pullup</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">"Updated Athlete"</span><span class="p">,</span> <span class="n">eid</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="nb">print</span><span class="p">(</span><span class="s2">"user not found"</span><span class="p">)</span>
-
-    <span class="nb">print</span><span class="p">(</span><span class="n">userupdate</span><span class="p">)</span>
-
-<span class="n">updateq</span><span class="p">()</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">"error"</span><span class="p">)</span>
+<span class="n">updateA</span><span class="p">()</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_text output_error">
+<pre>
+<span class="ansi-red-fg">---------------------------------------------------------------------------</span>
+<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
+<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-17-AP-unit2-4bHACKS.ipynb Cell 11</span> in <span class="ansi-cyan-fg">&lt;cell line: 17&gt;</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-17-AP-unit2-4bHACKS.ipynb#X36sdnNjb2RlLXJlbW90ZQ%3D%3D?line=14'&gt;15&lt;/a&gt;</span>     else:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-17-AP-unit2-4bHACKS.ipynb#X36sdnNjb2RlLXJlbW90ZQ%3D%3D?line=15'&gt;16&lt;/a&gt;</span>         print("error")
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-17-AP-unit2-4bHACKS.ipynb#X36sdnNjb2RlLXJlbW90ZQ%3D%3D?line=16'&gt;17&lt;/a&gt;</span> updateA()
+
+<span class="ansi-green-intense-fg ansi-bold">/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-17-AP-unit2-4bHACKS.ipynb Cell 11</span> in <span class="ansi-cyan-fg">updateA</span><span class="ansi-blue-fg">()</span>
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-17-AP-unit2-4bHACKS.ipynb#X36sdnNjb2RlLXJlbW90ZQ%3D%3D?line=10'&gt;11&lt;/a&gt;</span> if Athlete is not None:
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-17-AP-unit2-4bHACKS.ipynb#X36sdnNjb2RlLXJlbW90ZQ%3D%3D?line=11'&gt;12&lt;/a&gt;</span>     with app.app_context():
+<span class="ansi-green-fg">---&gt; &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-17-AP-unit2-4bHACKS.ipynb#X36sdnNjb2RlLXJlbW90ZQ%3D%3D?line=12'&gt;13&lt;/a&gt;</span>         Athlete.update(bench=bench, squat=squat, pullup=pullup)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-17-AP-unit2-4bHACKS.ipynb#X36sdnNjb2RlLXJlbW90ZQ%3D%3D?line=13'&gt;14&lt;/a&gt;</span>         print("Updated Athlete", eid)
+<span class="ansi-green-intense-fg ansi-bold">     &lt;a href='vscode-notebook-cell://wsl%2Bubuntu/mnt/c/Users/liavb/vscode/ominicient-lavebear/_notebooks/2023-03-17-AP-unit2-4bHACKS.ipynb#X36sdnNjb2RlLXJlbW90ZQ%3D%3D?line=14'&gt;15&lt;/a&gt;</span> else:
+
+<span class="ansi-red-fg">TypeError</span>: update() got an unexpected keyword argument 'bench'</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -604,7 +661,7 @@ Created new athlete 3
         <span class="k">elif</span> <span class="n">selected_option</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'r'</span><span class="p">:</span>
             <span class="n">read</span><span class="p">()</span>
         <span class="k">elif</span> <span class="n">selected_option</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'u'</span><span class="p">:</span>
-            <span class="n">update</span><span class="p">()</span>
+            <span class="n">updateA</span><span class="p">()</span>
         <span class="k">elif</span> <span class="n">selected_option</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'d'</span><span class="p">:</span>
             <span class="n">delete</span><span class="p">()</span>
         <span class="k">elif</span> <span class="n">selected_option</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="s1">'s'</span><span class="p">:</span>
@@ -637,7 +694,12 @@ Created new athlete 3
 (u) Update
 (d) Delete
 (s) Schema
-Error while executing the UPDATE: near "_bench": syntax error
+(1, '1', 225, 400, 12)
+(2, '2', 135, 225, 22)
+(5, '5', 135, 140, 24)
+(6, '1', 225, 400, 12)
+(7, '2', 135, 225, 22)
+(8, '3', 180, 300, 15)
 Select an option:
 (c) Create
 (r) Read
