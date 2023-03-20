@@ -6,6 +6,9 @@ categories: [Notes]
 title: 2.3 and 2.4 Debugging Code Segments
 ---
 
+# Debugging
+- Here you can see I participated in both the tech talks and completed the debugging.
+
 ![Screen Shot 2023-03-19 at 21 15 49 PM](https://user-images.githubusercontent.com/111464984/226245933-df33a1b7-f53b-4b98-aa15-3e17a6b109a6.png)
 
 ![Screen Shot 2023-03-19 at 21 15 43 PM](https://user-images.githubusercontent.com/111464984/226245945-5eefda77-147a-4115-827b-3d42056b1bae.png)
