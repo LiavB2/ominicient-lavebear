@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      119 min read
+      121 min read
     
 </span></p>
 
@@ -161,7 +161,11 @@ window.onload = wrap_img;
 </li>
 <li class="toc-entry toc-h1"><a href="#Hacks">Hacks </a>
 <ul>
+<li class="toc-entry toc-h2"><a href="#Explaination:">Explaination: </a>
+<ul>
 <li class="toc-entry toc-h3"><a href="#Time-and-Space-Complexity-Practice">Time and Space Complexity Practice </a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toc-entry toc-h1"><a href="#code">code </a></li>
@@ -9591,6 +9595,92 @@ Time taken: 2.033327579498291 seconds
 </ul>
 <p>Complete the Time and Space Complexity analysis questions linked below.
 <a href="https://www.geeksforgeeks.org/practice-questions-time-complexity-analysis/">Practice</a></p>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">datetime</span>
+
+<span class="c1"># Define a function to calculate the number of steps taken</span>
+<span class="k">def</span> <span class="nf">calculate_steps</span><span class="p">(</span><span class="n">distance</span><span class="p">):</span>
+    <span class="c1"># Assuming an average stride length of 0.7 meters</span>
+    <span class="n">steps</span> <span class="o">=</span> <span class="n">distance</span> <span class="o">/</span> <span class="mf">0.7</span>
+    <span class="k">return</span> <span class="n">steps</span>
+
+<span class="c1"># Define a function to calculate the number of calories burned</span>
+<span class="k">def</span> <span class="nf">calculate_calories_burned</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="n">duration</span><span class="p">):</span>
+    <span class="c1"># Assuming an average burn rate of 5 calories per minute</span>
+    <span class="n">calories_burned</span> <span class="o">=</span> <span class="n">weight</span> <span class="o">*</span> <span class="mi">5</span> <span class="o">*</span> <span class="n">duration</span>
+    <span class="k">return</span> <span class="n">calories_burned</span>
+
+<span class="c1"># Define the main function to track fitness activities</span>
+<span class="k">def</span> <span class="nf">track_fitness</span><span class="p">():</span>
+    <span class="c1"># Get user input for distance traveled and duration of workout</span>
+    <span class="n">distance</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the distance you traveled (in kilometers): "</span><span class="p">))</span>
+    <span class="n">duration</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Enter the duration of your workout (in minutes): "</span><span class="p">))</span>
+    
+    <span class="c1"># Calculate the number of steps taken</span>
+    <span class="n">steps</span> <span class="o">=</span> <span class="n">calculate_steps</span><span class="p">(</span><span class="n">distance</span><span class="p">)</span>
+    
+    <span class="c1"># Get user input for weight</span>
+    <span class="n">weight</span> <span class="o">=</span> <span class="nb">float</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">"Enter your weight (in kilograms): "</span><span class="p">))</span>
+    
+    <span class="c1"># Calculate the number of calories burned</span>
+    <span class="n">calories_burned</span> <span class="o">=</span> <span class="n">calculate_calories_burned</span><span class="p">(</span><span class="n">weight</span><span class="p">,</span> <span class="n">duration</span><span class="p">)</span>
+    
+    <span class="c1"># Print the results</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">"You took </span><span class="si">{}</span><span class="s2"> steps and burned </span><span class="si">{}</span><span class="s2"> calories during your workout!"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">steps</span><span class="p">,</span> <span class="n">calories_burned</span><span class="p">))</span>
+    
+    <span class="c1"># Write the results to a file for tracking purposes</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">"fitness_tracker.txt"</span><span class="p">,</span> <span class="s2">"a"</span><span class="p">)</span> <span class="k">as</span> <span class="n">f</span><span class="p">:</span>
+        <span class="n">current_time</span> <span class="o">=</span> <span class="n">datetime</span><span class="o">.</span><span class="n">datetime</span><span class="o">.</span><span class="n">now</span><span class="p">()</span>
+        <span class="n">f</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">"</span><span class="si">{}</span><span class="s2"> - Distance: </span><span class="si">{}</span><span class="s2"> km, Duration: </span><span class="si">{}</span><span class="s2"> min, Steps: </span><span class="si">{}</span><span class="s2">, Calories Burned: </span><span class="si">{}</span><span class="se">\n</span><span class="s2">"</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">current_time</span><span class="p">,</span> <span class="n">distance</span><span class="p">,</span> <span class="n">duration</span><span class="p">,</span> <span class="n">steps</span><span class="p">,</span> <span class="n">calories_burned</span><span class="p">))</span>
+
+<span class="c1"># Call the main function to track a fitness activity</span>
+<span class="n">track_fitness</span><span class="p">()</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>You took 14.285714285714286 steps and burned 26000.0 calories during your workout!
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Explaination:">
+<a class="anchor" href="#Explaination:" aria-hidden="true"><span class="octicon octicon-link"></span></a>Explaination:<a class="anchor-link" href="#Explaination:"> </a>
+</h2>
+<ul>
+<li>In my code, the user is prompted to enter the distance they traveled and the duration of their workout. These inputs are then used to calculate the number of steps taken and the number of calories burned. The user is also prompted to enter their weight, which is used in the calculation of calories burned.<ul>
+<li>The results are printed to the console and also written to a file called "fitness_tracker.txt" for tracking purposes. The current date and time are also included in the file for reference.</li>
+<li>By tracking their fitness activities over time, the user can use the data to set goals and track progress towards my fitness program.</li>
+</ul>
+</li>
+</ul>
 
 </div>
 </div>
