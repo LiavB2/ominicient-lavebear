@@ -50,3 +50,10 @@ session_set_cookie_params([
 
 - This code sets the SameSite cookie attribute to 'Strict', which means that the cookie will only be sent to the website's own domain and not to any other domains.
 
+
+# Why are these important?
+- It is important to learn about Advanced Security Certbot and Cross-origin Security advancements because they both play a critical role in ensuring the security and integrity of web applications and websites.
+    - Protecting websites and online services: 
+        - In today's digital age, websites and online services are vulnerable to cyber attacks such as hacking, data theft, and other security breaches. By learning about advanced security tools and techniques like Certbot and Cross-origin Security, website owners and developers can better protect their websites and users from these threats.
+    - Building trust with users: 
+        - Users expect websites and online services to be secure and protect their personal data. By implementing advanced security measures, website owners and developers can build trust with users and improve their reputation.
