@@ -1,7 +1,7 @@
 ---
 toc: true
 layout: post
-description: My expirience at the Algorthymic Performances
+description: My expirience at the algorythmic performances
 categories: [Notes]
 title: Algorythmic Performances
 ---
