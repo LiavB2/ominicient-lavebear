@@ -6,7 +6,7 @@ layout: base
 badges: false
 permalink: /collegeboard/error
 image: /images/apcsp.png
-categories: []
+categories: [1.B, 4.C]
 type: ap
 week: 7
 nb_path: _notebooks/2022-10-03-AP-error_testing copy.ipynb
@@ -272,9 +272,6 @@ layout: notebook
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>This code outputs the even numbers from 0 - 10 using a for loop.</p>
-<ul>
-<li>Analyze this code to determine what can be changed to get the outcome to be odd numbers. (Code block below)</li>
-</ul>
 
 </div>
 </div>
