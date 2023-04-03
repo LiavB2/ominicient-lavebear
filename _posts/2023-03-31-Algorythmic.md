@@ -41,4 +41,4 @@ title: Algorythmic Performances
 # Overall
 - This was overall a very fun experience, I'm glad the CSA kids were able to have fun and make these presenations
 - My favorite one was the Second group, but probably because I got to watch and make fun of my cousin, Re'em B.
-- If I end up taking CSA next year, I would actually be very excited to do this.
+- If I end up taking CSA next year, I would actually be very excited to do this. /
