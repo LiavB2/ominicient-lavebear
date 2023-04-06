@@ -18,21 +18,21 @@ week: 29
 > As we have learned, a computer needs aa program to do something smart.  The sequence of a program initiates a series of actions with the computers Central Processing Unit (CPU). This component is essentially a binary machine focussing on program instructions provided.  The CPU retrieives and stores the data it acts upon in Random Access Memory (RAM). Between the CPU, RAM, and Storage Devices a computer can work with many programs and large amounts of data.
 
 List specification of your Computer, or Computers if working as Pair/Trio
-- Processor GHz:
-- Memory in GB:
-- Storage in GB:
-- OS:
+- Processor GHz: 11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz
+- Memory in GB: 8.00 GB (7.56 GB usable)
+- Storage in GB: 256 GB
+- OS: Windows 11 Home 22H2
 
 Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.
-- Input devices
-- Output devices
-- Program File
-- Program Code
-- Processes
-- Ports
-- Data File
-- Inspect Running Code
-- Inspect Variables
+- Input devices: physical piece of hardware that connects to a primary device (such as computer) ti oprovide user input
+- Output devices: a piece of equipment/hardware that gives result of the entered input after processing (ex: printer/monitor)
+- Program File: directory name of a standard folder in Microsoft Windows operating systems, applications that aren't part of OS are installed here
+- Program Code: set of instructions written in a programming language
+- Processes: instance of a program running on a computer
+- Ports: virtual port where network connections start and end
+- Data File: a computer file that stores data to be used by a computer app or system, including input and output data
+- Inspect Running Code: debugging, find the root of a problem in a code base
+- Inspect Variables: can move your mouse over the name of the variable to inspect the variables
 
 
 ![]({{site.baseurl}}/images/cpu.jpeg "https://github.com/LiavB2/ominicient-lavebear")
@@ -61,7 +61,15 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 > Watch/review College Board Daily Video 4.1.2
 
-- Complete True of False Questions
+#### Complete True of False Questions
+
+   - Open standards and protocols enable diff manufacturers/developers to build hardware and software that can communicate with hardware/software on the rest of the internet: TRUE
+    - IETF is a task force used to enforce laws to keep manufacters out of the internet: FALSE
+    - routes are determined in advanced and aren't flexible: FALSE
+    - a protocol is an agreed upons et of rules that specify the behavior of a system: TRUE
+    - UDP guarantees transfers and is faster: FALSE
+    - the WWW is the internet: FALSE
+    - HTTP is a protocol used by WWW: TRUE
 
 - Essential Knowledge
     - The internet is a computer network consisting of interconnected networks that use standardized, open (nonproprierary) communication protocols.
@@ -114,19 +122,23 @@ The "network" layer is responsible for ***routing data packets between networks*
 > Watch both Daily videos for 4.2
 
 - Complete the network activity, summarize your understanding of fault tolerance.
-
+    - There are benefits to having multiple paths because if one path/wire goes down, the rest of the computers can still communicate. But the more wires means more resources are needed.
+    - Fault-tolerant means that if some wires go down, the network can still work and end points can still communicate. A network must be thoroughly fault-tolerant to be considered fault-tolerant.
+    - Redundacy is the inclusion of extra components to llimit failure of a system if other components fail.
 
 ### Parallel and Distributed Computing
 > Review previous lecture on Parallel Computing and watch Daily vidoe 4.3.  Think of ways to make something in you team project to utilize Cores more effectively.  Here are some thoughts to add to your story of Computers and Networks...
 
 - What is naturally Distributed in Frontend/Backend archeticture?  
+    - Naturally distributed in frontend/backend means that there isn't a HEAVY load on either, but rather that they are balanced.
 
-- Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  
-- Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
+- Analyze this command in Docker: ```ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"```.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an [article](https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7)
+    - Parallelism is when 2+ tasks are executed at the same time, so this command does have parallel computing because you can execute all the options at the same time and all of them will be run.
 
 
 > Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.
 - Review this [article](https://www.anyscale.com/blog/writing-your-first-distributed-python-application-with-ray)...  Can you get parallel code on images to work more effectively?  I have not tried Ray.
+- Yes, you can use the Ray API maybe.
 
 - Code example from ChatGPT using squares.  This might be more interesting if nums we generated to be a lot bigger.
 
