@@ -81,7 +81,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      8 min read
     
 </span></p>
 
@@ -101,7 +101,11 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h2"><a href="#requirements">Requirements</a>
 <ul>
 <li class="toc-entry toc-h3"><a href="#how-a-computer-works">How a Computer Works</a></li>
-<li class="toc-entry toc-h3"><a href="#the-internet">The Internet</a></li>
+<li class="toc-entry toc-h3"><a href="#the-internet">The Internet</a>
+<ul>
+<li class="toc-entry toc-h4"><a href="#complete-true-of-false-questions">Complete True of False Questions</a></li>
+</ul>
+</li>
 <li class="toc-entry toc-h3"><a href="#fault-tolerance">Fault Tolerance</a></li>
 <li class="toc-entry toc-h3"><a href="#parallel-and-distributed-computing">Parallel and Distributed Computing</a></li>
 </ul>
@@ -120,23 +124,23 @@ window.onload = wrap_img;
 
 <p>List specification of your Computer, or Computers if working as Pair/Trio</p>
 <ul>
-  <li>Processor GHz:</li>
-  <li>Memory in GB:</li>
-  <li>Storage in GB:</li>
-  <li>OS:</li>
+  <li>Processor GHz: 11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz</li>
+  <li>Memory in GB: 8.00 GB (7.56 GB usable)</li>
+  <li>Storage in GB: 256 GB</li>
+  <li>OS: Windows 11 Home 22H2</li>
 </ul>
 
 <p>Define or describe usage of Computer using Computer Programs. Pictures are preferred over a lot of text.  Use your experience.</p>
 <ul>
-  <li>Input devices</li>
-  <li>Output devices</li>
-  <li>Program File</li>
-  <li>Program Code</li>
-  <li>Processes</li>
-  <li>Ports</li>
-  <li>Data File</li>
-  <li>Inspect Running Code</li>
-  <li>Inspect Variables</li>
+  <li>Input devices: physical piece of hardware that connects to a primary device (such as computer) ti oprovide user input</li>
+  <li>Output devices: a piece of equipment/hardware that gives result of the entered input after processing (ex: printer/monitor)</li>
+  <li>Program File: directory name of a standard folder in Microsoft Windows operating systems, applications that aren’t part of OS are installed here</li>
+  <li>Program Code: set of instructions written in a programming language</li>
+  <li>Processes: instance of a program running on a computer</li>
+  <li>Ports: virtual port where network connections start and end</li>
+  <li>Data File: a computer file that stores data to be used by a computer app or system, including input and output data</li>
+  <li>Inspect Running Code: debugging, find the root of a problem in a code base</li>
+  <li>Inspect Variables: can move your mouse over the name of the variable to inspect the variables</li>
 </ul>
 
 <p><img src="/ominicient-lavebear/images/cpu.jpeg" alt="" title="https://github.com/LiavB2/ominicient-lavebear"></p>
@@ -176,9 +180,18 @@ window.onload = wrap_img;
   <p>Watch/review College Board Daily Video 4.1.2</p>
 </blockquote>
 
+<h4 id="complete-true-of-false-questions">
+<a class="anchor" href="#complete-true-of-false-questions" aria-hidden="true"><span class="octicon octicon-link"></span></a>Complete True of False Questions</h4>
+
 <ul>
   <li>
-    <p>Complete True of False Questions</p>
+    <p>Open standards and protocols enable diff manufacturers/developers to build hardware and software that can communicate with hardware/software on the rest of the internet: TRUE
+    - IETF is a task force used to enforce laws to keep manufacters out of the internet: FALSE
+    - routes are determined in advanced and aren’t flexible: FALSE
+    - a protocol is an agreed upons et of rules that specify the behavior of a system: TRUE
+    - UDP guarantees transfers and is faster: FALSE
+    - the WWW is the internet: FALSE
+    - HTTP is a protocol used by WWW: TRUE</p>
   </li>
   <li>Essential Knowledge
     <ul>
@@ -236,7 +249,13 @@ window.onload = wrap_img;
 </blockquote>
 
 <ul>
-  <li>Complete the network activity, summarize your understanding of fault tolerance.</li>
+  <li>Complete the network activity, summarize your understanding of fault tolerance.
+    <ul>
+      <li>There are benefits to having multiple paths because if one path/wire goes down, the rest of the computers can still communicate. But the more wires means more resources are needed.</li>
+      <li>Fault-tolerant means that if some wires go down, the network can still work and end points can still communicate. A network must be thoroughly fault-tolerant to be considered fault-tolerant.</li>
+      <li>Redundacy is the inclusion of extra components to llimit failure of a system if other components fail.</li>
+    </ul>
+  </li>
 </ul>
 
 <h3 id="parallel-and-distributed-computing">
@@ -246,18 +265,23 @@ window.onload = wrap_img;
 </blockquote>
 
 <ul>
-  <li>
-    <p>What is naturally Distributed in Frontend/Backend archeticture?</p>
+  <li>What is naturally Distributed in Frontend/Backend archeticture?
+    <ul>
+      <li>Naturally distributed in frontend/backend means that there isn’t a HEAVY load on either, but rather that they are balanced.</li>
+    </ul>
   </li>
-  <li>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.</li>
-  <li>Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a>
-</li>
+  <li>Analyze this command in Docker: <code class="language-plaintext highlighter-rouge">ENV GUNICORN_CMD_ARGS="--workers=1 --bind=0.0.0.0:8086"</code>.   Determine if there is options are options in this command for parallel computing within the server that runs python/gunicorn.  Here is an <a href="https://medium.com/building-the-system/gunicorn-3-means-of-concurrency-efbb547674b7">article</a>
+    <ul>
+      <li>Parallelism is when 2+ tasks are executed at the same time, so this command does have parallel computing because you can execute all the options at the same time and all of them will be run.</li>
+    </ul>
+  </li>
 </ul>
 
 <blockquote>
   <p>Last week we discussed parallel computing on local machine.  There are many options.  Here is something to get parallel computing work with a tool called Ray.</p>
   <ul>
     <li>Review this <a href="https://www.anyscale.com/blog/writing-your-first-distributed-python-application-with-ray">article</a>…  Can you get parallel code on images to work more effectively?  I have not tried Ray.</li>
+    <li>Yes, you can use the Ray API maybe.</li>
   </ul>
 </blockquote>
 
