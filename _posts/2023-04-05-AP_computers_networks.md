@@ -91,6 +91,10 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 ![]({{site.baseurl}}/images/fullstack.png "https://github.com/LiavB2/ominicient-lavebear")
 
+##### My Canva Diagram
+
+![]({{site.baseurl}}/images/computercanva.png "https://github.com/LiavB2/ominicient-lavebear")
+
 
 - Often we draw pictures of machines communicating over the Internet with arrows.  However, the real communication goes through protocol layers and the machine and then is trasported of the network.   For College Board and future Computer Knowledge you should become familiar with the following ...
 
