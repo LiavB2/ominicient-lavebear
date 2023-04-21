@@ -1,0 +1,41 @@
+<p>Access-Control-Allow-Origin: https://example.com
+Access-Control-Allow-Credentials: true</p>
+
+<p>&lt;!DOCTYPE html&gt;</p>
+<html>
+<head>
+	<title>Protected Web Page</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Styling code -->
+	<style>
+		body {
+			font-family: Arial, Helvetica, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+		}
+	</style>
+</head>
+<body>
+	<!-- HTML code -->
+	<h1>Protected Web Page</h1>
+	<p>Welcome to my protected web page.</p>
+
+	<!-- JavaScript code -->
+	<script>
+		var xhr = new XMLHttpRequest();
+		xhr.open('GET', 'https://example.com/api/data', true);
+		xhr.withCredentials = true;
+		xhr.onreadystatechange = function() {
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				console.log(xhr.responseText);
+			}
+		};
+		xhr.send();
+	</script>
+</body>
+</html>
