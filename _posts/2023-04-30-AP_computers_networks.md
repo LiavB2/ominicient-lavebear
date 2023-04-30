@@ -34,7 +34,7 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 - Inspect Variables - **can be used to programmatically access and retrieve information about variables, functions, classes, and other objects during runtime.**
 
 
-![]({{site.baseurl}}/images/Picture11.jpeg "https://github.com/LiavB2/ominicient-lavebear")
+![]({{site.baseurl}}/images/Picture11.png "https://github.com/LiavB2/ominicient-lavebear")
 
 
 
@@ -95,7 +95,7 @@ Define or describe usage of Computer using Computer Programs. Pictures are prefe
 
 - Go over AP videos, vocabulary, and essential knowledge.  Draw a diagram showing the internet and its many levels. A preferred diagram would using your knowledge of frontend, backend, deployment, etc.  Picture would highligh vocabulary by illustration. The below illustration have some ideas
 
-![]({{site.baseurl}}/images/picture12.jpeg "https://github.com/LiavB2/ominicient-lavebear")
+![]({{site.baseurl}}/images/picture12.png "https://github.com/LiavB2/ominicient-lavebear")
 
 
 - Often we draw pictures of machines communicating over the Internet with arrows.  However, the real communication goes through protocol layers and the machine and then is trasported of the network.   For College Board and future Computer Knowledge you should become familiar with the following ...
