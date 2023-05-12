@@ -6,7 +6,7 @@ categories: [Notes]
 title: Group ALAAT Photo Site Planning
 ---
 
-# Members
+# Members: Team ALAAT
 
 ## President
 - Arnav Kanekar 
