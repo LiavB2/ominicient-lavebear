@@ -98,6 +98,7 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#hours-i-worked">Hours I Worked</a></li>
 <li class="toc-entry toc-h1"><a href="#feature-overview">Feature Overview</a></li>
+<li class="toc-entry toc-h1"><a href="#some-demo-code">Some Demo Code</a></li>
 </ul><h1 id="hours-i-worked">
 <a class="anchor" href="#hours-i-worked" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hours I Worked</h1>
 
@@ -171,6 +172,112 @@ window.onload = wrap_img;
 
 <h1 id="feature-overview">
 <a class="anchor" href="#feature-overview" aria-hidden="true"><span class="octicon octicon-link"></span></a>Feature Overview</h1>
+<ul>
+  <li>Like and comment system
+    <ul>
+      <li>The images will sort based on amount of likes and comments</li>
+    </ul>
+  </li>
+</ul>
+
+<h1 id="some-demo-code">
+<a class="anchor" href="#some-demo-code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Some Demo Code</h1>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;title&gt;Forum Demo&lt;/title&gt;
+    &lt;style&gt;
+        .post {
+            margin-bottom: 10px;
+            padding: 10px;
+            background-color: #f2f2f2;
+        }
+        .comment {
+            margin-left: 20px;
+            margin-bottom: 5px;
+        }
+        .like-btn {
+            color: blue;
+            cursor: pointer;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div id="post-container"&gt;
+        &lt;!-- Posts will be added dynamically here --&gt;
+    &lt;/div&gt;
+    &lt;script&gt;
+        // Data structure to hold posts
+        let posts = [];
+
+        // Function to add a post
+        function addPost(title, content) {
+            let post = {
+                title: title,
+                content: content,
+                likes: 0,
+                comments: []
+            };
+            posts.push(post);
+            renderPosts();
+        }
+
+        // Function to add a comment to a post
+        function addComment(postIndex, commentContent) {
+            let comment = {
+                content: commentContent,
+                likes: 0
+            };
+            posts[postIndex].comments.push(comment);
+            renderPosts();
+        }
+
+        // Function to like a post
+        function likePost(postIndex) {
+            posts[postIndex].likes++;
+            renderPosts();
+        }
+
+        // Function to like a comment
+        function likeComment(postIndex, commentIndex) {
+            posts[postIndex].comments[commentIndex].likes++;
+            renderPosts();
+        }
+
+        // Function to render posts and comments
+        function renderPosts() {
+            let postContainer = document.getElementById("post-container");
+            postContainer.innerHTML = "";
+
+            posts.forEach(function(post, postIndex) {
+                let postElement = document.createElement("div");
+                postElement.className = "post";
+                postElement.innerHTML = `
+                    &lt;h3&gt;${post.title}&lt;/h3&gt;
+                    &lt;p&gt;${post.content}&lt;/p&gt;
+                    &lt;button class="like-btn" onclick="likePost(${postIndex})"&gt;Like&lt;/button&gt;
+                    &lt;span&gt;Likes: ${post.likes}&lt;/span&gt;
+                `;
+
+                post.comments.forEach(function(comment, commentIndex) {
+                    let commentElement = document.createElement("div");
+                    commentElement.className = "comment";
+                    commentElement.innerHTML = `
+                        &lt;p&gt;${comment.content}&lt;/p&gt;
+                        &lt;button class="like-btn" onclick="likeComment(${postIndex}, ${commentIndex})"&gt;Like&lt;/button&gt;
+                        &lt;span&gt;Likes: ${comment.likes}&lt;/span&gt;
+                    `;
+                    postElement.appendChild(commentElement);
+                });
+
+                postContainer.appendChild(postElement);
+            });
+        }
+    &lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre></div></div>
 
   </div><a class="u-url" href="/ominicient-lavebear/notes/2023/05/12/ALAAT-LikesandCommentsFeature+hours.html" hidden></a>
 </article>
