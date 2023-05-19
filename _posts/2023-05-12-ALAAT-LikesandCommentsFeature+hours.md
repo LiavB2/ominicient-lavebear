@@ -11,7 +11,7 @@ title: ALAAT Likes Feature + Hours Tracking
 |Task #|Hours|Task|
 |-|-|-|
 |1|Plan out group project + Canva Model [Here](https://liavb2.github.io/ominicient-lavebear/notes/2023/05/12/ALAAT-Planning.html)|1 Hour|
-|2|||
+|2|Research and collaboration on implementing the likes feature on each photo and determining what the best way to implement it will be|1 hour|
 |3|||
 |4|||
 |5|||
@@ -25,6 +25,8 @@ title: ALAAT Likes Feature + Hours Tracking
 # Feature Overview
 - Like and comment system
     - The images will sort based on amount of likes and comments
+- Make a button with a count request that adds +1 everytime the button is clicked.
+    - Save amount of likes on each photo to backend 
 
 
 
@@ -225,3 +227,177 @@ title: ALAAT Likes Feature + Hours Tracking
         <script src="/striver-frontend/scripts/forum.js"></script>
     </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Like System</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+  <h1>Like System</h1>
+
+  <div>
+    <button id="object1" class="like-button">Like</button>
+    <span id="object1-count">0</span>
+  </div>
+
+  <div>
+    <button id="object2" class="like-button">Like</button>
+    <span id="object2-count">0</span>
+  </div>
+
+  <!-- Add more objects as needed -->
+
+  <script>
+    $(document).ready(function() {
+      $('.like-button').click(function() {
+        var objectId = $(this).attr('id');
+        incrementLikeCount(objectId);
+      });
+
+      function incrementLikeCount(objectId) {
+        var countElement = $('#' + objectId + '-count');
+        var count = parseInt(countElement.text());
+        count++;
+        countElement.text(count);
+
+        // Send an AJAX request to update the backend with the new like count
+        $.ajax({
+          url: 'backend.php',
+          type: 'POST',
+          data: { objectId: objectId, count: count },
+          success: function(response) {
+            console.log(response);
+          },
+          error: function(xhr, status, error) {
+            console.error(error);
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Like System</title>
+</head>
+<body>
+  <h1>Like System</h1>
+
+  <button id="likeButton" onclick="incrementLikeCount()">Like</button>
+
+  <script>
+    var likeCount = 0;
+
+    function incrementLikeCount() {
+      likeCount++;
+      document.getElementById('likeButton').innerHTML = 'Like (' + likeCount + ')';
+    }
+  </script>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sprite Animation</title>
+    <style>
+      canvas {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <script>
+      // Get the canvas element
+      const canvas = document.getElementById("canvas");
+      const context = canvas.getContext("2d");
+      // Load the sprite image
+      const spriteImage = new Image();
+      spriteImage.src = "sprite.png";
+      // Set the initial position and speed of the sprite
+      let spriteX = 100;
+      let spriteY = 100;
+      const spriteSpeed = 5;
+      // Set the animation frames
+      const frames = [];
+      const frameWidth = 64;
+      const frameHeight = 64;
+      for (let i = 0; i < 6; i++) {
+        const frame = {
+          image: spriteImage,
+          sx: i * frameWidth,
+          sy: 0,
+          sw: frameWidth,
+          sh: frameHeight,
+        };
+        frames.push(frame);
+      }
+      // Set the initial frame index and animation delay
+      let currentFrame = 0;
+      const animationDelay = 10; // Lower value means faster animation
+      // Function to update the animation frame
+      function updateFrame() {
+        currentFrame = (currentFrame + 1) % frames.length;
+      }
+      // Function to draw the sprite
+      function drawSprite() {
+        const frame = frames[currentFrame];
+        context.drawImage(
+          frame.image,
+          frame.sx,
+          frame.sy,
+          frame.sw,
+          frame.sh,
+          spriteX,
+          spriteY,
+          frame.sw,
+          frame.sh
+        );
+      }
+      // Function to handle keyboard input
+      function handleInput() {
+        window.addEventListener("keydown", (event) => {
+          switch (event.key) {
+            case "ArrowLeft":
+              spriteX -= spriteSpeed;
+              break;
+            case "ArrowRight":
+              spriteX += spriteSpeed;
+              break;
+            case "ArrowUp":
+              spriteY -= spriteSpeed;
+              break;
+            case "ArrowDown":
+              spriteY += spriteSpeed;
+              break;
+          }
+        });
+      }
+      // Game loop
+      function gameLoop() {
+        // Clear the canvas
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        // Update the animation frame
+        if (Date.now() % animationDelay === 0) {
+          updateFrame();
+        }
+        // Draw the sprite
+        drawSprite();
+        // Request the next frame
+        requestAnimationFrame(gameLoop);
+      }
+      // Start the game loop
+      handleInput();
+      gameLoop();
+    </script>
+  </body>
+</html>
+
