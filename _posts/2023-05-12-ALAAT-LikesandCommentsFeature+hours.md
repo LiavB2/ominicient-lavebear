@@ -13,7 +13,7 @@ title: ALAAT Likes Feature + Hours Tracking
 |1|Plan out group project + Canva Model [Here](https://liavb2.github.io/ominicient-lavebear/notes/2023/05/12/ALAAT-Planning.html)|1 Hour|
 |2|Research and collaboration on implementing the likes feature on each photo and determining what the best way to implement it will be|1 hour|
 |3|Develop a few prototype like systems (with multiple deigns)|1.5 hours|
-|4|||
+|4|Research backend likes saving|0.5 Hours|
 |5|||
 |6|||
 |7|||
@@ -184,19 +184,25 @@ title: ALAAT Likes Feature + Hours Tracking
                                 class="nav-link"
                                 href="/striver-frontend/index.html"
                             >
-                                Quotes
+                                Comments
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#"> Forum </a>
+                            <a class="nav-link" href="#"> Gallery </a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
         <div class="container mt-3">
-            <h1>Forum</h1>
-            <p class="text-muted">
+            <h1>Comments and Likes</h1>
+            <p class="text-muted">---
+toc: true
+layout: post
+description: Planning for our tri 3 Final Project
+categories: [Notes]
+title: Group ALAAT Photo Site Planning
+---
                 Submit your thoughts & comments on each of the photos!
             </p>
             <div class="mb-3">
