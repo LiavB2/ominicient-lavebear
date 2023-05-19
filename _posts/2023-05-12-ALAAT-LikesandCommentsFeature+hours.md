@@ -12,7 +12,7 @@ title: ALAAT Likes Feature + Hours Tracking
 |-|-|-|
 |1|Plan out group project + Canva Model [Here](https://liavb2.github.io/ominicient-lavebear/notes/2023/05/12/ALAAT-Planning.html)|1 Hour|
 |2|Research and collaboration on implementing the likes feature on each photo and determining what the best way to implement it will be|1 hour|
-|3|||
+|3|Develop a few prototype like systems (with multiple deigns)|1.5 hours|
 |4|||
 |5|||
 |6|||
@@ -161,7 +161,7 @@ title: ALAAT Likes Feature + Hours Tracking
                         style="margin-right: 10px"
                         alt=""
                     />
-                    Striver
+                    ALAAT
                 </a>
                 <button
                     class="navbar-toggler"
@@ -228,14 +228,14 @@ title: ALAAT Likes Feature + Hours Tracking
     </body>
 </html>
 
-<!DOCTYPE html>
+
 <html>
 <head>
-  <title>Like System</title>
+  <title>Like System Design 1</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
-  <h1>Like System</h1>
+  <h1>Like System Design 1</h1>
 
   <div>
     <button id="object1" class="like-button">Like</button>
@@ -261,7 +261,6 @@ title: ALAAT Likes Feature + Hours Tracking
         var count = parseInt(countElement.text());
         count++;
         countElement.text(count);
-
         // Send an AJAX request to update the backend with the new like count
         $.ajax({
           url: 'backend.php',
@@ -280,13 +279,13 @@ title: ALAAT Likes Feature + Hours Tracking
 </body>
 </html>
 
-<!DOCTYPE html>
 <html>
 <head>
-  <title>Like System</title>
+  <title>Like System Design 2</title>
 </head>
+
 <body>
-  <h1>Like System</h1>
+  <h1>Like System Design 2</h1>
 
   <button id="likeButton" onclick="incrementLikeCount()">Like</button>
 
@@ -301,9 +300,6 @@ title: ALAAT Likes Feature + Hours Tracking
 </body>
 </html>
 
-
-
-<!DOCTYPE html>
 <html>
   <head>
     <title>Sprite Animation</title>
