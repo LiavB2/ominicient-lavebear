@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      1 min read
+      2 min read
     
 </span></p>
 
@@ -100,8 +100,8 @@ window.onload = wrap_img;
 <li class="toc-entry toc-h1"><a href="#feature-overview">Feature Overview</a></li>
 <li class="toc-entry toc-h1"><a href="#some-demo-code">Some Demo Code</a></li>
 <li class="toc-entry toc-h1"><a href="#forum">Forum</a></li>
-<li class="toc-entry toc-h1"><a href="#like-system">Like System</a></li>
-<li class="toc-entry toc-h1"><a href="#like-system-1">Like System</a></li>
+<li class="toc-entry toc-h1"><a href="#like-system-design-1">Like System Design 1</a></li>
+<li class="toc-entry toc-h1"><a href="#like-system-design-2">Like System Design 2</a></li>
 </ul><body>
 <h1 id="hours-i-worked">
 <a class="anchor" href="#hours-i-worked" aria-hidden="true"><span class="octicon octicon-link"></span></a>Hours I Worked</h1>
@@ -128,8 +128,8 @@ window.onload = wrap_img;
     </tr>
     <tr>
       <td>3</td>
-      <td> </td>
-      <td> </td>
+      <td>Develop a few prototype like systems (with multiple deigns)</td>
+      <td>1.5 hours</td>
     </tr>
     <tr>
       <td>4</td>
@@ -305,7 +305,7 @@ window.onload = wrap_img;
             <div class="container">
                 <a class="navbar-brand" href="/striver-frontend/index.html">
                     <img src="/striver-frontend/assets/icon.png" width="30" height="30" class="d-inline-block align-top rounded" style="margin-right: 10px" alt="">
-                    Striver
+                    ALAAT
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -350,15 +350,14 @@ window.onload = wrap_img;
     
 
 
-<p>&lt;!DOCTYPE html&gt;</p>
 
 
-  <title>Like System</title>
+  <title>Like System Design 1</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 
 
   <h1>
-<a class="anchor" href="#like-system" aria-hidden="true"><span class="octicon octicon-link"></span></a>Like System</h1>
+<a class="anchor" href="#like-system-design-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Like System Design 1</h1>
 
   <div>
     <button id="object1" class="like-button">Like</button>
@@ -384,7 +383,6 @@ window.onload = wrap_img;
         var count = parseInt(countElement.text());
         count++;
         countElement.text(count);
-
         // Send an AJAX request to update the backend with the new like count
         $.ajax({
           url: 'backend.php',
@@ -403,14 +401,14 @@ window.onload = wrap_img;
 
 
 
-<p>&lt;!DOCTYPE html&gt;</p>
 
 
-  <title>Like System</title>
+  <title>Like System Design 2</title>
+
 
 
   <h1>
-<a class="anchor" href="#like-system-1" aria-hidden="true"><span class="octicon octicon-link"></span></a>Like System</h1>
+<a class="anchor" href="#like-system-design-2" aria-hidden="true"><span class="octicon octicon-link"></span></a>Like System Design 2</h1>
 
   <button id="likeButton" onclick="incrementLikeCount()">Like</button>
 
@@ -425,7 +423,6 @@ window.onload = wrap_img;
 
 
 
-<p>&lt;!DOCTYPE html&gt;</p>
 
   
     <title>Sprite Animation</title>
