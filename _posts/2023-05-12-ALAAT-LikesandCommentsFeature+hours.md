@@ -8,19 +8,20 @@ title: ALAAT Likes Feature + Hours Tracking
 
 # Hours I Worked
 
-|Task #|Hours|Task|
-|-|-|-|
-|1|Plan out group project + Canva Model [Here](https://liavb2.github.io/ominicient-lavebear/notes/2023/05/12/ALAAT-Planning.html)|1 Hour|
-|2|Research and collaboration on implementing the likes feature on each photo and determining what the best way to implement it will be|1 hour|
-|3|Develop a few prototype like systems (with multiple deigns)|1.5 hours|
-|4|Research backend likes saving|0.5 Hours|
-|5|||
-|6|||
-|7|||
+|Task #|Date|Task|Hours|
+|-|-|-|-|
+|1|05/06/23|Plan out group project + Canva Model [Here](https://liavb2.github.io/ominicient-lavebear/notes/2023/05/12/ALAAT-Planning.html)|1 Hour|
+|2|05/08/23|Research and collaboration on implementing the likes feature on each photo and determining what the best way to implement it will be|1 hour|
+|3|05/09/23|Clean up repo to make it only our code|0.5|
+|4|05/15-16/23|Develop a few prototype like systems (with multiple deigns)|1.5 hours|
+|5|05/18/23|Research backend likes saving from last tri full stack lessons and write the code in the backend|1.5 Hours|
+|6|05/19/23|Recall how to call an API backend to the frontend (this took me a whole week to learn last tri)|0.5 hours|
+|7|05/20/23|Design and add logo to the top left of the frontend on the navbar make it clickable as a home button and make agile manifesto|1|
 |8|||
 |9|||
-|9|||
 |10|||
+|11|||
+|12|||
 
 # Feature Overview
 - Like and comment system
@@ -403,3 +404,34 @@ title: Group ALAAT Photo Site Planning
   </body>
 </html>
 
+<!-- HTML button element -->
+<button id="likeButton">Like</button>
+
+<script>
+  // JavaScript code
+  const likeButton = document.getElementById('likeButton');
+
+  likeButton.addEventListener('click', async () => {
+    try {
+      // Send an HTTP PATCH request to update the likes count
+      const response = await fetch('http://127.0.0.1:8086/api/images/', {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ increment: 1 }), // Increment likes by 1
+      });
+
+      if (response.ok) {
+        // Success
+        const updatedData = await response.json();
+        console.log('Likes count updated:', updatedData.likes);
+      } else {
+        // Error
+        console.error('Failed to update likes count:', response.status);
+      }
+    } catch (error) {
+      console.error('An error occurred:', error);
+    }
+  });
+</script>
