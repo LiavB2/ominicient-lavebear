@@ -1,108 +1,11 @@
 ---
 toc: true
 layout: post
-description: Bear Animation example for the exit ticket discussion
+description: Frontend Discussion Board for the exit ticket discussion
 categories: [Notes]
-title: Bear Animation Example
+title: Frontend Javascrip Project
 ---
 
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Bear Animation</title>
-    <style>
-      canvas {
-        border: 1px solid black;
-      }
-    </style>
-  </head>
-  <body>
-    <canvas id="canvas" width="800" height="600"></canvas>
-    <script>
-      // Get the canvas element
-      const canvas = document.getElementById("canvas");
-      const context = canvas.getContext("2d");
-      // Load the sprite image
-      const spriteImage = new Image();
-      spriteImage.src = "bear.png";
-      // Set the initial position and speed of the sprite
-      let spriteX = 100;
-      let spriteY = 100;
-      const spriteSpeed = 5;
-      // Set the animation frames
-      const frames = [];
-      const frameWidth = 64;
-      const frameHeight = 64;
-      for (let i = 0; i < 6; i++) {
-        const frame = {
-          image: spriteImage,
-          sx: i * frameWidth,
-          sy: 0,
-          sw: frameWidth,
-          sh: frameHeight,
-        };
-        frames.push(frame);
-      }
-      // Set the initial frame index and animation delay
-      let currentFrame = 0;
-      const animationDelay = 10; // Lower value means faster animation
-      // Function to update the animation frame
-      function updateFrame() {
-        currentFrame = (currentFrame + 1) % frames.length;
-      }
-      // Function to draw the sprite
-      function drawSprite() {
-        const frame = frames[currentFrame];
-        context.drawImage(
-          frame.image,
-          frame.sx,
-          frame.sy,
-          frame.sw,
-          frame.sh,
-          spriteX,
-          spriteY,
-          frame.sw,
-          frame.sh
-        );
-      }
-      // Function to handle keyboard input
-      function handleInput() {
-        window.addEventListener("keydown", (event) => {
-          switch (event.key) {
-            case "ArrowLeft":
-              spriteX -= spriteSpeed;
-              break;
-            case "ArrowRight":
-              spriteX += spriteSpeed;
-              break;
-            case "ArrowUp":
-              spriteY -= spriteSpeed;
-              break;
-            case "ArrowDown":
-              spriteY += spriteSpeed;
-              break;
-          }
-        });
-      }
-      // Game loop
-      function gameLoop() {
-        // Clear the canvas
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        // Update the animation frame
-        if (Date.now() % animationDelay === 0) {
-          updateFrame();
-        }
-        // Draw the sprite
-        drawSprite();
-        // Request the next frame
-        requestAnimationFrame(gameLoop);
-      }
-      // Start the game loop
-      handleInput();
-      gameLoop();
-    </script>
-  </body>
-</html>
 
 <!DOCTYPE html>
 <html>
@@ -142,3 +45,117 @@ title: Bear Animation Example
     <tr>
       <th>Name</th>
       <th>Comment</th>
+
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Social Media Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .metrics {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+    .metric-card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
+    }
+    .update-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Social Media Dashboard</h1>
+
+  <div class="metrics">
+    <div class="metric-card">
+      <h2>Follower Count</h2>
+      <p id="follower-count">Loading...</p>
+      <button onclick="updateFollowerCount()">Update</button>
+    </div>
+    <div class="metric-card">
+      <h2>Likes</h2>
+      <p id="likes">Loading...</p>
+      <button onclick="updateLikes()">Update</button>
+    </div>
+    <div class="metric-card">
+      <h2>Comments</h2>
+      <p id="comments">Loading...</p>
+      <button onclick="updateComments()">Update</button>
+    </div>
+    <div class="metric-card">
+      <h2>Engagement Rate</h2>
+      <p id="engagement-rate">Loading...</p>
+      <button onclick="updateEngagementRate()">Update</button>
+    </div>
+  </div>
+
+  <script>
+    // Simulated initial data (replace with real data retrieval)
+    var followerCount = 15000;
+    var likes = 500;
+    var comments = 200;
+    var engagementRate = ((likes + comments) / followerCount * 100).toFixed(2);
+
+    // Function to update follower count
+    function updateFollowerCount() {
+      var newFollowerCount = parseInt(prompt("Enter new follower count:"));
+      if (!isNaN(newFollowerCount)) {
+        followerCount = newFollowerCount;
+        updateMetrics();
+      }
+    }
+
+    // Function to update likes
+    function updateLikes() {
+      var newLikes = parseInt(prompt("Enter new likes count:"));
+      if (!isNaN(newLikes)) {
+        likes = newLikes;
+        updateMetrics();
+      }
+    }
+
+    // Function to update comments
+    function updateComments() {
+      var newComments = parseInt(prompt("Enter new comments count:"));
+      if (!isNaN(newComments)) {
+        comments = newComments;
+        updateMetrics();
+      }
+    }
+
+    // Function to update engagement rate
+    function updateEngagementRate() {
+      var newEngagementRate = parseFloat(prompt("Enter new engagement rate:"));
+      if (!isNaN(newEngagementRate)) {
+        engagementRate = newEngagementRate.toFixed(2);
+        updateMetrics();
+      }
+    }
+
+    // Function to update metric values in the dashboard
+    function updateMetrics() {
+      document.getElementById("follower-count").textContent = followerCount.toLocaleString();
+      document.getElementById("likes").textContent = likes.toLocaleString();
+      document.getElementById("comments").textContent = comments.toLocaleString();
+      document.getElementById("engagement-rate").textContent = engagementRate + "%";
+    }
+
+    // Initial update of metric values
+    updateMetrics();
+  </script>
+</body>
+</html>
