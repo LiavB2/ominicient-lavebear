@@ -103,3 +103,42 @@ title: Bear Animation Example
     </script>
   </body>
 </html>
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Comments Board</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #comment-form {
+      margin-bottom: 10px;
+    }
+    #comments-board {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    #comments-board th,
+    #comments-board td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <h1>User Comments Board</h1>
+
+  <form id="comment-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required><br>
+    <label for="comment">Comment:</label>
+    <textarea id="comment" required></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <table id="comments-board">
+    <tr>
+      <th>Name</th>
+      <th>Comment</th>
