@@ -4,21 +4,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="twitter:card" content="summary_large_image" /><!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Bear Animation Example | LB Blogs</title>
+<title>Frontend Javascrip Project | LB Blogs</title>
 <meta name="generator" content="Jekyll v4.1.1" />
-<meta property="og:title" content="Bear Animation Example" />
+<meta property="og:title" content="Frontend Javascrip Project" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Bear Animation example for the exit ticket discussion" />
-<meta property="og:description" content="Bear Animation example for the exit ticket discussion" />
+<meta name="description" content="Frontend Discussion Board for the exit ticket discussion" />
+<meta property="og:description" content="Frontend Discussion Board for the exit ticket discussion" />
 <link rel="canonical" href="https://liavb2.github.io/ominicient-lavebear/notes/2023/05/19/animation.html" />
 <meta property="og:url" content="https://liavb2.github.io/ominicient-lavebear/notes/2023/05/19/animation.html" />
 <meta property="og:site_name" content="LB Blogs" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2023-05-19T00:00:00-05:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Bear Animation Example" />
+<meta property="twitter:title" content="Frontend Javascrip Project" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-19T00:00:00-05:00","datePublished":"2023-05-19T00:00:00-05:00","description":"Bear Animation example for the exit ticket discussion","headline":"Bear Animation Example","mainEntityOfPage":{"@type":"WebPage","@id":"https://liavb2.github.io/ominicient-lavebear/notes/2023/05/19/animation.html"},"url":"https://liavb2.github.io/ominicient-lavebear/notes/2023/05/19/animation.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2023-05-19T00:00:00-05:00","datePublished":"2023-05-19T00:00:00-05:00","description":"Frontend Discussion Board for the exit ticket discussion","headline":"Frontend Javascrip Project","mainEntityOfPage":{"@type":"WebPage","@id":"https://liavb2.github.io/ominicient-lavebear/notes/2023/05/19/animation.html"},"url":"https://liavb2.github.io/ominicient-lavebear/notes/2023/05/19/animation.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/ominicient-lavebear/assets/css/style.css"><link type="application/atom+xml" rel="alternate" href="https://liavb2.github.io/ominicient-lavebear/feed.xml" title="LB Blogs" /><link rel="shortcut icon" type="image/x-icon" href="/ominicient-lavebear/images/favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Primer/15.2.0/primer.css" integrity="sha512-xTz2ys4coGAOz8vuV1NcQBkgVmKhsSEtjbqyMJbBHRplFuvKIUo6xhLHpAyPt9mfR6twHJgn9OgVLuqOvjeBhg==" crossorigin="anonymous" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />
@@ -73,7 +73,7 @@ window.onload = wrap_img;
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Bear Animation Example</h1><p class="page-description">Bear Animation example for the exit ticket discussion</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-05-19T00:00:00-05:00" itemprop="datePublished">
+    <h1 class="post-title p-name" itemprop="name headline">Frontend Javascrip Project</h1><p class="page-description">Frontend Discussion Board for the exit ticket discussion</p><p class="post-meta post-meta-title"><time class="dt-published" datetime="2023-05-19T00:00:00-05:00" itemprop="datePublished">
         May 19, 2023
       </time>
        • <span class="read-time" title="Estimated read time">
@@ -97,105 +97,15 @@ window.onload = wrap_img;
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#user-comments-board">User Comments Board</a></li>
+<li class="toc-entry toc-h1"><a href="#social-media-dashboard">Social Media Dashboard</a>
+<ul>
+<li class="toc-entry toc-h2"><a href="#follower-count">Follower Count</a></li>
+<li class="toc-entry toc-h2"><a href="#likes">Likes</a></li>
+<li class="toc-entry toc-h2"><a href="#comments">Comments</a></li>
+<li class="toc-entry toc-h2"><a href="#engagement-rate">Engagement Rate</a></li>
+</ul>
+</li>
 </ul><body>
-<p>&lt;!DOCTYPE html&gt;</p>
-
-  
-    <title>Bear Animation</title>
-    <style>
-      canvas {
-        border: 1px solid black;
-      }
-    </style>
-  
-  
-    <canvas id="canvas" width="800" height="600"></canvas>
-    <script>
-      // Get the canvas element
-      const canvas = document.getElementById("canvas");
-      const context = canvas.getContext("2d");
-      // Load the sprite image
-      const spriteImage = new Image();
-      spriteImage.src = "bear.png";
-      // Set the initial position and speed of the sprite
-      let spriteX = 100;
-      let spriteY = 100;
-      const spriteSpeed = 5;
-      // Set the animation frames
-      const frames = [];
-      const frameWidth = 64;
-      const frameHeight = 64;
-      for (let i = 0; i < 6; i++) {
-        const frame = {
-          image: spriteImage,
-          sx: i * frameWidth,
-          sy: 0,
-          sw: frameWidth,
-          sh: frameHeight,
-        };
-        frames.push(frame);
-      }
-      // Set the initial frame index and animation delay
-      let currentFrame = 0;
-      const animationDelay = 10; // Lower value means faster animation
-      // Function to update the animation frame
-      function updateFrame() {
-        currentFrame = (currentFrame + 1) % frames.length;
-      }
-      // Function to draw the sprite
-      function drawSprite() {
-        const frame = frames[currentFrame];
-        context.drawImage(
-          frame.image,
-          frame.sx,
-          frame.sy,
-          frame.sw,
-          frame.sh,
-          spriteX,
-          spriteY,
-          frame.sw,
-          frame.sh
-        );
-      }
-      // Function to handle keyboard input
-      function handleInput() {
-        window.addEventListener("keydown", (event) => {
-          switch (event.key) {
-            case "ArrowLeft":
-              spriteX -= spriteSpeed;
-              break;
-            case "ArrowRight":
-              spriteX += spriteSpeed;
-              break;
-            case "ArrowUp":
-              spriteY -= spriteSpeed;
-              break;
-            case "ArrowDown":
-              spriteY += spriteSpeed;
-              break;
-          }
-        });
-      }
-      // Game loop
-      function gameLoop() {
-        // Clear the canvas
-        context.clearRect(0, 0, canvas.width, canvas.height);
-        // Update the animation frame
-        if (Date.now() % animationDelay === 0) {
-          updateFrame();
-        }
-        // Draw the sprite
-        drawSprite();
-        // Request the next frame
-        requestAnimationFrame(gameLoop);
-      }
-      // Start the game loop
-      handleInput();
-      gameLoop();
-    </script>
-  
-
-
 <p>&lt;!DOCTYPE html&gt;</p>
 
 
@@ -235,6 +145,125 @@ window.onload = wrap_img;
     <tr>
       <th>Name</th>
       <th>Comment</th>
+
+
+&lt;!DOCTYPE html&gt;
+
+
+  <title>Social Media Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+    }
+    .metrics {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+    .metric-card {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      padding: 10px;
+      text-align: center;
+    }
+    .update-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
+
+
+  <h1>
+<a class="anchor" href="#social-media-dashboard" aria-hidden="true"><span class="octicon octicon-link"></span></a>Social Media Dashboard</h1>
+
+  <div class="metrics">
+    <div class="metric-card">
+      <h2>
+<a class="anchor" href="#follower-count" aria-hidden="true"><span class="octicon octicon-link"></span></a>Follower Count</h2>
+      <p id="follower-count">Loading...</p>
+      <button onclick="updateFollowerCount()">Update</button>
+    </div>
+    <div class="metric-card">
+      <h2>
+<a class="anchor" href="#likes" aria-hidden="true"><span class="octicon octicon-link"></span></a>Likes</h2>
+      <p id="likes">Loading...</p>
+      <button onclick="updateLikes()">Update</button>
+    </div>
+    <div class="metric-card">
+      <h2>
+<a class="anchor" href="#comments" aria-hidden="true"><span class="octicon octicon-link"></span></a>Comments</h2>
+      <p id="comments">Loading...</p>
+      <button onclick="updateComments()">Update</button>
+    </div>
+    <div class="metric-card">
+      <h2>
+<a class="anchor" href="#engagement-rate" aria-hidden="true"><span class="octicon octicon-link"></span></a>Engagement Rate</h2>
+      <p id="engagement-rate">Loading...</p>
+      <button onclick="updateEngagementRate()">Update</button>
+    </div>
+  </div>
+
+  <script>
+    // Simulated initial data (replace with real data retrieval)
+    var followerCount = 15000;
+    var likes = 500;
+    var comments = 200;
+    var engagementRate = ((likes + comments) / followerCount * 100).toFixed(2);
+
+    // Function to update follower count
+    function updateFollowerCount() {
+      var newFollowerCount = parseInt(prompt("Enter new follower count:"));
+      if (!isNaN(newFollowerCount)) {
+        followerCount = newFollowerCount;
+        updateMetrics();
+      }
+    }
+
+    // Function to update likes
+    function updateLikes() {
+      var newLikes = parseInt(prompt("Enter new likes count:"));
+      if (!isNaN(newLikes)) {
+        likes = newLikes;
+        updateMetrics();
+      }
+    }
+
+    // Function to update comments
+    function updateComments() {
+      var newComments = parseInt(prompt("Enter new comments count:"));
+      if (!isNaN(newComments)) {
+        comments = newComments;
+        updateMetrics();
+      }
+    }
+
+    // Function to update engagement rate
+    function updateEngagementRate() {
+      var newEngagementRate = parseFloat(prompt("Enter new engagement rate:"));
+      if (!isNaN(newEngagementRate)) {
+        engagementRate = newEngagementRate.toFixed(2);
+        updateMetrics();
+      }
+    }
+
+    // Function to update metric values in the dashboard
+    function updateMetrics() {
+      document.getElementById("follower-count").textContent = followerCount.toLocaleString();
+      document.getElementById("likes").textContent = likes.toLocaleString();
+      document.getElementById("comments").textContent = comments.toLocaleString();
+      document.getElementById("engagement-rate").textContent = engagementRate + "%";
+    }
+
+    // Initial update of metric values
+    updateMetrics();
+  </script>
+
+
 </tr>
 </table>
 </body>
