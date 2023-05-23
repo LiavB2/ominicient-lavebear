@@ -96,6 +96,7 @@ window.onload = wrap_img;
 
   <div class="post-content e-content" itemprop="articleBody">
     <ul id="toc" class="section-nav">
+<li class="toc-entry toc-h1"><a href="#user-comments-board">User Comments Board</a></li>
 </ul><body>
 <p>&lt;!DOCTYPE html&gt;</p>
 
@@ -194,6 +195,48 @@ window.onload = wrap_img;
     </script>
   
 
+
+<p>&lt;!DOCTYPE html&gt;</p>
+
+
+  <title>User Comments Board</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    #comment-form {
+      margin-bottom: 10px;
+    }
+    #comments-board {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    #comments-board th,
+    #comments-board td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+
+
+  <h1>
+<a class="anchor" href="#user-comments-board" aria-hidden="true"><span class="octicon octicon-link"></span></a>User Comments Board</h1>
+
+  <form id="comment-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" required=""><br>
+    <label for="comment">Comment:</label>
+    <textarea id="comment" required=""></textarea><br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <table id="comments-board">
+    <tr>
+      <th>Name</th>
+      <th>Comment</th>
+</tr>
+</table>
 </body>
   </div><a class="u-url" href="/ominicient-lavebear/notes/2023/05/19/animation.html" hidden></a>
 </article>
