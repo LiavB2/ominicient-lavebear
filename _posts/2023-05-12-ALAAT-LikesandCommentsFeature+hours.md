@@ -17,8 +17,8 @@ title: ALAAT Likes Feature + Hours Tracking
 |5|05/18/23|Research backend likes saving from last tri full stack lessons and write the code in the backend|1.5 Hours|
 |6|05/19/23|Recall how to call an API backend to the frontend (this took me a whole week to learn last tri)|0.5 hours|
 |7|05/20/23|Design and add logo to the top left of the frontend on the navbar make it clickable as a home button and make agile manifesto|1|
-|8|||
-|9|||
+|8|05/21/23|Spent 2 hours trying to figure out how to code a comment board where you can comment on posts and like them|2 hours|
+|9|05/22/23|In class I finally figured out the comment board|1|
 |10|||
 |11|||
 |12|||
