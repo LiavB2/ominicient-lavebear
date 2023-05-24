@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      8 min read
+      12 min read
     
 </span></p>
 
@@ -486,6 +486,231 @@ insertion sort
 sorting by city
 insertion sort
 [{&#39;name&#39;: &#39;John&#39;, &#39;age&#39;: 63, &#39;city&#39;: &#39;Eugene&#39;}, {&#39;name&#39;: &#39;Ryan&#39;, &#39;age&#39;: 21, &#39;city&#39;: &#39;Los Angeles&#39;}, {&#39;name&#39;: &#39;Risa&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;New York&#39;}, {&#39;name&#39;: &#39;Shekar&#39;, &#39;age&#39;: 18, &#39;city&#39;: &#39;San Francisco&#39;}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Here-I-do-a-Merge-Sort">Here I do a Merge Sort<a class="anchor-link" href="#Here-I-do-a-Merge-Sort"> </a></h1>
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">arr</span>
+    
+    <span class="n">mid</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:</span><span class="n">mid</span><span class="p">]</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">:]</span>
+    
+    <span class="n">left</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="n">merged</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">right</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+            <span class="n">merged</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">merged</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">):</span>
+        <span class="n">merged</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">right</span><span class="p">):</span>
+        <span class="n">merged</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+        <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">merged</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># list/dictionary sample</span>
+    <span class="n">list_of_people</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Tom Brady&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;team&quot;</span><span class="p">:</span> <span class="s2">&quot;Patriots&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mahomes&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span> <span class="s2">&quot;team&quot;</span><span class="p">:</span> <span class="s2">&quot;Chiefs&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Justin Jefferson&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;team&quot;</span><span class="p">:</span> <span class="s2">&quot;Vikings&quot;</span><span class="p">},</span>
+    <span class="p">]</span>
+    
+    <span class="c1"># assuming uniform keys, pick the first row as the source of keys</span>
+    <span class="n">key_row</span> <span class="o">=</span> <span class="n">list_of_people</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="c1"># print the list as defined</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;original&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">)</span>
+    
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">key_row</span><span class="p">:</span>  <span class="c1"># find each key in the row</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">key</span><span class="p">)</span>
+        <span class="n">sorted_list</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>  <span class="c1"># sort the list of people</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">sorted_list</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>original
+[{&#39;name&#39;: &#39;Tom Brady&#39;, &#39;age&#39;: 50, &#39;team&#39;: &#39;Patriots&#39;}, {&#39;name&#39;: &#39;Mahomes&#39;, &#39;age&#39;: 27, &#39;team&#39;: &#39;Chiefs&#39;}, {&#39;name&#39;: &#39;Justin Jefferson&#39;, &#39;age&#39;: 23, &#39;team&#39;: &#39;Vikings&#39;}]
+name
+[{&#39;name&#39;: &#39;Justin Jefferson&#39;, &#39;age&#39;: 23, &#39;team&#39;: &#39;Vikings&#39;}, {&#39;name&#39;: &#39;Mahomes&#39;, &#39;age&#39;: 27, &#39;team&#39;: &#39;Chiefs&#39;}, {&#39;name&#39;: &#39;Tom Brady&#39;, &#39;age&#39;: 50, &#39;team&#39;: &#39;Patriots&#39;}]
+age
+[{&#39;name&#39;: &#39;Justin Jefferson&#39;, &#39;age&#39;: 23, &#39;team&#39;: &#39;Vikings&#39;}, {&#39;name&#39;: &#39;Mahomes&#39;, &#39;age&#39;: 27, &#39;team&#39;: &#39;Chiefs&#39;}, {&#39;name&#39;: &#39;Tom Brady&#39;, &#39;age&#39;: 50, &#39;team&#39;: &#39;Patriots&#39;}]
+team
+[{&#39;name&#39;: &#39;Mahomes&#39;, &#39;age&#39;: 27, &#39;team&#39;: &#39;Chiefs&#39;}, {&#39;name&#39;: &#39;Tom Brady&#39;, &#39;age&#39;: 50, &#39;team&#39;: &#39;Patriots&#39;}, {&#39;name&#39;: &#39;Justin Jefferson&#39;, &#39;age&#39;: 23, &#39;team&#39;: &#39;Vikings&#39;}]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+    
+
+<div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<ul>
+<li><p>Comparison: The merge sort algorithm utilizes comparisons to establish the relative arrangement of elements during the merging phase. These comparisons are executed based on a specified key or attribute associated with the elements undergoing sorting.</p>
+</li>
+<li><p>Swaps: Unlike other sorting algorithms, merge sort does not directly employ swaps to rearrange elements. Instead, the merging process in merge sort involves the creation of new lists or arrays to hold the sorted elements. The elements from the original list are selectively positioned in the appropriate locations within the newly merged list.</p>
+</li>
+<li><p>Time: The time complexity of an algorithm estimates how its performance scales with the size of the input. In the case of merge sort, it exhibits a time complexity of O(n log n), where n represents the number of elements in the list. Consequently, when the size of the list doubles, the time required to sort it will increase by a factor of approximately two times the logarithm of the list size.</p>
+</li>
+</ul>
+
+</div>
+</div>
+</div>
+    
+    
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">mergeSort</span><span class="p">(</span><span class="n">arr</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="mi">1</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">arr</span>
+    
+    <span class="n">mid</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span>
+    <span class="n">left</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[:</span><span class="n">mid</span><span class="p">]</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">arr</span><span class="p">[</span><span class="n">mid</span><span class="p">:]</span>
+    
+    <span class="n">left</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+    <span class="n">right</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">right</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+    
+    <span class="k">return</span> <span class="n">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">key</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">merge</span><span class="p">(</span><span class="n">left</span><span class="p">,</span> <span class="n">right</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+    <span class="n">merged</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">0</span>
+    
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">)</span> <span class="ow">and</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">right</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">]</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">key</span><span class="p">):</span>
+            <span class="n">merged</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+            <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">merged</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+            <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">left</span><span class="p">):</span>
+        <span class="n">merged</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">left</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+        <span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">while</span> <span class="n">j</span> <span class="o">&lt;</span> <span class="nb">len</span><span class="p">(</span><span class="n">right</span><span class="p">):</span>
+        <span class="n">merged</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">right</span><span class="p">[</span><span class="n">j</span><span class="p">])</span>
+        <span class="n">j</span> <span class="o">+=</span> <span class="mi">1</span>
+    
+    <span class="k">return</span> <span class="n">merged</span>
+
+
+<span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s2">&quot;__main__&quot;</span><span class="p">:</span>
+    <span class="c1"># list/dictionary sample</span>
+    <span class="n">list_of_people</span> <span class="o">=</span> <span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Tom Brady&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">50</span><span class="p">,</span> <span class="s2">&quot;team&quot;</span><span class="p">:</span> <span class="s2">&quot;Patriots&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Mahomes&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">27</span><span class="p">,</span> <span class="s2">&quot;team&quot;</span><span class="p">:</span> <span class="s2">&quot;Chiefs&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Justin Jefferson&quot;</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">:</span> <span class="mi">23</span><span class="p">,</span> <span class="s2">&quot;team&quot;</span><span class="p">:</span> <span class="s2">&quot;Vikings&quot;</span><span class="p">},</span>
+    <span class="p">]</span>
+    
+    <span class="c1"># assuming uniform keys, pick the first row as the source of keys</span>
+    <span class="n">key_row</span> <span class="o">=</span> <span class="n">list_of_people</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Original:&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">list_of_people</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Sorted by Name:&quot;</span><span class="p">)</span>
+    <span class="n">sorted_list</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">,</span> <span class="s2">&quot;name&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">sorted_list</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Sorted by Age:&quot;</span><span class="p">)</span>
+    <span class="n">sorted_list</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">,</span> <span class="s2">&quot;age&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">sorted_list</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Sorted by team:&quot;</span><span class="p">)</span>
+    <span class="n">sorted_list</span> <span class="o">=</span> <span class="n">mergeSort</span><span class="p">(</span><span class="n">list_of_people</span><span class="p">,</span> <span class="s2">&quot;team&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">sorted_list</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">person</span><span class="p">)</span>
+</pre></div>
+
+    </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Original:
+{&#39;name&#39;: &#39;Tom Brady&#39;, &#39;age&#39;: 50, &#39;team&#39;: &#39;Patriots&#39;}
+{&#39;name&#39;: &#39;Mahomes&#39;, &#39;age&#39;: 27, &#39;team&#39;: &#39;Chiefs&#39;}
+{&#39;name&#39;: &#39;Justin Jefferson&#39;, &#39;age&#39;: 23, &#39;team&#39;: &#39;Vikings&#39;}
+
+Sorted by Name:
+{&#39;name&#39;: &#39;Justin Jefferson&#39;, &#39;age&#39;: 23, &#39;team&#39;: &#39;Vikings&#39;}
+{&#39;name&#39;: &#39;Mahomes&#39;, &#39;age&#39;: 27, &#39;team&#39;: &#39;Chiefs&#39;}
+{&#39;name&#39;: &#39;Tom Brady&#39;, &#39;age&#39;: 50, &#39;team&#39;: &#39;Patriots&#39;}
+
+Sorted by Age:
+{&#39;name&#39;: &#39;Justin Jefferson&#39;, &#39;age&#39;: 23, &#39;team&#39;: &#39;Vikings&#39;}
+{&#39;name&#39;: &#39;Mahomes&#39;, &#39;age&#39;: 27, &#39;team&#39;: &#39;Chiefs&#39;}
+{&#39;name&#39;: &#39;Tom Brady&#39;, &#39;age&#39;: 50, &#39;team&#39;: &#39;Patriots&#39;}
+
+Sorted by team:
+{&#39;name&#39;: &#39;Mahomes&#39;, &#39;age&#39;: 27, &#39;team&#39;: &#39;Chiefs&#39;}
+{&#39;name&#39;: &#39;Tom Brady&#39;, &#39;age&#39;: 50, &#39;team&#39;: &#39;Patriots&#39;}
+{&#39;name&#39;: &#39;Justin Jefferson&#39;, &#39;age&#39;: 23, &#39;team&#39;: &#39;Vikings&#39;}
 </pre>
 </div>
 </div>
