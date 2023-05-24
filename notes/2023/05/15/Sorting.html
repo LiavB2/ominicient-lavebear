@@ -79,7 +79,7 @@ window.onload = wrap_img;
        • <span class="read-time" title="Estimated read time">
     
     
-      6 min read
+      8 min read
     
 </span></p>
 
@@ -206,20 +206,57 @@ Take about 5 minutes to read about your algorithm (Geek for Geeks linked below) 
 <h2 id="Practice">Practice<a class="anchor-link" href="#Practice"> </a></h2><p>[75, 17, 46, 80, 67, 45, 69, 79, 40, 0]</p>
 <p>How would you sort this list with...</p>
 <ul>
-<li>Bubble Sort</li>
-<li>Selection Sort<blockquote><p>Explain.</p>
-</blockquote>
-</li>
-<li><strong>Bubble sort:</strong> starts with first two elements and compares which is greater, waps if necessary. continues to next pair of elements and swaps if necessary. keeps comparing pairs until the end is reached. then it starts over again and compares all the pairs again. this keeps happening until one iteration through all pairs is successful without ANY swaps.- <strong>Selection Sort</strong>: start with the entire list, and then find the least value and move that to the first value. then take the subarray from the second value to the end and find the least value... continue doing this until all items are sorted.</li>
+<li>Bubble Sort<ul>
+<li>This works by  repeatedly swapping elements if they are in the wrong order. It continues iterating through the list until the entire list is sorted.</li>
 </ul>
-<p>[88, 39, 53, 39, 58, 43, 74, 81, 71, 51]</p>
+</li>
+</ul>
+<p>Pass 1: [17, 46, 75, 67, 45, 69, 79, 40, 0, 80]</p>
+<p>Pass 2: [17, 46, 67, 45, 69, 75, 40, 0, 79, 80]</p>
+<p>Pass 3: [17, 46, 45, 67, 69, 40, 0, 75, 79, 80]</p>
+<p>Pass 4: [17, 45, 46, 67, 40, 0, 69, 75, 79, 80]</p>
+<p>Pass 5: [17, 45, 46, 40, 0, 67, 69, 75, 79, 80]</p>
+<p>Pass 6: [17, 45, 40, 0, 46, 67, 69, 75, 79, 80]</p>
+<p>Pass 7: [17, 40, 0, 45, 46, 67, 69, 75, 79, 80]</p>
+<p>Pass 8: [17, 0, 40, 45, 46, 67, 69, 75, 79, 80]</p>
+<p>Pass 9: [0, 17, 40, 45, 46, 67, 69, 75, 79, 80]</p>
+<ul>
+<li>Selection Sort<ul>
+<li>this works by repeatedly finding the minimum element from the unsorted part of the list and placing it at the beginning</li>
+</ul>
+</li>
+</ul>
+<p>Pass 1: [0, 17, 46, 80, 67, 45, 69, 79, 40, 75]</p>
+<p>Pass 2: [0, 17, 40, 80, 67, 45, 69, 79, 46, 75]</p>
+<p>Pass 3: [0, 17, 40, 45, 67, 80, 69, 79, 46, 75]</p>
+<p>Pass 4: [0, 17, 40, 45, 46, 80, 69, 79, 67, 75]</p>
+<p>Pass 5: [0, 17, 40, 45, 46, 67, 69, 79, 80, 75]</p>
+<p>Pass 6: [0, 17, 40, 45, 46, 67, 69, 75, 80, 79]</p>
+<p>Pass 7: [0, 17, 40, 45, 46, 67, 69, 75, 79, 80]</p>
+<blockquote><p>Explain.</p>
+</blockquote>
+<h1 id="Pt2">Pt2<a class="anchor-link" href="#Pt2"> </a></h1><p>[88, 39, 53, 39, 58, 43, 74, 81, 71, 51]</p>
 <p>How would you sort this list with...</p>
 <ul>
-<li><strong>Merge Sort</strong>: split into half and then sort, then start merging and sort those merges</li>
-<li><strong>Insertion Sort:</strong> liek sorting cards, go through each value and insert it into the sorted subarray where it belongs.<blockquote><p>Explain.</p>
-</blockquote>
-</li>
+<li>Merge Sort recursively divides the list into smaller halves, sorts them individually, and then merges them back together to obtain the final sorted list. </li>
 </ul>
+<p>Step 1:Divide the list into individual elements [88], [39], [53], [39], [58], [43], [74], [81], [71], [51]
+Step 2: Merge the individual elements pairwise [39, 88], [39, 53], [39, 53, 88], [39, 39, 53, 53, 88], [43, 58], [43, 58, 74], [43, 58, 74, 81], [51, 71], [51, 71, 81], [51, 71, 74, 81]</p>
+<p>Step 3: Merge the pairs until we obtain the final sorted list [39, 39, 53, 53, 58, 88], [43, 58, 74, 74, 81], [51, 71, 71, 81]</p>
+<p>Final sorted list: [39, 39, 43, 51, 53, 53, 58, 71, 74, 74, 81, 81, 88]</p>
+<ul>
+<li>Insertion Sort iterates over each element in the unsorted portion and inserts it into the correct position in the sorted portion.</li>
+</ul>
+<p>Pass 1: [39, 88, 53, 39, 58, 43, 74, 81, 71, 51]</p>
+<p>Pass 2: [39, 53, 88, 39, 58, 43, 74, 81, 71, 51]</p>
+<p>Pass 3: [39, 39, 53, 88, 58, 43, 74, 81, 71, 51]</p>
+<p>Pass 4: [39, 39, 53, 58, 88, 43, 74, 81, 71, 51]</p>
+<p>Pass 5: [39, 39, 43, 53, 58, 88, 74, 81, 71, 51]</p>
+<p>Pass 6: [39, 39, 43, 53, 58, 74, 88, 81, 71, 51]</p>
+<p>Pass 7: [39, 39, 43, 53, 58, 74, 81, 88, 71, 51]</p>
+<p>Pass 8: [39, 39, 43, 53, 58, 71, 74, 81, 88, 51]</p>
+<p>Pass 9: [39, 39, 43, 53, 58, 71, 74, 81, 88, 51]</p>
+<p>Pass 10: [39, 39, 43, 51, 53, 58, 71, 74, 81, 88]</p>
 
 </div>
 </div>
