@@ -383,8 +383,6 @@ User JSON:
 
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
         <span class="p">#</span><span class="nn">outputTable</span> <span class="p">{</span>
             <span class="k">background-color</span><span class="p">:</span> <span class="mh">#353b45</span><span class="p">;</span>
@@ -448,8 +446,6 @@ User JSON:
 
 <html>
 <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js"></script>
     <style>
         #outputTable {
             background-color: #353b45;
@@ -491,7 +487,7 @@ function submitForm() {
     const outputRow = "<tr><td>" + name + "</td><td>" + exercise + "</td><td>" + favorite + "</td></tr>";
     $("#outputTable tbody").append(outputRow);
 
-    // Clear input fields
+    // clear input fields
     document.getElementById("nameInput").value = "";
     document.getElementById("exerciseInput").value = "";
     document.getElementById("favoriteInput").value = "";
@@ -569,8 +565,6 @@ function submitForm() {
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">&lt;</span><span class="n">html</span><span class="o">&gt;</span>
 <span class="o">&lt;</span><span class="n">head</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
-    <span class="o">&lt;</span><span class="n">script</span> <span class="n">src</span><span class="o">=</span><span class="s2">&quot;https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.31.3/js/jquery.tablesorter.min.js&quot;</span><span class="o">&gt;&lt;/</span><span class="n">script</span><span class="o">&gt;</span>
     <span class="o">&lt;</span><span class="n">style</span><span class="o">&gt;</span>
         <span class="c1">#outputTable {</span>
             <span class="n">background</span><span class="o">-</span><span class="n">color</span><span class="p">:</span> <span class="c1">#353b45;</span>
@@ -597,13 +591,8 @@ function submitForm() {
 <div class="cell border-box-sizing text_cell rendered"><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
-<li>This part defines the basic structure of an HTML document.<ul>
-<li>It includes the head and body sections. In the head section, it includes two external JavaScript files using the script tags. </li>
-<li>These files are hosted on CDNs (Content Delivery Networks). <ul>
-<li>The first script is jQuery, a popular JavaScript library, and the second script is the jQuery table sorter plugin. </li>
-<li>Additionally, it defines some CSS styles for the outputTable element.</li>
-</ul>
-</li>
+<li>This part defines the basic structure/ design of the HTML document.<ul>
+<li>You can see the backround color and shadow as well as the font and color for the words.</li>
 </ul>
 </li>
 </ul>
