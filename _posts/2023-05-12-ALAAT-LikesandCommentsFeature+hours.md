@@ -18,10 +18,11 @@ title: ALAAT Likes Feature + Hours Tracking
 |6|05/19/23|Recall how to call an API backend to the frontend (this took me a whole week to learn last tri)|0.5 hours|
 |7|05/20/23|Design and add logo to the top left of the frontend on the navbar make it clickable as a home button and make agile manifesto|1|
 |8|05/21/23|Spent 2 hours trying to figure out how to code a comment board where you can comment on posts and like them|2 hours|
-|9|05/22/23|In class I finally figured out the comment board|1|
-|10|||
-|11|||
-|12|||
+|9|05/22/23|In class I finally figured out the comment board|1 hour|
+|10|05/23/23|Research with Taiyo on how to connect the backend for the comment board|0.5 hour|
+|11|05/24/23|Figure out how to attatch a like button to every image on the gallery|1 hour|
+|12|05/25/23|Research and Create a Javascript loop in the gallery file that automatically puts a like button on every image file|2 hours|
+|||||
 
 # Feature Overview
 - Like and comment system
