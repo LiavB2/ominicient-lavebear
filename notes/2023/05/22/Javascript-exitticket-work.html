@@ -170,19 +170,15 @@ window.onload = wrap_img;
         <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Comment: </span><span class="si">{</span><span class="n">person</span><span class="o">.</span><span class="n">comment</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="nb">print</span><span class="p">()</span>
 
-<span class="c1"># Create an empty list to store user comments</span>
+<span class="c1"># create an empty list to store user comments</span>
 <span class="n">user_list</span> <span class="o">=</span> <span class="p">[]</span>
-
-<span class="c1"># Prompt the user for input</span>
 <span class="n">num_comments</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="nb">input</span><span class="p">(</span><span class="s2">&quot;Enter the number of comments: &quot;</span><span class="p">))</span>
 
 <span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_comments</span><span class="p">):</span>
     <span class="n">add_comment</span><span class="p">()</span>
 
-<span class="c1"># Generate the comments board</span>
 <span class="n">generate_board</span><span class="p">()</span>
 
-<span class="c1"># Convert the user list to JSON</span>
 <span class="n">user_json</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">([</span><span class="n">person</span><span class="o">.</span><span class="vm">__dict__</span> <span class="k">for</span> <span class="n">person</span> <span class="ow">in</span> <span class="n">user_list</span><span class="p">],</span> <span class="n">indent</span><span class="o">=</span><span class="mi">4</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">User JSON:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">user_json</span><span class="p">)</span>
@@ -380,7 +376,6 @@ User JSON:
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%%html</span>
-
 <span class="p">&lt;</span><span class="nt">html</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
     <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
@@ -421,10 +416,12 @@ User JSON:
     <span class="kr">const</span> <span class="nx">exercise</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;exerciseInput&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
     <span class="kr">const</span> <span class="nx">favorite</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;favoriteInput&quot;</span><span class="p">).</span><span class="nx">value</span><span class="p">;</span>
 
+    <span class="c1">// create new row at the end</span>
+
     <span class="kr">const</span> <span class="nx">outputRow</span> <span class="o">=</span> <span class="s2">&quot;&lt;tr&gt;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">exercise</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">favorite</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&lt;/tr&gt;&quot;</span><span class="p">;</span>
     <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#outputTable tbody&quot;</span><span class="p">).</span><span class="nx">append</span><span class="p">(</span><span class="nx">outputRow</span><span class="p">);</span>
 
-    <span class="c1">// clear input fields</span>
+    <span class="c1">// clear the input fields so you don&#39;t have to delete it yourself</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;nameInput&quot;</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;exerciseInput&quot;</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
     <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&quot;favoriteInput&quot;</span><span class="p">).</span><span class="nx">value</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span><span class="p">;</span>
@@ -443,7 +440,6 @@ User JSON:
 
 
 <div class="output_html rendered_html output_subarea ">
-
 <html>
 <head>
     <style>
@@ -483,6 +479,8 @@ function submitForm() {
     const name = document.getElementById("nameInput").value;
     const exercise = document.getElementById("exerciseInput").value;
     const favorite = document.getElementById("favoriteInput").value;
+
+    // create new row at the end
 
     const outputRow = "<tr><td>" + name + "</td><td>" + exercise + "</td><td>" + favorite + "</td></tr>";
     $("#outputTable tbody").append(outputRow);
