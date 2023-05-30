@@ -22,10 +22,10 @@ title: ALAAT Likes Feature + Hours Tracking
 |10|05/23/23|Research with Taiyo on how to connect the backend for the comment board|0.5 hour|
 |11|05/24/23|Figure out how to attatch a like button to every image on the gallery|1 hour|
 |12|05/25/23|Research and Create a Javascript loop in the gallery file that automatically puts a like button on every image file|3.5 hours|
-|13|05/26/23|Make the team logo and figure out how to place it on the navbar and click it as a home button|0.5|
-|14|05/28/23|Try to save likes to backend. It's hard because each like button is assigned to every image file because of my javascipt loop, so saving them to backend is very hard (I was unsuccessful in completing this)|3|
+|13|05/26/23|Make the team logo and figure out how to place it on the navbar and click it as a home button|0.5 hours|
+|14|05/28/23|Try to save likes to backend. It's hard because each like button is assigned to every image file because of my javascipt loop, so saving them to backend is very hard (I was unsuccessful in completing this)|3 hours|
 |||||
-|||||
+|16|05/30/23|Make Frontend and Backend Read.me and build instructions|0.5 hours|
 |||||
 |||||
 |||||
